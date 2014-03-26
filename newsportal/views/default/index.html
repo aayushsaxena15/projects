@@ -1,0 +1,26 @@
+{{extend 'layout.html'}}
+
+<h3 style="color:red">Only for admin</h3>
+<a href="add">add categories</a><br/>
+<a href="delete">delete a user account</a><br/>
+
+<h3 style="color:green">Any logged in person can choose the following</h3>
+<a href="{{=URL('post')}}">POST a news item</a><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h1>Categories of news:</h1>
+
+<br/>
+{{if fin:}}
+{{for i in range(len(fin)):}}
+<a href="{{=URL('cat?p=%s'%fin[i])}}">{{=fin[i]}}</a>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+{{pass}}
+{{else:}}
+no categories added by admin
+{{pass}}

@@ -1,0 +1,20 @@
+{{extend 'layout.html'}}
+{{ if y:}}
+<h1 style="color:red">Detail Description</h1>
+News Heading:-{{=y[0].news_heading}}<br/>
+News Category:-{{=y[0].news_category}}<br/>
+News URL:-{{=y[0].news_url}}<br/>
+News Posted By:-{{=y[0].news_postedby}}<br/>
+{{pass}}
+{{=form}}
+{{if y:}}
+<h1>Comments made by people:</h1>
+{{k=1}}
+{{for i in range(len(y)):}}
+{{=k}}. {{=y[i].comment_by}} commented on {{=y[i].commenttime}}:-<br/>
+&nbsp; {{=y[i].comment_body}}<br/>
+{{k=k+1}}
+{{pass}}
+{{else:}}
+no comments
+{{pass}}

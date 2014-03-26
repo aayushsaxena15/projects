@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title>Logistics</title>
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css" media="all" />
+    <script src="../static/js/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <script src="../static/js/jquery.jcarousel.pack.js" type="text/javascript"></script>
+    <script src="../static/js/jquery-func.js" type="text/javascript"></script>
+
+</head>
+<body>
+<div id="page" class="shell">
+	<!-- Logo + Search + Navigation -->
+	<div id="top">
+		<div class="cl">&nbsp;</div>
+		<h1 id="logo"><a href="#"></a></h1>
+		<!--form action="" method="post" id="search">
+			<div class="field-holder">
+				<input type="text" class="field" value="Search" title="Search" />
+			</div>
+			<input type="submit" class="button" value="Search" />
+			<div class="cl">&nbsp;</div>
+		</form-->
+		<div class="cl">&nbsp;</div>
+		<div id="navigation">
+			<ul>
+                <li>
+                    <a href="{{=URL('default','index')}}"  class="active" ><span>home</span></a>
+                </li>
+                <li>
+                    <a href="{{=URL('default','about_us')}}"><span>About us</span></a>
+                </li>
+                <li>
+                        <li><a href="{{=URL('default','place_order')}}"><span>Place Order</span></a></li>
+                        
+                        
+                </li>
+                <li>
+                    <a href="{{=URL('default','estimate_cost')}}"><span>Estimate Cost</span></a>
+                </li>
+                <li><a href="{{=URL('default','view_consignment')}}"><span>View/Track Consignments</span></a></li>
+                <li>
+                    <a href="{{=URL('default','contact')}}"><span>contact</span></a>
+                </li>
+            </ul>
+		</div>	
+	</div>
+	<!-- END Logo + Search + Navigation -->
+	<!-- Header -->
+	<div id="header">
+		<!-- Slider -->
+		<div id="slider">
+			<div id="slider-holder">
+				<ul>
+				    <li>
+				    	<div class="slide-image1">
+				    		
+				    	</div>
+				    </li>
+				    <li>
+				    					    	<div class="slide-image2">
+				    		
+				    	</div>
+				    </li>
+				    <li>
+				    					    	<div class="slide-image3">
+				    		
+				    	</div>
+				    </li>
+				</ul>
+			</div>
+			<div class="slider-nav">
+				<a href="#" class="prev">Previous</a>
+				<a href="#" class="next">Next</a>
+			</div>
+		</div>
+		<!-- END Slider -->	
+	</div>
+	<!-- END Header -->
+	<!-- Main -->
+	<div id="main">
+		<!-- Three Column Content -->
+		<div class="cols three-cols">
+			<div class="cl">&nbsp;</div>
+			<div class="col">
+				<h2>What is Mondays?</h2>
+				<h3 class="notext txt-monday-again">MONDAY AGAIN</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit ac.</p>
+				<p><a href="#" class="more">Learn more</a></p>
+			</div>
+			<div class="col">
+				<h2>Monday Services</h2>
+				<h3 class="notext txt-wedothis">WE DO THIS AND THAT....</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. </p>
+				<p><a href="#" class="more">Learn more</a></p>
+			</div>
+			<div class="col col-last">
+				<h2>Monday Support</h2>
+				<h3 class="notext txt-247">24/7 YES REALLY...</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue.</p>
+				<p><a href="#" class="more">Learn more</a></p>
+			</div>
+			<div class="cl">&nbsp;</div>
+		</div>
+		<!-- END Three Column Content -->
+		<!-- Two Column Content -->
+		<div class="cols two-cols">
+			<div class="cl">&nbsp;</div>
+			<div class="col">
+				<h2>Why Mondays?</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit ac.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare consequat tortor quis porttitor. Aliquam sed fringilla arcu. Maecenas sit amet cursus augue. Donec felis eros, luctus at blandit ac.</p>
+				<p><a href="#" class="more">Learn more</a></p>
+			</div>
+			<div class="col col-last">
+				{{if(x):}}
+				<h2>Details of your Consignment are</h2>
+<h3>			{{if(x[0]['Current_location']):}}
+				<b>Current Location : {{=x[0]['Current_location']}}</b><br>
+				{{else:}}
+				<b>Current Location will be updated soon</b><br>
+				{{pass}}
+				<b>Logistics Type : {{=x[0]['Logistic_Type']}}</b><br>
+				<b>Service : {{=x[0]['Service']}}</b><br>
+				{{if(x[0]['Expected_Delivery_Date']):}}
+				<b>Expected Delivery Date : {{=x[0]['Expected_Delivery_Date']}}</b><br>
+				{{else:}}
+				<b>Expected Delivery Date will be updated soon</b><br>
+				{{pass}}
+			</h3>
+			{{else:}}
+			<b><h3>Please Enter valid Consignment Id</h3></b>
+			{{pass}}
+				
+			</div>
+			<div class="cl">&nbsp;</div>
+		</div>
+		<!-- END Two Column Content -->
+	</div>
+	<!-- END Main -->
+	<!-- Footer -->
+	<div id="footer">
+		<p class="right">&copy; 2013 - &nbsp; Design by <a href="http://web.iiit.ac.in/~saurabh.kathpalia" target="_blank" title="IIIT Hyderabad">Saurabh Kathpalia</a></p>
+		<a href="#">Contact</a></p>
+		<div class="cl">&nbsp;</div>
+	</div>
+	<!-- END Footer -->
+	<br />
+</div>
+</body>
+</html>
+<script>
+	$(window).load(function() {
+  $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+});
+</script>

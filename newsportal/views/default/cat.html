@@ -1,0 +1,20 @@
+
+{{extend 'layout.html'}}
+news under the category of {{=a}}<br/>
+{{k=1}}
+{{if r:}}
+{{for i in range(len(r)):}}
+
+{{=k}}. 
+<a href="{{=URL('cat1?p=%s'%r[i].heading)}}">{{=r[i].heading}}</a><br/>
+&nbsp;&nbsp;&nbsp;
+Rating:-{{=r[i].rating}}<br/>
+&nbsp;&nbsp;&nbsp;
+Posted on:-{{=r[i].posttime}}<br/>
+&nbsp;&nbsp;&nbsp;
+Posted by:-{{=r[i].posted_by}}<br/>
+{{k=k+1}}
+{{pass}}
+{{else:}}
+no news under this category
+{{pass}}

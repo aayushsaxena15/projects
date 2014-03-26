@@ -1,0 +1,414 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.IndexError'> list index out of range"
+p3
+sS'layer'
+p4
+S'/home/saurabh/web2py/applications/Comprehensive_Logistics_Management_Portal/controllers/default.py'
+p5
+sS'code'
+p6
+S'# -*- coding: utf-8 -*-\n# this file is released under public domain and you can use without limitations\n\n#########################################################################\n## This is a sample controller\n## - index is the default action of any application\n## - user is required for authentication and authorization\n## - download is for downloading files uploaded in the db (does streaming)\n## - call exposes all registered services (none by default)\n#########################################################################\n\n\ndef index():\n    """\n    example action using the internationalization operator T and flash\n    rendered by views/default/index.html or views/generic.html\n\n    if you need a simple wiki simple replace the two lines below with:\n    return auth.wiki()\n    """\n    return dict(message=T(\'Hello World\'))\n\n\ndef user():\n    """\n    exposes:\n    http://..../[app]/default/user/login\n    http://..../[app]/default/user/logout\n    http://..../[app]/default/user/register\n    http://..../[app]/default/user/profile\n    http://..../[app]/default/user/retrieve_password\n    http://..../[app]/default/user/change_password\n    http://..../[app]/default/user/manage_users (requires membership in \n    use @auth.requires_login()\n        @auth.requires_membership(\'group name\')\n        @auth.requires_permission(\'read\',\'table name\',record_id)\n    to decorate functions that need access control\n    """\n    return dict(form=auth())\n\n@cache.action()\ndef download():\n    """\n    allows downloading of uploaded files\n    http://..../[app]/default/download/[filename]\n    """\n    return response.download(request, db)\n\n\ndef call():\n    """\n    exposes services. for example:\n    http://..../[app]/default/call/jsonrpc\n    decorate with @services.jsonrpc the functions to expose\n    supports xml, json, xmlrpc, jsonrpc, amfrpc, rss, csv\n    """\n    return service()\n\n\n@auth.requires_signature()\ndef data():\n    """\n    http://..../[app]/default/data/tables\n    http://..../[app]/default/data/create/[table]\n    http://..../[app]/default/data/read/[table]/[id]\n    http://..../[app]/default/data/update/[table]/[id]\n    http://..../[app]/default/data/delete/[table]/[id]\n    http://..../[app]/default/data/select/[table]\n    http://..../[app]/default/data/search/[table]\n    but URLs must be signed, i.e. linked with\n      A(\'table\',_href=URL(\'data/tables\',user_signature=True))\n    or with the signed load operator\n      LOAD(\'default\',\'data.load\',args=\'tables\',ajax=True,user_signature=True)\n    """\n    return dict(form=crud())\n@auth.requires_login()\ndef place_order():\n    if request.post_vars[\'source_city\']:\n        """print request.post_vars;\n        print request.post_vars[\'service\']\n        print request.post_vars[\'source_city\']\n        print request.post_vars[\'Destination_city\']\n        """\n        a=db((db.Location1.Source_City==request.post_vars[\'source_city\'])&( db.Location1.Destination_City==request.post_vars[\'destination_city\']) ).select()\n        #print a[0].id\n        print request.post_vars[\'type\']\n        db.Logistics.insert(Service=request.post_vars[\'service\'],\n            location_id=a[0].id,\n            Logistic_Type=request.post_vars[\'type\'],\n            Mode_of_Payment=request.post_vars[\'mode_of_payment\'],\n            Weight=request.post_vars[\'weight\'],\n            customer_id=auth.user.id,\n            Source_address=request.post_vars[\'source_address\'],\n            Destination_address=request.post_vars[\'destination_address\'])\n        session.flash=\'Order Placed\'\n        mail_body=\'Hi ,%s\\nYou have successfully placed order for your consignment\\nDetails are :\\nThank You\'%(auth.user.first_name,)\n        mail.send(\'sksaurabhkathpalia@gmail.com\', \'Booking Confirmation Mail\', mail_body)\n        redirect(URL(\'index\'))\n    return locals()\n\ndef track_consignment():\n    consignment_id=request.vars.consignment_id\n    x=db(db.Logistics.id==consignment_id).select(db.Logistics.ALL)\n    lid=x[0][\'location_id\']\n    loc=db(db.Location1.id==lid).select(db.Location1.ALL)\n    return dict(x=x,loc=loc)\n\ndef estimate_cost():\n    return locals()\n\ndef estimate():\n    source_city=request.vars.source_city;\n    destination_city=request.vars.destination_city;\n    print source_city\n    print destination_city\n    logistic_type=request.vars.logistic_type\n    weight=request.vars.weight\n    if(logistic_type==\'Document\'):\n        weight=0\n    s="<h3>Enter Weight</h3>"\n    if(weight==""):\n        return s\n    mode_of_payment=request.vars.mode_of_payment\n    service=request.vars.service\n    print service\n    print logistic_type,mode_of_payment\n    c1="<h3>Estimated Cost of consignment &nbsp;&nbsp; "\n    cost=db((db.Location1.Source_City==source_city )&(db.Location1.Destination_City==destination_city)).select(db.Location1.standard_cost)\n    cost=(cost[0][\'standard_cost\'])\n    if(weight!=None):\n        weight=int(weight)\n    if(logistic_type==\'Non-Document\'):\n        cost+=weight*25\n    if(mode_of_payment!=\'Self Service(You go to dealer to pay)\'):\n        cost+=30\n    if(service==\'Airport to Airport\'):\n        cost+=50\n    elif (service==\'Domestic Priority\'):\n        cost+=30\n    elif(service==\'Domestic Priority 1030\'):\n        cost+=35\n    elif(service==\'Door to Door\'):\n        cost+=30\n    cost="<br/><center>Rs. "+str(cost) +"</center>"\n    c1+=cost\n    cost=c1\n    #print c2\n  #  ret="<script>" + "function cost() { alert(\'"\n    ret=""\n    ret+=cost\n   # ret+="\');"\n   # ret+="}"\n  #  ret+="cost();"\n  #  ret+="</script>"\n    ret+="</h3>"\n    print ret\n    return ret\n\ndef enter_id():\n    return locals();\n\ndef check_dest():\n    source_city=request.vars.source_city;\n #   print source_city\n   # soure_city=source_city[0]\n    a=[]\n    ret=db(db.Location1.Source_City==source_city).select(db.Location1.Destination_City)\n    for i in ret:\n        a.append(i[\'Destination_City\'])\n    a=set(a)\n    result=""\n    result+="<link rel=\\"stylesheet\\" href=\\"/Comprehensive_Logistics_Management_Portal/static/chosen/chosen.css\\"><style type=\\"text/css\\" media=\\"all\\">.chosen-rtl .chosen-drop { left: -9000px; }</style>"\n    result+="<select class=\\"chosen-select\\" name=\\"destination_city\\">"\n    for i in a:\n        result += "<option value=\\"" + str(i) + "\\"" + ">" + i + "</option>"\n    result+="</select>"\n    #result+="<script src=\\"https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js\\" type=\\"text/javascript\\"></script>\n    result+="<script src=\\"/Comprehensive_Logistics_Management_Portal/static/chosen/chosen.jquery.js\\" type=\\"text/javascript\\"></script>"\n    result+="  <script type=\\"text/javascript\\">var config = {\'.chosen-select\': {},\'.chosen-select-deselect\'  : {allow_single_deselect:true},\'.chosen-select-no-single\' : {disable_search_threshold:10}, \'.chosen-select-no-results\': {no_results_text:\'Oops, nothing found!\'},\'.chosen-select-width\': {width:\\"95%\\"}}\\n  for (var selector in config) {$(selector).chosen(config[selector]);}</script>"  \n    #print result\n    return result\n\n\n\ndef adminupdate():\n    v=request.post_vars[\'submit\']\n    print v;\n    if v:\n        #print request.post_vars;\n        #print request.post_vars[\'current\'],request.post_vars[\'expected\'];\n        cur=request.post_vars[\'current\']\n        order=request.post_vars[\'orderid\']\n        d=request.post_vars[\'expected\']        \n        print d,cur,order;\n        db(db.Logistics.id==order).update(Expected_Delivery_Date=d,Current_location=cur)  \n        response.flash="updated"\n    return locals()\n\n\n\ndef showorderid():\n    #pint \'aabhas\'\n    var=request.vars.orderid;\n    a=db(db.Logistics.id==var).select()\n    #print a\n    s=""\n    if len(a)==0:\n        s="Enter a valid id"\n    else:\n        a=a[0]\n        s+="id : "+str(a.id)+ "<br/>"\n        s+="Source_address :" + str(a.Source_address) +"<br/>"\n        s+="Destination_address :" + str(a.Destination_address) +"<br/>"\n        s+="Logistic_Type :" +str(a.Logistic_Type) +"<br/>"\n        if a.Logistic_Type!=\'Document\':\n            print \'aabhas_majumdar\'\n            s+="Weight :" +str(a.Weight) +"<br/>"\n        s+="Mode_of_Payment :" +str(a.Mode_of_Payment) +"<br/>"\n        s+="Service :" +str(a.Service) +"<br/>"\n        loc=db(db.Location1.id==a.location_id).select()\n        loc=loc[0];\n        s+="Destination city :" + str(loc.Destination_City) +"<br/>"\n        s+="Source City :" + str(loc.Source_City) +"<br/>"\n        cus=db(a.customer_id==db.auth_user.id).select()\n        s+="Username :" + str(cus[0].username) +"<br/>" \n        s+="Current Location :" +str(a.Current_location) +"<br/>"\n        s+="Expected Delivery Date :" +str(a.Expected_Delivery_Date) +"<br/>"\n        #s+="<form method =\\"POST\\" action=\\"\\" >"\n        #s+="<form action=\\"#\\" enctype=\\"multipart/form-data\\" method=\\"post\\">"\n        if a.Current_location==None:\n            a.Current_location=\'\'\n        s+="Current Location &nbsp;&nbsp; : &nbsp;&nbsp;<input value=\\"%s\\" name=\\"current\\" type=\\"text\\" />"%a.Current_location\n        if a.Expected_Delivery_Date==None:\n            a.Expected_Delivery_Date=\'\'\n        #s+="<br/> Expected Delivery Date&nbsp;&nbsp; : &nbsp;&nbsp;<input class=\\"date\\" placeholder=\\"yyyy-mm-dd\\" type=\\\'text\\\' value=\\"%s\\" name=\\"expected\\" />"%a.Expected_Delivery_Date\n        #s+="<tr id=\\>"Logistics_Expected_Delivery_Date__row\\"><td class=\\"w2p_fl\\"><label for=\\"Logistics_Expected_Delivery_Date\\" id=\\"Logistics_Expected_Delivery_Date__label\\">Expected Delivery Date: </label></td><td class=\\"w2p_fw\\"><input class=\\"date\\" id=\\"Logistics_Expected_Delivery_Date\\" name=\\"Expected_Delivery_Date\\" value=\\"\\" type=\\"text\\"></td><td class=\\"w2p_fc\\"></td></tr>"\n        s+="<script src=\\"/Comprehensive_Logistics_Management_Portal/static/js/jquery.js\\" type=\\"text/javascript\\"></script><link href=\\"/Comprehensive_Logistics_Management_Portal/static/css/calendar.css\\" rel=\\"stylesheet\\" type=\\"text/css\\" /><script src=\\"/Comprehensive_Logistics_Management_Portal/static/js/calendar.js\\" type=\\"text/javascript\\"></script><script src=\\"/Comprehensive_Logistics_Management_Portal/static/js/web2py.js\\" type=\\"text/javascript\\"></script><link href=\\"/Comprehensive_Logistics_Management_Portal/static/css/web2py.css\\" rel=\\"stylesheet\\" type=\\"text/css\\" /><link href=\\"/Comprehensive_Logistics_Management_Portal/static/css/bootstrap.min.css\\" rel=\\"stylesheet\\" type=\\"text/css\\" /><link href=\\"/Comprehensive_Logistics_Management_Portal/static/css/bootstrap-responsive.min.css\\" rel=\\"stylesheet\\" type=\\"text/css\\" /><link href=\\"/Comprehensive_Logistics_Management_Portal/static/css/web2py_bootstrap.css\\" rel=\\"stylesheet\\" type=\\"text/css\\" />"\n        s+="<table><tr><td class=\\"w2p_fc\\"></td></tr><tr id=\\"Logistics_Expected_Delivery_Date__row\\"><td class=\\"w2p_fl\\"><label for=\\"Logistics_Expected_Delivery_Date\\" id=\\"Logistics_Expected_Delivery_Date__label\\">Expected Delivery Date: </label></td><td class=\\"w2p_fw\\"><input class=\\"date\\" id=\\"expected\\" name=\\"expected\\" type=\\"text\\" value=\\"%s\\" /></td></table>"%a.Expected_Delivery_Date\n        \n        #s+="<table>"\n        s+="<br/><input type=\\"submit\\" name=\\\'submit\\\' value=\\"update\\" class=\\"btn btn-primary / \\">"\n        #s+="</div>"\n        #s+="</table>"\n        #s+="</form>"\n        #s+= "" + str(a.id) +"<br/>"\n    form=SQLFORM(db.Logistics)\n    return  XML(s)\n    #return dict(form=form)\n\n\ndef showorderid_1():\n    #pint \'aabhas\'\n    var=request.vars.orderid;\n    a=db(db.Logistics.id==var).select()\n    #print a\n    s=""\n    if len(a)==0:\n        s="Enter a valid id"\n    else:\n        a=a[0]\n        loc=db(db.Location1.id==a.location_id).select()\n        loc=loc[0];\n        cus=db(a.customer_id==db.auth_user.id).select()\n        s+="Username :" + str(cus[0].username) +"<br/>" \n        s+="Source City :" + str(loc.Source_City) +"<br/>"\n        s+="Destination city :" + str(loc.Destination_City) +"<br/>"\n        \n        s+="Current Location :" +str(a.Current_location) +"<br/>"\n        s+="Expected Delivery Date :" +str(a.Expected_Delivery_Date) +"<br/>"\n        #s+="<form method =\\"POST\\" action=\\"\\" >"\n        #s+="<form action=\\"#\\" enctype=\\"multipart/form-data\\" method=\\"post\\">"\n    \n    return  XML(s)\n    #return dict(form=form)\n\n\n\n@auth.requires_login()\ndef view_consignment():\n    a=db(db.Logistics.customer_id==auth.user.id).select()\n    b=\'aabhas\'\n    return dict(a=a)\n\n\ndef test():\n    form=SQLFORM(db.Logistics)\n    a=1\n    print dir(form.hidden_fields);\n    if form.process().accepted and a==  0:\n        print dir(form)\n        print \n        print dir(form.vars)\n        print \'\\n\',form.vars;\n    return locals()\n\n\n\n@auth.requires_login()\ndef testmail():\n    print auth.user.email;\n    mail = auth.settings.mailer\n    mail.settings.server = \'aabhas_majumdar@yahoo.com:25\'\n    mail.settings.sender = \'admin@logistic.com\'\n    mail.settings.login = \'admin:password\'\n    a=mail.send(to=[\'noreply@example.com\'],\n          subject=\'hello\',\n          # If reply_to is omitted, then mail.settings.sender is used\n          reply_to=\'us@example.com\',\n          message=\'hi there\')\n    print a;\n    return locals()\n\n\ndef cancel_consignment():\n    x=request.vars.cancel_id\n    print x\n    db(db.Logistics.id==x).delete()\n    redirect(URL(\'default\',\'view_consignment\'))\n\n\n\ndef adminadd():\n    form=SQLFORM(db.Location1)\n    if form.process().accepted:\n        session.flash="new location added"\n        redirect(URL(\'index\'))\n    return locals()\n\nresponse._vars=response._caller(estimate)\n'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__hash__'
+p12
+S"<method-wrapper '__hash__' of exceptions.IndexError object>"
+p13
+sS'__setattr__'
+p14
+S"<method-wrapper '__setattr__' of exceptions.IndexError object>"
+p15
+sS'__reduce_ex__'
+p16
+S'<built-in method __reduce_ex__ of exceptions.IndexError object>'
+p17
+sS'__getslice__'
+p18
+S"<method-wrapper '__getslice__' of exceptions.IndexError object>"
+p19
+sS'__getitem__'
+p20
+S"<method-wrapper '__getitem__' of exceptions.IndexError object>"
+p21
+sS'__setstate__'
+p22
+S'<built-in method __setstate__ of exceptions.IndexError object>'
+p23
+sS'__reduce__'
+p24
+S'<built-in method __reduce__ of exceptions.IndexError object>'
+p25
+sS'__str__'
+p26
+S"<method-wrapper '__str__' of exceptions.IndexError object>"
+p27
+sS'__format__'
+p28
+S'<built-in method __format__ of exceptions.IndexError object>'
+p29
+sS'__getattribute__'
+p30
+S"<method-wrapper '__getattribute__' of exceptions.IndexError object>"
+p31
+sS'__class__'
+p32
+S"<type 'exceptions.IndexError'>"
+p33
+sS'__unicode__'
+p34
+S'<built-in method __unicode__ of exceptions.IndexError object>'
+p35
+sS'__delattr__'
+p36
+S"<method-wrapper '__delattr__' of exceptions.IndexError object>"
+p37
+sS'__subclasshook__'
+p38
+S'<built-in method __subclasshook__ of type object>'
+p39
+sS'__repr__'
+p40
+S"<method-wrapper '__repr__' of exceptions.IndexError object>"
+p41
+sS'args'
+p42
+S"('list index out of range',)"
+p43
+sS'__dict__'
+p44
+S'{}'
+p45
+sS'__sizeof__'
+p46
+S'<built-in method __sizeof__ of exceptions.IndexError object>'
+p47
+sS'__doc__'
+p48
+S"'Sequence index out of range.'"
+p49
+sS'__init__'
+p50
+S"<method-wrapper '__init__' of exceptions.IndexError object>"
+p51
+sS'__new__'
+p52
+S'<built-in method __new__ of type object>'
+p53
+ssS'evalue'
+p54
+S'list index out of range'
+p55
+sS'request'
+p56
+cgluon.html
+XML_unpickle
+p57
+(S's\xc8g\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">ajax</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">application</td><td style="vertical-align:top;">:</td><td><div>Comprehensive_Logistics_Management_Portal</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cid</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">controller</td><td style="vertical-align:top;">:</td><td><div>default</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">registered</td><td style="vertical-align:top;">:</td><td><div>yes<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_admin</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-ebfa269c-0cbf-4ff4-afc3-1a887dcbb9a6<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_comprehensive_logistics_management_portal</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-bdbcb8ce-5cba-477f-aade-8527c4f97e91<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_welcome</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-cde1adfe-68a2-4a17-b745-e2ba89134c8b<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">env</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">CONTENT_LENGTH</td><td style="vertical-align:top;">:</td><td><div>158</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">CONTENT_TYPE</td><td style="vertical-align:top;">:</td><td><div>application/x-www-form-urlencoded; charset=UTF-8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT</td><td style="vertical-align:top;">:</td><td><div>*/*</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_ENCODING</td><td style="vertical-align:top;">:</td><td><div>gzip,deflate,sdch</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_LANGUAGE</td><td style="vertical-align:top;">:</td><td><div>en-US,en;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CONNECTION</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CONTENT_LENGTH</td><td style="vertical-align:top;">:</td><td><div>158</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CONTENT_TYPE</td><td style="vertical-align:top;">:</td><td><div>application/x-www-form-urlencoded; charset=UTF-8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_COOKIE</td><td style="vertical-align:top;">:</td><td><div>registered=yes; session_id_welcome=127.0.0.1-cde1adfe-68a2-4a17-b745-e2ba89134c8b; session_id_admin=127.0.0.1-ebfa269c-0cbf-4ff4-afc3-1a887dcbb9a6; session_id_comprehensive_logistics_management_portal=127.0.0.1-bdbcb8ce-5cba-477f-aade-8527c4f97e91</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_HOST</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ORIGIN</td><td style="vertical-align:top;">:</td><td><div>http://127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_REFERER</td><td style="vertical-align:top;">:</td><td><div>http://127.0.0.1:8000/Comprehensive_Logistics_Management_Portal/default/estimate_cost</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_USER_AGENT</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_X_REQUESTED_WITH</td><td style="vertical-align:top;">:</td><td><div>XMLHttpRequest</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">PATH_INFO</td><td style="vertical-align:top;">:</td><td><div>/Comprehensive_Logistics_Management_Portal/default/estimate</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">QUERY_STRING</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_ADDR</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_PORT</td><td style="vertical-align:top;">:</td><td><div>59615</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REQUEST_METHOD</td><td style="vertical-align:top;">:</td><td><div>POST</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SCRIPT_NAME</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_NAME</td><td style="vertical-align:top;">:</td><td><div>saurabh-Inspiron-N4050</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PORT</td><td style="vertical-align:top;">:</td><td><div>8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PROTOCOL</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_SOFTWARE</td><td style="vertical-align:top;">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;/home/saurabh/web2py/applications/Comprehensive_Logistics_Management_Portal/&#x27;, &#x27;/home/saurabh/web2py/applications/admin/&#x27;, &#x27;/home/saurabh/web2py/applications/welcome/&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>/home/saurabh/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_options</td><td style="vertical-align:top;">:</td><td><div>&lt;Values at 0x9c1f22c: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;with_scheduler&#x27;: False, &#x27;ips&#x27;: [&#x27;127.0.1.1&#x27;], &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;port&#x27;: 8000, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;saurabh-Inspiron-N4050&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: False, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;/home/saurabh/web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;import_models&#x27;: False, &#x27;winservice&#x27;: &#x27;&#x27;, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;profiler_dir&#x27;: None, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;interfaces&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;scheduler_groups&#x27;: None, &#x27;password&#x27;: &#x27;&lt;ask&gt;&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;minthreads&#x27;: None, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">content_length</td><td style="vertical-align:top;">:</td><td><div>158</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">content_type</td><td style="vertical-align:top;">:</td><td><div>application/x-www-form-urlencoded; charset=UTF-8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>/home/saurabh/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept</td><td style="vertical-align:top;">:</td><td><div>*/*</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_encoding</td><td style="vertical-align:top;">:</td><td><div>gzip,deflate,sdch</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_language</td><td style="vertical-align:top;">:</td><td><div>en-US,en;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_connection</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_content_length</td><td style="vertical-align:top;">:</td><td><div>158</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_content_type</td><td style="vertical-align:top;">:</td><td><div>application/x-www-form-urlencoded; charset=UTF-8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_cookie</td><td style="vertical-align:top;">:</td><td><div>registered=yes; session_id_welcome=127.0.0.1-cde1adfe-68a2-4a17-b745-e2ba89134c8b; session_id_admin=127.0.0.1-ebfa269c-0cbf-4ff4-afc3-1a887dcbb9a6; session_id_comprehensive_logistics_management_portal=127.0.0.1-bdbcb8ce-5cba-477f-aade-8527c4f97e91</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_host</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_origin</td><td style="vertical-align:top;">:</td><td><div>http://127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_referer</td><td style="vertical-align:top;">:</td><td><div>http://127.0.0.1:8000/Comprehensive_Logistics_Management_Portal/default/estimate_cost</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_user_agent</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_x_requested_with</td><td style="vertical-align:top;">:</td><td><div>XMLHttpRequest</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>127.0.1.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>saurabh-Inspiron-N4050</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>127.0.0.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path_info</td><td style="vertical-align:top;">:</td><td><div>/Comprehensive_Logistics_Management_Portal/default/estimate</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">query_string</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_addr</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_port</td><td style="vertical-align:top;">:</td><td><div>59615</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_method</td><td style="vertical-align:top;">:</td><td><div>POST</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_uri</td><td style="vertical-align:top;">:</td><td><div>/Comprehensive_Logistics_Management_Portal/default/estimate</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">script_name</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_name</td><td style="vertical-align:top;">:</td><td><div>saurabh-Inspiron-N4050</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_port</td><td style="vertical-align:top;">:</td><td><div>8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_protocol</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_software</td><td style="vertical-align:top;">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_path</td><td style="vertical-align:top;">:</td><td><div>/home/saurabh/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.7.4-stable+timestamp.2013.10.14.15.16.29</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0xb734e0d0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x9bd771c&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.input</td><td style="vertical-align:top;">:</td><td><div>&lt;socket._fileobject object at 0xace3dc6c&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multithread</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.url_scheme</td><td style="vertical-align:top;">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0xb734e0d0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x9bd771c&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_input</td><td style="vertical-align:top;">:</td><td><div>&lt;socket._fileobject object at 0xace3dc6c&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multithread</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_url_scheme</td><td style="vertical-align:top;">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">extension</td><td style="vertical-align:top;">:</td><td><div>html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">folder</td><td style="vertical-align:top;">:</td><td><div>/home/saurabh/web2py/applications/Comprehensive_Logistics_Management_Portal/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">function</td><td style="vertical-align:top;">:</td><td><div>estimate</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">global_settings</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;/home/saurabh/web2py/applications/Comprehensive_Logistics_Management_Portal/&#x27;, &#x27;/home/saurabh/web2py/applications/admin/&#x27;, &#x27;/home/saurabh/web2py/applications/welcome/&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>/home/saurabh/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_options</td><td style="vertical-align:top;">:</td><td><div>&lt;Values at 0x9c1f22c: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;with_scheduler&#x27;: False, &#x27;ips&#x27;: [&#x27;127.0.1.1&#x27;], &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;port&#x27;: 8000, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;saurabh-Inspiron-N4050&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: False, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;/home/saurabh/web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;import_models&#x27;: False, &#x27;winservice&#x27;: &#x27;&#x27;, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;profiler_dir&#x27;: None, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;interfaces&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;scheduler_groups&#x27;: None, &#x27;password&#x27;: &#x27;&lt;ask&gt;&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;minthreads&#x27;: None, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>/home/saurabh/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>127.0.1.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>saurabh-Inspiron-N4050</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>127.0.0.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.7.4-stable+timestamp.2013.10.14.15.16.29</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_https</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_local</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_restful</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">now</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2013, 11, 30, 2, 48, 33, 830279)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_args</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_extension</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">url</td><td style="vertical-align:top;">:</td><td><div>/Comprehensive_Logistics_Management_Portal/default/estimate</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">utcnow</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2013, 11, 29, 21, 18, 33, 830301)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">uuid</td><td style="vertical-align:top;">:</td><td><div>Comprehensive_Logistics_Management_Portal/127.0.0.1.2013-11-30.02-48-33.5ce0dc81-d14a-42b4-a206-1cc02537c742</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi</td><td style="vertical-align:top;">:</td><td><div>&lt;gluon.main.LazyWSGI object at 0xad16694c&gt;</div></td></tr></table></div>'
+tRp58
+sS'frames'
+p59
+(lp60
+(dp61
+S'file'
+p62
+S'/home/saurabh/web2py/gluon/restricted.py'
+p63
+sS'dump'
+p64
+(dp65
+S'environment'
+p66
+S"{'A': <class 'gluon.html.A'>, 'ANY_OF': <class 'gluon.validators.ANY_OF'>, 'Auth': <class 'gluon.tools.Auth'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'BUTTON': <class 'gluon.html.BUTTON'>, 'CAT': <class 'gluon.html.CAT'>, 'CENTER': <class 'gluon.html.CENTER'>, ...}"
+p67
+sS'ccode'
+p68
+S'<code object <module> at 0xad5b51d0, file "/home...nagement_Portal/controllers/default.py", line 13>'
+p69
+ssS'lnum'
+p70
+I217
+sS'lines'
+p71
+(dp72
+I212
+S'    try:'
+p73
+sI213
+S'        if isinstance(code, types.CodeType):'
+p74
+sI214
+S'            ccode = code'
+p75
+sI215
+S'        else:'
+p76
+sI216
+S'            ccode = compile2(code, layer)'
+p77
+sI217
+S'        exec ccode in environment'
+p78
+sI218
+S'    except HTTP:'
+p79
+sI219
+S'        raise'
+p80
+sI220
+S'    except RestrictedError:'
+p81
+sI221
+S'        # do not encapsulate (obfuscate) the original RestrictedError'
+p82
+ssS'call'
+p83
+S"(code='# -*- coding: utf-8 -*-\\n# this file is released ...als()\\n\\nresponse._vars=response._caller(estimate)\\n', environment={'A': <class 'gluon.html.A'>, 'ANY_OF': <class 'gluon.validators.ANY_OF'>, 'Auth': <class 'gluon.tools.Auth'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'BUTTON': <class 'gluon.html.BUTTON'>, 'CAT': <class 'gluon.html.CAT'>, 'CENTER': <class 'gluon.html.CENTER'>, ...}, layer='/home/saurabh/web2py/applications/Comprehensive_Logistics_Management_Portal/controllers/default.py')"
+p84
+sS'func'
+p85
+S'restricted'
+p86
+sa(dp87
+g62
+S'/home/saurabh/web2py/applications/Comprehensive_Logistics_Management_Portal/controllers/default.py'
+p88
+sg64
+(dp89
+sg70
+I329
+sg71
+(dp90
+I320
+S''
+sI321
+S''
+sI322
+S'def adminadd():'
+p91
+sI323
+S'    form=SQLFORM(db.Location1)'
+p92
+sI324
+S'    if form.process().accepted:'
+p93
+sI325
+S'        session.flash="new location added"'
+p94
+sI326
+S"        redirect(URL('index'))"
+p95
+sI327
+S'    return locals()'
+p96
+sI318
+S"    redirect(URL('default','view_consignment'))"
+p97
+sI319
+S''
+ssg83
+S'()'
+p98
+sg85
+S'<module>'
+p99
+sa(dp100
+g62
+S'/home/saurabh/web2py/gluon/globals.py'
+p101
+sg64
+(dp102
+S'self'
+p103
+S'undefined'
+p104
+sS'f'
+S'<function estimate>'
+p105
+ssg70
+I372
+sg71
+(dp106
+I367
+S'        self.menu = []             # used by the default view layout'
+p107
+sI368
+S'        self.files = []            # used by web2py_ajax.html'
+p108
+sI369
+S'        self.generic_patterns = []  # patterns to allow generic views'
+p109
+sI370
+S"        self.delimiters = ('{{', '}}')"
+p110
+sI371
+S'        self._vars = None'
+p111
+sI372
+S'        self._caller = lambda f: f()'
+p112
+sI373
+S'        self._view_environment = None'
+p113
+sI374
+S'        self._custom_commit = None'
+p114
+sI375
+S'        self._custom_rollback = None'
+p115
+sI376
+S''
+ssg83
+S'(f=<function estimate>)'
+p116
+sg85
+S'<lambda>'
+p117
+sa(dp118
+g62
+S'/home/saurabh/web2py/applications/Comprehensive_Logistics_Management_Portal/controllers/default.py'
+p119
+sg64
+(dp120
+S'cost'
+p121
+S'<Rows (0)>'
+p122
+ssg70
+I129
+sg71
+(dp123
+I128
+S'    cost=db((db.Location1.Source_City==source_city )&(db.Location1.Destination_City==destination_city)).select(db.Location1.standard_cost)'
+p124
+sI129
+S"    cost=(cost[0]['standard_cost'])"
+p125
+sI130
+S'    if(weight!=None):'
+p126
+sI131
+S'        weight=int(weight)'
+p127
+sI132
+S"    if(logistic_type=='Non-Document'):"
+p128
+sI133
+S'        cost+=weight*25'
+p129
+sI124
+S'    service=request.vars.service'
+p130
+sI125
+S'    print service'
+p131
+sI126
+S'    print logistic_type,mode_of_payment'
+p132
+sI127
+S'    c1="<h3>Estimated Cost of consignment &nbsp;&nbsp; "'
+p133
+ssg83
+S'()'
+p134
+sg85
+S'estimate'
+p135
+sa(dp136
+g62
+S'/home/saurabh/web2py/gluon/dal.py'
+p137
+sg64
+(dp138
+S'i'
+S'0'
+sS'self'
+p139
+S'<Rows (0)>'
+p140
+sS'self.records'
+p141
+S'[]'
+p142
+sS'row'
+p143
+g104
+ssg70
+I10391
+sg71
+(dp144
+I10386
+S''
+sI10387
+S'    def __getslice__(self, a, b):'
+p145
+sI10388
+S'        return Rows(self.db,self.records[a:b],self.colnames,compact=self.compact)'
+p146
+sI10389
+S''
+sI10390
+S'    def __getitem__(self, i):'
+p147
+sI10391
+S'        row = self.records[i]'
+p148
+sI10392
+S'        keys = row.keys()'
+p149
+sI10393
+S"        if self.compact and len(keys) == 1 and keys[0] != '_extra':"
+p150
+sI10394
+S'            return row[row.keys()[0]]'
+p151
+sI10395
+S'        return row'
+p152
+ssg83
+S'(self=<Rows (0)>, i=0)'
+p153
+sg85
+g20
+sasS'pyver'
+p154
+S'Python 2.7.3: /usr/bin/python (prefix: /usr)'
+p155
+sS'session'
+p156
+g57
+(S's{\t\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">auth</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">expiration</td><td style="vertical-align:top;">:</td><td><div>3600</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">hmac_key</td><td style="vertical-align:top;">:</td><td><div>bbe2360b-81da-4cbe-ac49-09fc8e7672ff</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">last_visit</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2013, 11, 30, 2, 42, 40, 884484)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remember</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">user</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">email</td><td style="vertical-align:top;">:</td><td><div>sksaurabhkathpalia@gmail.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">first_name</td><td style="vertical-align:top;">:</td><td><div>aabhas</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">id</td><td style="vertical-align:top;">:</td><td><div>2L</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">last_name</td><td style="vertical-align:top;">:</td><td><div>majumdar</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">registration_id</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">registration_key</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">reset_password_key</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">username</td><td style="vertical-align:top;">:</td><td><div>aabhas</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">user_groups</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">2</td><td style="vertical-align:top;">:</td><td><div>user_2</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">flash</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr></table></div>'
+tRp157
+sS'etype'
+p158
+S"<type 'exceptions.IndexError'>"
+p159
+sS'date'
+p160
+S'Sat Nov 30 02:48:33 2013'
+p161
+sS'response'
+p162
+g57
+(S's\x924\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">body</td><td style="vertical-align:top;">:</td><td><div>&lt;cStringIO.StringO object at 0xad59f720&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_comprehensive_logistics_management_portal</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-bdbcb8ce-5cba-477f-aade-8527c4f97e91<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div>/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">delimiters</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>{{</div></td></tr><tr><td><div>}}</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">files</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">flash</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generic_patterns</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>*</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">google_analytics_id</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">headers</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">X-Powered-By</td><td style="vertical-align:top;">:</td><td><div>web2py</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">logo</td><td style="vertical-align:top;">:</td><td><div><a class="brand" data-w2p_disable_with="default" href="http://www.web2py.com/"><b>web<span>2</span>py</b>&trade;&nbsp;</a></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">menu</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div><table><tr><td><div>Home</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/Comprehensive_Logistics_Management_Portal/default/index</div></td></tr><tr><td><div><table></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div><span class="highlighted">web2py</span></div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>My Sites</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/site</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>This App</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/design/Comprehensive_Logistics_Management_Portal</div></td></tr><tr><td><div>[(&lt;lazyT &#x27;Controller&#x27;&gt;, False, &#x27;/admin/default/edit/Comprehensive_Logistics_Management_Portal/controllers/default.py&#x27;), (&lt;lazyT &#x27;View&#x27;&gt;, False, &#x27;/admin/default/edit/Comprehensive_Logistics_Management_Portal/views/default/estimate.html&#x27;), (&lt;lazyT &#x27;Layout&#x27;&gt;, False, &#x27;/admin/default/edit/Comprehensive_Logistics_Management_Portal/views/layout.html&#x27;), (&lt;lazyT &#x27;Stylesheet&#x27;&gt;, False, &#x27;/admin/default/edit/Comprehensive_Logistics_Management_Portal/static/css/web2py.css&#x27;), (&lt;lazyT &#x27;DB Model&#x27;&gt;, False, &#x27;/admin/default/edit/Comprehensive_Logistics_Management_Portal/models/db.py&#x27;), (&lt;lazyT &#x27;Menu Model&#x27;&gt;, False, &#x27;/admin/default/edit/Comprehensive_Logistics_Management_Portal/models/menu.py&#x27;), (&lt;lazyT &#x27;Database&#x27;&gt;, False, &#x27;/Comprehensive_Logistics_Management_Portal/appadmin/index&#x27;), (&lt;lazyT &#x27;Errors&#x27;&gt;, False, &#x27;/admin/default/errors/Comprehensive_Logistics_Management_Portal&#x27;), (&lt;lazyT &#x27;About&#x27;&gt;, False, &#x27;/admin/default/about/Comprehensive_Logistics_Management_Portal&#x27;)]</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>web2py.com</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com</div></td></tr><tr><td><div>[(&lt;lazyT &#x27;Download&#x27;&gt;, False, &#x27;http://www.web2py.com/examples/default/download&#x27;), (&lt;lazyT &#x27;Support&#x27;&gt;, False, &#x27;http://www.web2py.com/examples/default/support&#x27;), (&lt;lazyT &#x27;Demo&#x27;&gt;, False, &#x27;http://web2py.com/demo_admin&#x27;), (&lt;lazyT &#x27;Quick Examples&#x27;&gt;, False, &#x27;http://web2py.com/examples/default/examples&#x27;), (&lt;lazyT &#x27;FAQ&#x27;&gt;, False, &#x27;http://web2py.com/AlterEgo&#x27;), (&lt;lazyT &#x27;Videos&#x27;&gt;, False, &#x27;http://www.web2py.com/examples/default/videos/&#x27;), (&lt;lazyT &#x27;Free Applications&#x27;&gt;, False, &#x27;http://web2py.com/appliances&#x27;), (&lt;lazyT &#x27;Plugins&#x27;&gt;, False, &#x27;http://web2py.com/plugins&#x27;), (&lt;lazyT &#x27;Layouts&#x27;&gt;, False, &#x27;http://web2py.com/layouts&#x27;), (&lt;lazyT &#x27;Recipes&#x27;&gt;, False, &#x27;http://web2pyslices.com/&#x27;), (&lt;lazyT &#x27;Semantic&#x27;&gt;, False, &#x27;http://web2py.com/semantic&#x27;)]</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Documentation</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book</div></td></tr><tr><td><div>[(&lt;lazyT &#x27;Preface&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/00&#x27;), (&lt;lazyT &#x27;Introduction&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/01&#x27;), (&lt;lazyT &#x27;Python&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/02&#x27;), (&lt;lazyT &#x27;Overview&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/03&#x27;), (&lt;lazyT &#x27;The Core&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/04&#x27;), (&lt;lazyT &#x27;The Views&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/05&#x27;), (&lt;lazyT &#x27;Database&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/06&#x27;), (&lt;lazyT &#x27;Forms and Validators&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/07&#x27;), (&lt;lazyT &#x27;Email and SMS&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/08&#x27;), (&lt;lazyT &#x27;Access Control&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/09&#x27;), (&lt;lazyT &#x27;Services&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/10&#x27;), (&lt;lazyT &#x27;Ajax Recipes&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/11&#x27;), (&lt;lazyT &#x27;Components and Plugins&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/12&#x27;), (&lt;lazyT &#x27;Deployment Recipes&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/13&#x27;), (&lt;lazyT &#x27;Other Recipes&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/14&#x27;), (&lt;lazyT &#x27;Buy this book&#x27;&gt;, False, &#x27;http://stores.lulu.com/web2py&#x27;)]</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Community</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>None</div></td></tr><tr><td><div>[(&lt;lazyT &#x27;Groups&#x27;&gt;, False, &#x27;http://www.web2py.com/examples/default/usergroups&#x27;), (&lt;lazyT &#x27;Twitter&#x27;&gt;, False, &#x27;http://twitter.com/web2py&#x27;), (&lt;lazyT &#x27;Live Chat&#x27;&gt;, False, &#x27;http://webchat.freenode.net/?channels=web2py&#x27;)]</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Plugins</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>None</div></td></tr><tr><td><div>[(&#x27;plugin_wiki&#x27;, False, &#x27;http://web2py.com/examples/default/download&#x27;), (&lt;lazyT &#x27;Other Plugins&#x27;&gt;, False, &#x27;http://web2py.com/plugins&#x27;), (&lt;lazyT &#x27;Layout Plugins&#x27;&gt;, False, &#x27;http://web2py.com/layouts&#x27;)]</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">meta</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">author</td><td style="vertical-align:top;">:</td><td><div>Your Name &lt;you@example.com&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">description</td><td style="vertical-align:top;">:</td><td><div>a cool new app</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generator</td><td style="vertical-align:top;">:</td><td><div>Web2py Web Framework</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">keywords</td><td style="vertical-align:top;">:</td><td><div>web2py, python, framework</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">models_to_run</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>^\\w+\\.py$</div></td></tr><tr><td><div>^default/\\w+\\.py$</div></td></tr><tr><td><div>^default/estimate/\\w+\\.py$</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">postprocessing</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_compression_level</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_expires</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_key</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_data_name</td><td style="vertical-align:top;">:</td><td><div>session_data_comprehensive_logistics_management_portal</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_file</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;/home/saurabh/web2py/applications/Comprehensive_Logistics_Management_Portal/sessions/127.0.0.1-bdbcb8ce-5cba-477f-aade-8527c4f97e91&#x27;, mode &#x27;rb+&#x27; at 0xad6e4d88&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_filename</td><td style="vertical-align:top;">:</td><td><div>/home/saurabh/web2py/applications/Comprehensive_Logistics_Management_Portal/sessions/127.0.0.1-bdbcb8ce-5cba-477f-aade-8527c4f97e91</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_hash</td><td style="vertical-align:top;">:</td><td><div>f9ecf004a1488e0a2307e681c1c93821</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-bdbcb8ce-5cba-477f-aade-8527c4f97e91</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_name</td><td style="vertical-align:top;">:</td><td><div>session_id_comprehensive_logistics_management_portal</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_locked</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_masterapp</td><td style="vertical-align:top;">:</td><td><div>Comprehensive_Logistics_Management_Portal</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_new</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_storage_type</td><td style="vertical-align:top;">:</td><td><div>file</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">status</td><td style="vertical-align:top;">:</td><td><div>200</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">subtitle</td><td style="vertical-align:top;">:</td><td><div>customize me!</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">title</td><td style="vertical-align:top;">:</td><td><div>Comprehensive Logistics Management Portal</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">view</td><td style="vertical-align:top;">:</td><td><div>default/estimate.html</div></td></tr></table></div>'
+tRp163
+sS'locals'
+p164
+(dp165
+S'i'
+S'0'
+sS'self'
+p166
+S'<Rows (0)>'
+p167
+sssS'traceback'
+p168
+S'Traceback (most recent call last):\n  File "/home/saurabh/web2py/gluon/restricted.py", line 217, in restricted\n    exec ccode in environment\n  File "/home/saurabh/web2py/applications/Comprehensive_Logistics_Management_Portal/controllers/default.py", line 329, in <module>\n  File "/home/saurabh/web2py/gluon/globals.py", line 372, in <lambda>\n    self._caller = lambda f: f()\n  File "/home/saurabh/web2py/applications/Comprehensive_Logistics_Management_Portal/controllers/default.py", line 129, in estimate\n    cost=(cost[0][\'standard_cost\'])\n  File "/home/saurabh/web2py/gluon/dal.py", line 10391, in __getitem__\n    row = self.records[i]\nIndexError: list index out of range\n'
+p169
+s.

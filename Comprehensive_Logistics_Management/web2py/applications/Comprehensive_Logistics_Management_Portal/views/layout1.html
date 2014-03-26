@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Comprehensive Logistic Management Portal</title>
+		<link rel="stylesheet" type="text/css" href="{{=URL('static/css/','normalize.css')}}"/>
+		<link rel="stylesheet" type="text/css" href="{{=URL('static/css/','demo.css')}}"/>
+		<link rel="stylesheet" type="text/css" href="{{=URL('static/css/','component.css')}}"/>
+		<script src="{{=URL('static/js','modernizr.custom1.js')}}"></script>
+		<script type="text/javascript"><!--
+			// These variables are used by the web2py_ajax_init function in web2py_ajax.js (which is loaded below).
+		var w2p_ajax_confirm_message = "{{=T('Are you sure you want to delete this object?')}}";
+		var w2p_ajax_date_format = "{{=T('%Y-%m-%d')}}";
+		var w2p_ajax_datetime_format = "{{=T('%Y-%m-%d %H:%M:%S')}}";
+		//--></script>
+	{{
+	response.files.insert(0,URL('static','js/jquery.js'))
+	response.files.insert(1,URL('static','css/calendar.css'))
+	response.files.insert(2,URL('static','js/calendar.js'))
+	response.files.insert(3,URL('static','js/web2py.js'))
+	response.include_meta()
+	response.include_files()
+	}}
+	<body>
+		<div class="container">
+			<ul id="gn-menu" class="gn-menu-main">
+				<li class="gn-trigger">
+					<a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+					<nav class="gn-menu-wrapper">
+						<div class="gn-scroller">
+							<ul class="gn-menu">
+								<!--li class="gn-search-item">
+									<input placeholder="Search" type="search" class="gn-search">
+									<a class="gn-icon gn-icon-search"><span>Search</span></a>
+								</li-->
+								<li>
+									<a class="gn-icon gn-icon-download" href="https://www.rollbase.com/prod1/portal/portal.jsp?c=77509365&p=79787329&g=79787794">Place Order</a>
+								</li>
+									<li><a class="gn-icon gn-icon-article">Estimate Cost</a></li>
+								<li><a class="gn-icon gn-icon-cog">Account Settings</a></li>
+								<li><a class="gn-icon gn-icon-help">FAQ</a></li>
+								<li>
+									<a class="gn-icon gn-icon-archive">Previous Consignments</a>
+									</li>
+									<li><a class="gn-icon gn-icon-article">Track Consignment</a></li>
+							</ul>
+						</div><!-- /gn-scroller -->
+					</nav>
+				</li>
+				<li><a href="https://www.rollbase.com/prod1/portal/portal.jsp?c=77509365&p=79787329&g=79787331">Home</a></li>
+				<li><a href="#"><span>Admin</span></a></li>
+				<li><a class="codrops-icon codrops-icon-drop" href="https://www.rollbase.com/prod1/portal/portal.jsp?c=77509365&p=79787329&g=79787561"><span>Login</span></a></li>
+			</ul>
+			<header>
+				<!--h1>Comprehensive Logistic Management Portal <span>A  Portal Made by Progress Rollbase<a href="http://www.google.com/nexus/index.html"></a> </span></h1-->
+<script src="{{=URL('static/js','classie.js')}}"></script>
+				<script src="{{=URL('static/js','gnmenu.js')}}"></script>
+		<script>
+			new gnMenu( document.getElementById( 'gn-menu' ) );
+		</script>
+{{include}}
+</header>
+</body>
+</html>

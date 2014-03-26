@@ -1,0 +1,16 @@
+{{extend 'layout.html'}}
+{{if r==1:}}
+{{if d:}}
+{{k=1}}
+{{for i in range(len(d)):}}
+{{=k}}. &nbsp;&nbsp;&nbsp;User's id:-{{=d[i].id}}<br/>
+&nbsp;&nbsp;&nbsp;
+User's first name:-{{=d[i].first_name}}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;User's last name:-{{=d[i].last_name}}<br/>
+{{k=k+1}}
+{{pass}}
+{{=form}}
+{{else:}}
+no users
+{{pass}}
+{{pass}}

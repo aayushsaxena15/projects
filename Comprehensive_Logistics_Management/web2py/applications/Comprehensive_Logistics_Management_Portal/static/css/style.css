@@ -1,0 +1,119 @@
+* { padding: 0; margin: 0; outline: 0; }
+
+body, html { height: 100%; }
+
+body {
+	background: #e1e5e8;
+	font-family: "Georgia", Tahoma, Sans-Serif;
+	font-size: 12px;
+	line-height: 18px;
+	color: #888;
+}
+input, textarea, select { font-family: "Georgia", Tahoma, Sans-Serif; font-size:12px; }
+.field { padding: 4px 5px; border: solid 1px #e7e7e7; color: #969696; height: 15px; }
+.field-focused { color: #333; }
+input.button { padding: 4px 5px; cursor: pointer; }
+
+a { color: #45c7ee; text-decoration: underline; cursor: pointer; }
+a:hover { text-decoration: none; }
+a img { border: 0; }
+
+h2 { font-size: 19px; line-height: 1; font-weight: normal; color: #464646; font-family: "Trebuchet MS", Tahoma, Sans-Serif; margin-bottom: 5px; }
+
+p { padding-bottom: 18px; }
+
+.left, .alignleft { float: left; display: inline; }
+.right, .alignright { float: right; display: inline; }
+
+.cl { font-size: 0; line-height: 0; clear: both; display: block; height: 0; }
+
+.notext { font-size: 0; line-height: 0; text-indent: -4000px; background-repeat: no-repeat; }
+
+.al { text-align: left; }
+.ar { text-align: right; }
+.ac { text-align: center; }
+
+#page { width: 874px; margin: 0 auto; }
+#page { padding: 0 28px; min-height: 100%; height: auto !important; height: 100%; background: url(https://www.rollbase.com/storage/servlet/Image?c=77509365&fileName=8597095952238943277.gif&contentType=image%2Fgif) repeat-y center 0; }
+
+#top { padding: 20px 0 16px; }
+
+#logo { float: left; display: inline; width: 348px; font-size: 0; line-height: 0; }
+#logo a { display: block; height: 68px; text-indent: -4000px; background: url(https://www.rollbase.com/storage/servlet/Image?c=77509365&fileName=4111012078529345072.gif&contentType=image%2Fgif); }
+
+#search { float: right; display: inline; padding-top: 18px; width: 227px; }
+#search .field-holder { float: left; display: inline; width: 196px; background: url(../../static/images/search-field.gif) no-repeat 0 0; padding: 1px; }
+#search .field { width: 186px; border: 0; background: none; }
+#search .button { float: right; display: inline; width: 25px; height: 25px; font-size: 0; line-height: 0; text-indent: -4000px; }
+#search .button { background: url(../../static/images/search-button.gif) no-repeat 0 0; border: 0; }
+
+#navigation { height: 38px; background: url(https://www.rollbase.com/storage/servlet/Image?c=77509365&fileName=590015127560647192.gif&contentType=image%2Fgif) no-repeat; padding: 8px 10px 6px; margin-top: 16px; }
+#navigation ul { font-size: 13px; line-height: 38px; text-transform: capitalize; }
+#navigation ul li { float: left; display: inline; list-style-type: none; padding-right: 2px; }
+#navigation ul li a { float: left; display: inline; color: #fff; text-decoration: none; padding-left: 17px; }
+#navigation ul li a span { float: left; display: inline; padding-right: 17px; background-position: right 0 !important; }
+#navigation ul li a:hover,
+#navigation ul li a.active,
+#navigation ul li a:hover span,
+#navigation ul li a.active span { color: #717171; background: url(https://www.rollbase.com/storage/servlet/Image?c=77509365&fileName=8569527356071045305.gif&contentType=image%2Fgif) no-repeat 0 0; }
+
+#header { padding-bottom: 10px; }
+
+#slider { height: 327px; position: relative; }
+#slider .slider-nav a { display: block; width: 18px; height: 49px; font-size: 0; line-height: 0; text-indent: -4000px; position: absolute; top: 120px; }
+#slider .slider-nav a.prev { left: 0; background: url(https://www.rollbase.com/storage/servlet/Image?c=77509365&fileName=5734352125774883615.gif&contentType=image%2Fgif); }
+#slider .slider-nav a.next { right: 0; background: url(https://www.rollbase.com/storage/servlet/Image?c=77509365&fileName=4534516086640522949.gif&contentType=image%2Fgif); }
+
+#slider-holder { height: 327px;	}
+#slider-holder .jcarousel-clip { position: relative; overflow: hidden; position: relative;}
+#slider-holder .slide-image1 {background: url(https://www.rollbase.com/storage/servlet/Image?c=77509365&fileName=4855669580183713096.gif&contentType=image%2Fgif)  no-repeat 0 0;  height: 327px; width: 874px; position: relative;}
+#slider-holder .slide-image2 {background: url(https://www.rollbase.com/storage/servlet/Image?c=77509365&fileName=4265049671009125133.gif&contentType=image%2Fgif)  no-repeat 0 0;  height: 327px; width: 874px; position: relative;}
+#slider-holder .slide-image3 {background: url(https://www.rollbase.com/storage/servlet/Image?c=77509365&fileName=8411467356770007537.gif&contentType=image%2Fgif)  no-repeat 0 0;  height: 327px; width: 874px; position: relative;}
+
+#slider-holder ul { width: 874px; height: 327px; position: relative; overflow: hidden; }
+#slider-holder ul li { list-style-type: none; float: left; display: inline; height: 327px; width: 874px; position: relative; overflow: hidden; }
+
+#main { border-bottom: solid 1px #e3e7e9; margin-bottom: 6px; }
+
+h2.txt-we-love-mondays { height: 94px; background-image: url(../../static/images/txt-we-love-mondays.gif); }
+h3.txt-monday-again { background-image: url(../../static/images/txt-monday-again.gif); }
+h3.txt-wedothis { background-image: url(../../static/images/txt-wedothis.gif); }
+h3.txt-247 { background-image: url(https://www.rollbase.com/storage/servlet/Image?c=77509365&fileName=7367092799400460265.gif&contentType=image%2Fgif); }
+
+.button-more { display: block; width: 66px; height: 22px; font-size: 0; line-height: 0; text-indent: -4000px; background: url(images/button-more.gif) no-repeat 0 0; }
+.more { padding-left: 10px; background: url(https://www.rollbase.com/storage/servlet/Image?c=77509365&fileName=8474341003522442634.gif&contentType=image%2Fgif) no-repeat 0 center; }
+
+.cols { padding: 15px 0 10px; }
+.cols .col { float: left; display: inline; }
+.cols .col-last { margin-right: 0 !important; }
+.cols .col h3.notext { height: 45px; margin-bottom: 5px; }
+
+.three-cols .col { width: 264px; margin-right: 41px; }
+.two-cols .col { width: 420px; margin-right: 34px; }
+
+#footer { height: 41px; background: url(../../static/images/footer.gif) no-repeat 0 0; line-height: 41px; padding: 10px 10px 10px 22px; color: #fff; }
+#footer p { padding-bottom: 0; }
+#footer a { color: #fff; text-decoration: none; }
+#footer a:hover { color: #237087; }
+#footer span { margin: 0 6px; }
+
+
+/* *************************** * navigation drop down * ****************************** */
+
+#top { position:relative; z-index: 100; }
+#navigation ul li { position: relative; }
+#navigation ul li:hover > a,
+#navigation ul li:hover > a.active,
+#navigation ul li:hover > a span,
+#navigation ul li:hover > a.active span { color: #717171; background: url(https://www.rollbase.com/storage/servlet/Image?c=77509365&fileName=8569527356071045305.gif&contentType=image%2Fgif) no-repeat 0 0; }
+
+#navigation ul li ul { display:none; position:absolute; top: 30px; left: 0; background: #fff; width:200px; 
+	border-radius: 0px 5px 5px 5px; -moz-border-radius: 0px 5px 5px 5px; -webkit-border-radius: 0px 5px 5px 5px; -o-border-radius: 0px 5px 5px 5px;
+}
+
+#navigation ul li:hover > ul { display: block; }
+#navigation ul li ul li { float:none; display:block; background: transparent; padding-right:0; }
+#navigation ul li ul li a { display:block; float:none; background: transparent; color:#717171; }
+#navigation ul li ul li a:hover { background: #3fc2ed url(../../static/images/dd-hover.png) repeat-x 0 0; color:#fff; }
+#navigation ul li ul li:first-child a { border-radius: 0 5px 0 0; -moz-border-radius: 0 5px 0 0; -webkit-border-radius: 0 5px 0 0; -o-border-radius: 0 5px 0 0; }
+#navigation ul li ul li:last-child a { border-radius: 0 0 5px 5px; -moz-border-radius: 0 0 5px 5px; -webkit-border-radius: 0 0 5px 5px; -o-border-radius: 0 0 5px 5px; }

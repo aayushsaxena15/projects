@@ -1,0 +1,75 @@
+{{extend 'layout.html'}}
+
+{{import json}}
+
+
+<script>
+            function test(){
+                var e = document.getElementById("scity");
+                var sou = e.options[e.selectedIndex].text;
+                // document.write(sou);
+                var s=[sou];
+                var name=sou
+                var json_string = JSON.stringify(s);
+                ajax('check_dest',['sou'],'dest');
+                //     document.write(json_string);
+            }
+</script>
+
+    <form>
+        Source Address :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            <input placeholder="Enter the Source Street Address" name="source_address" type="text" />
+        <br/>
+        Source City :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <select name="source_city" id="scity" onchange="ajax('check_dest',['source_city'],'dest')">
+            {{source=db(db.Location1.id>0).select(db.Location1.Source_City)}}
+            {{a=[]}}
+            {{for i in source:}}
+            {{a.append(i['Source_City'])}}
+            {{pass}}
+            {{a=set(a)}}
+            {{for i in a:}}
+            <option value="{{=i}}">{{=i}}</option>
+            {{pass}}
+        </select>
+       
+
+                <br/>
+        Destination Address : 
+            <input placeholder="Enter the Destination Street Address" name="destination_address" type="text" />
+         <br>
+        Destination City : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <div id="dest" style="display: inline"><select>
+             </select></div>
+        <br/>
+        
+        Logistics Type : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <select name="type">
+            <option value="Document">Document</option>
+            <option value="Non-Document">Non-Document</option>
+        </select>
+        <br/>
+        Service Type :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <select name="service">
+            <option value="Airport to Airport">Airport to Airport</option>
+            <option value="Domestic Priority">Domestic Priority</option>
+            <option value="Domestic Priority 1030">Domestic Priority 1030</option>
+            <option value="Door to Door">Door to Door</option>
+        </select>
+        <br>
+        <div  id="wt" style="display:inline;visibility:hidden;">
+            Weight : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input  type="text" name="weight" placeholder="Enter Weight">
+            <br>
+        </div>
+        Payment Mode : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <select name="mode_of_payment">
+            <option value="Self Service(You go to dealer to pay)">Self Service(You go to dealer to pay)</option>
+            <option value="Home Service (Dealer's person comes to collect">Home Service (Dealer's person comes to collect)</option>
+        </select>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="submit" value="Place Order">
+    </form>
+    <div id="dest"></div>

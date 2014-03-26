@@ -1,0 +1,15 @@
+{{extend 'layout.html'}}
+<p style="font-size:20px">
+{{if y:}}
+User(s) Found With Pattern '{{=b}}' in username are :-
+{{l=1}}
+{{for i in y:}}
+<br/>
+<br/>
+{{=l}})<a href="{{=URL('showuser?userid=%d'%i.id)}}">{{=i.username}} </a> is a {{=i.Typeofuser}} from {{=i.Organisation}}
+{{l+=1}}
+{{pass}}
+{{else:}}
+No User Found With Username '{{=b}}'
+{{pass}}
+</p>

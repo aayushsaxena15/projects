@@ -1,0 +1,20 @@
+{{extend 'layout.html'}}
+<h3>Recent Projects</h3>
+{{k=len(s)}}
+{{j=1}}
+{{while j!=6:}}
+{{=j}}. '{{=s[k-1]['Project_Name']}}'
+submitted on {{=s[k-1]['Date_of_Submission']}}
+{{j=j+1}}
+{{k=k-1}}
+<br/>
+{{pass}}
+
+<h3>Recently commented</h3>
+{{k=len(t)}}
+{{j=1}}
+{{while j!=6:}}
+{{=j}}. {{=t[k-1]['comment_by']}}
+commented on project {{=t[k-1]['projectid']}} on {{=t[k-1]['commenttime']}}
+<br/>
+{{pass}}

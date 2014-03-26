@@ -1,0 +1,74 @@
+{{extend 'layout.html'}}
+{{k=db(pro.Username==db.auth_user.id).select(db.auth_user.username)}}
+{{k=k[0]}}
+<table>
+	<tr>
+		<td style="font-size:20px">Project name:</td>
+		<td style="font-size:20px">{{=pro.Project_Name}}</td>
+	</tr>
+	<tr>
+		<td style="font-size:20px">Uploaded by:</td>
+		<td style="font-size:20px"><a href="{{=URL('showuser?userid=%d'%pro.Username)}}">{{=k.username}}</a></td>
+	</tr>
+	<tr>
+		<td style="font-size:20px">Description:</td>
+		<td style="font-size:20px">{{=pro.Desription}}</td>
+	</tr>
+	<tr>
+		<td style="font-size:20px">Uploaded on:</td>
+		<td style="font-size:20px">{{=pro.Date_of_Submission}}</td>
+	</tr>
+	<tr>
+		<td style="font-size:20px">access mode:</td>
+		<td style="font-size:20px">{{=pro.Project_Mode}}</td>
+	</tr>
+	<tr>
+		<td style="font-size:20px">Type of Project:</td>
+		<td style="font-size:20px">{{=pro.Type_of_Project}}</td>
+	</tr>
+	<tr>
+		<td style="font-size:20px">Developed as:</td>
+		<td style="font-size:20px">{{=pro.Developed_as}}</td>
+	</tr>
+	<tr>
+		<td style="font-size:20px">project-file:</td>
+		<td style="font-size:20px"><a href="{{=URL('download1',args=pro.Project_File)}}">Link to Project File</a></td>
+	</tr>
+		{{if pro.Project_Manual!="":}}
+	<tr>
+		<td style="font-size:20px">Manual:</td>
+		<td style="font-size:20px"><a href="{{=URL('download',args=pro.Project_Manual)}}">Link to Manual</a></td>
+	</tr>
+	{{pass}}
+	<tr>
+		<td style="font-size:20px">Rating:</td>
+		<td style="font-size:20px">{{=ans}}</td>
+	</tr>
+	<tr>
+		<td style="font-size:20px">No. of Clicks:</td>
+		<td style="font-size:20px">{{=pro.no_of_download}}</td>
+	</tr>
+</table>
+<br/>
+<br/>
+<br/>
+<br/>
+<b>{{=form}}</b>
+<br/>
+<br/>
+<br/>
+{{for i in comm:}}
+{{a=db(i.comment_by==db.auth_user.id).select(db.auth_user.username)}}
+{{y=db(i.comment_by==db.image.imageowner).select(db.image.Image)}}
+{{if y:}}
+<a href="{{=URL('showuser?userid=%s'%i.comment_by)}}"><img src="{{=URL('download',args=y[0].Image)}}" width=70px style="float:left"/></a>
+{{else:}}
+<div style="font-size:20px">{{=a[0].username}}
+</div>
+{{pass}}
+<div style="font-size:20px">
+{{=i.commentbody}} </div>
+<br/>
+<br/>
+<br/>
+{{pass}}

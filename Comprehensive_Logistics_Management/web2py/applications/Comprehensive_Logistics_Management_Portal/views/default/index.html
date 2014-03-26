@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link rel="stylesheet" href="../static/css/bootstrap.css" type="text/css" media="all" />
+	<script src="{{=URL('static','js/bootstrap.min.js')}}"></script>
+  <script src="{{=URL('static','js/web2py_bootstrap.js')}}"></script>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title>Logistics</title>
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css" media="all" />
+    <script src="../static/js/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <script src="../static/js/jquery.jcarousel.pack.js" type="text/javascript"></script>
+    <script src="../static/js/jquery-func.js" type="text/javascript"></script>
+
+</head>
+<body>
+<div id="page" class="shell">
+	<!-- Logo + Search + Navigation -->
+	<div id="top">
+		<div class="cl">&nbsp;</div>
+		<h1 id="logo"><a href="#"></a></h1>
+		<!--form action="" method="post" id="search">
+			<div class="field-holder">
+				<input type="text" class="field" value="Search" title="Search" />
+			</div>
+			<input type="submit" class="button" value="Search" />
+			<div class="cl">&nbsp;</div>
+		</form-->
+		<div class="cl">&nbsp;</div>
+		<div id="navigation">
+			<ul>
+                <li>
+                    <a href="{{=URL('default','index')}}"  class="active" ><span>home</span></a>
+                </li>
+                <li>
+                    <a href="{{=URL('default','about_us')}}"><span>About us</span></a>
+                </li>
+                <li>
+                        <li><a href="{{=URL('default','place_order')}}"><span>Place Order</span></a></li>
+                        
+                        
+                </li>
+                <li>
+                    <a href="{{=URL('default','estimate_cost')}}"><span>Estimate Cost</span></a>
+                </li>
+                <li><a href="{{=URL('default','view_consignment')}}"><span>View/Track Consignments</span></a></li>
+                <li>
+                    <a href="{{=URL('default','contact')}}"><span>contact</span></a>
+                </li>
+                {{if not auth.user:}}
+                <li>
+                    <a href="{{=URL('default','user/login')}}"><span>Login</span></a>
+                </li>
+                {{else:}}
+                 <li>
+                    <a href="{{=URL('default','user/logout')}}"><span>Logout</span></a>
+                </li>
+                {{pass}}
+            </ul>
+		</div>	
+	</div>
+	<!-- END Logo + Search + Navigation -->
+	<!-- Header -->
+	<div id="header">
+		<!-- Slider -->
+		<div id="slider">
+			<div id="slider-holder">
+				<ul>
+				    <li>
+				    	<div class="slide-image1">
+				    		
+				    	</div>
+				    </li>
+				    <li>
+				    					    	<div class="slide-image2">
+				    		
+				    	</div>
+				    </li>
+				    <li>
+				    					    	<div class="slide-image3">
+				    		
+				    	</div>
+				    </li>
+				</ul>
+			</div>
+			<div class="slider-nav">
+				<a href="#" class="prev">Previous</a>
+				<a href="#" class="next">Next</a>
+			</div>
+		</div>
+		<!-- END Slider -->	
+	</div>
+	<!-- END Header -->
+	<!-- Main -->
+	<div id="main">
+		<!-- Three Column Content -->
+		<div class="cols three-cols">
+			<div class="cl">&nbsp;</div>
+			<div class="col">
+				<h2>Why choose us?</h2>
+				<h3>Logistics</h3>
+				<p>It is the best company ever in the courier section with best facilities . We even provide the option of booking consignment online and the delivery man comes to your home to collect the consignment</p>
+				<p><a href="#" class="more">Learn more</a></p>
+			</div>
+			<div class="col">
+				<h2>Our Services</h2>
+				<h3>WE DO THIS AND THAT....</h3>
+				<p>We provide almost all types of services ranging from domestic to international at very reasonable prices. Our service is 100% customer satisfactory</p>
+				<p><a href="#" class="more">Learn more</a></p>
+			</div>
+			<div class="col col-last">
+				<h2>Service Support</h2>
+				<h3 class="notext txt-247">24/7 YES REALLY...</h3>
+				<p>We provide 24x7 Service i.e. customer can book consignment at any time.</p>
+				<p><a href="#" class="more">Learn more</a></p>
+			</div>
+			<div class="cl">&nbsp;</div>
+		</div>
+		<!-- END Three Column Content -->
+		<!-- Two Column Content -->
+		<div class="cols two-cols">
+			<div class="cl">&nbsp;</div>
+			<div class="col">
+				<h2>Our Company</h2>
+				<p>Our comapny has been providing cutomer satisfactory services since 2001 . And over the years we have expanded at a very high rate with our motive of making our services reachable to every human.</p>
+				<p><a href="#" class="more">Learn more</a></p>
+			</div>
+			<script>
+			function get_link(){
+				var cid = "track_by_id?order_id="+document.getElementById('order_id').value;
+	//			alert(cid);
+				document.getElementById('track_button').href=cid;
+			}
+			</script>
+			<div class="col col-last">
+				<h2>Track By Id</h2><hr>
+				{{st="track_by_id?order_id="}}
+				<form method="POST" action="">
+					<input id="order_id" type="text" placeholder="Enter Consignment Id" name="order" onchange="get_link()"><br>
+					<a id="track_button" href="#"><button type="button" class="btn btn-primary">Track</button></a>
+				</form>
+
+			</div>
+			<div class="cl">&nbsp;</div>
+		</div>
+		<!-- END Two Column Content -->
+	</div>
+	<!-- END Main -->
+	<!-- Footer -->
+	<div id="footer">
+		<p class="right">&copy; 2013 - &nbsp; Design by <a href="http://web.iiit.ac.in/~saurabh.kathpalia" target="_blank" title="IIIT Hyderabad">Saurabh Kathpalia</a></p>
+		<a href="#">Contact</a></p>
+		<div class="cl">&nbsp;</div>
+	</div>
+	<!-- END Footer -->
+	<br />
+</div>
+</body>
+</html>
+<script>
+	$(document).ready(function(){
+    $("#order_id").keyup(function(){
+    	//alert("sasasa");
+        var x=$(this).val();
+        var value=Number(x);
+        
+        if(Math.floor(value) == value) {
+            // alert("Enter the weight less than 50");
+            // $(this).val("");
+            if(value>50) {
+             //   alert("Enter value less than 50");
+               // $(this).val("");
+            }
+        }
+        else {
+           // alert("Enter integer only");
+            $(this).val("");
+        }
+    });
+});
+
+</script>

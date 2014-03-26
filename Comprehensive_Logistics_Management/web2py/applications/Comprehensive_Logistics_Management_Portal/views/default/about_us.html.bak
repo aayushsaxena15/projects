@@ -1,0 +1,168 @@
+{{include 'web2py_ajax.html'}}
+<head>
+<link rel="stylesheet" href="../static/css/bootstrap.css" type="text/css" media="all" />
+
+  <!-- All JavaScript at the bottom, except for Modernizr which enables
+       HTML5 elements & feature detects -->
+ 
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>Logistics</title>
+<link rel="stylesheet" href="../static/css/style.css" type="text/css" media="all" />
+    <script src="../static/js/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <script src="../static/js/jquery.jcarousel.pack.js" type="text/javascript"></script>
+    <script src="../static/js/jquery-func.js" type="text/javascript"></script>
+
+
+  
+
+{{import json}}
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+
+<!-- this is autocomplete-->
+<!--link rel="stylesheet" href="{{=URL('static/chosen','docsupport/style.css')}}">
+<link rel="stylesheet" href="{{=URL('static/chosen','docsupport/prism.css')}}"-->
+<link rel="stylesheet" href="{{=URL('static/chosen','chosen.css')}}">
+<style type="text/css" media="all">
+/* fix rtl for demo */
+.chosen-rtl .chosen-drop { left: -9000px; }
+</style>
+<!-- this is autocomplete-->
+    
+    
+</head>
+<body>
+<div id="page" class="shell">
+    <!-- Logo + Search + Navigation -->
+    <div id="top">
+        <div class="cl">&nbsp;</div>
+        <h1 id="logo"><a href="#"></a></h1>
+        <!--form action="" method="post" id="search">
+            <div class="field-holder">
+                <input type="text" class="field" value="Search" title="Search" />
+            </div>
+            <input type="submit" class="button" value="Search" />
+            <div class="cl">&nbsp;</div>
+        </form-->
+        <div class="cl">&nbsp;</div>
+        <div id="navigation">
+            <ul>
+                <li>
+                    <a href="{{=URL('default','index')}}"><span>home</span></a>
+                </li>
+                <li>
+                    <a href="{{=URL('default','about_us')}}"  class="active"><span>About us</span></a>
+                </li>
+                <li>
+                        <li><a href="{{=URL('default','place_order')}}"><span>Place Order</span></a></li>
+                        
+                        
+                </li>
+                <li>
+                    <a href="{{=URL('default','estimate_cost')}}"><span>Estimate Cost</span></a>
+                </li>
+                <li><a href="{{=URL('default','view_consignment')}}"><span>View/Track Consignments</span></a></li>
+                <li>
+                    <a href="{{=URL('default','contact')}}"><span>contact</span></a>
+                </li>
+            </ul>
+        </div>  
+    </div>
+    <!-- END Logo + Search + Navigation -->
+    <!-- Header -->
+    <div id="header">
+    </div>
+    <!-- END Header -->
+
+
+<div id="main">
+<h2 style="color:blue">About</h2>
+<ol>
+	<li>
+	Comprehensive Logistics Management Portal provides the opportunity to the customers to book a consignment giving necessary details such as source location, destination location, type of logistic etc.
+	</li>
+	<li>
+	They can also see the estimated cost based on the parameters given by them.
+	</li>
+	<li>
+	System Administrator bears the responsibility for updating logistic location and adding new locations.
+	</li>
+	<li>
+	Logistics can be divided in the following categories based on their priorities:
+	</li>
+	
+	<ol>
+		<li><h3 style="color:green">Domestic Priority 1030:</h3>
+		<ul>
+			<li>
+			A guaranteed door-to-door time definite delivery of shipments by air the next possible business day by 10:30 hours, targeted at time-critical business-to-business needs.
+			</li>
+			<li><h4 style="color:red">Basic features:</h4>
+			<ul>
+				<li>Real-time tracking
+				</li>
+				<li>Money Back Guarantee(MBG)
+				</li>
+			</ul>
+			</li>
+
+			<li><h4 style="color:red">Important note:</h4>
+			<ul>
+				<li>All bookings must be made through Customer Service</li>
+				<li>Prevailing terms and conditions of carriage apply, in addition to specific TDD terms and conditions</li>
+				<li>Shipper pays the transport charges.</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li><h3 style="color:green">Domestic Priority 1200:</h3>
+		<ul>
+			<li>
+			A guaranteed door-to-door time definite delivery of shipments by air the next possible business day by 12:00 hours, targeted at time-critical business-to-business needs.
+			</li>
+			<li><h4 style="color:red">Basic features:</h4>
+			<ul>
+				<li>Real-time tracking</li>
+				<li>Money Back Guarantee(MBG)</li>
+			</ul>
+			</li>
+			<li><h4 style="color:red">Imporatant note:</h4>
+			<ul>
+				<li>All bookings must be made through Customer Service</li>
+				<li>Prevailing terms and conditions of carriage apply, in addition to specific TDD terms and conditions</li>
+				<li>Shipper pays the transport charges.</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li><h3 style="color:green">3. Dart Apex 1200:</h3>
+		<ul>
+			<li>
+			A guaranteed door-to-door time definite delivery of commercial shipments by Air that require regulatory clearances and specialized handling on the next possible business day by 12:00hrs, targeted at time-critical business-to-business needs.
+			</li>
+			<li><h4 style="color:red">Basic features:</h4>
+			<ul>
+				<li>Real-time tracking</li>
+				<li>Money Back Guarantee(MBG)</li>
+			</ul>
+			</li>
+			<li><h4 style="color:red">Imporatant note:</h4>
+			<ul>
+				<li>All bookings must be made through Customer Service</li>
+				<li>Prevailing terms and conditions of carriage apply, in addition to specific TDD terms and conditions</li>
+				<li>Shipper pays the transport charges.</li>
+				<li>Applicable for Commercial Shipments</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+	</ol>
+</ol>
+</div>
+  <br /><br /><br /><br />
+        <!-- Footer -->
+    <div id="footer">
+        <p class="right">&copy; 2013 - &nbsp; Design by <a href="http://web.iiit.ac.in/~saurabh.kathpalia" target="_blank" title="IIIT Hyderabad">Saurabh Kathpalia</a></p>
+        <a href="#">Contact</a></p>
+        <div class="cl">&nbsp;</div>
+    </div>
+    <!-- END Footer -->

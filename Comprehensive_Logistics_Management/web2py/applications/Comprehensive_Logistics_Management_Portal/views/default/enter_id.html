@@ -1,0 +1,12 @@
+{{extend 'layout.html'}}
+
+<h2>
+	Enter the id of order to track
+</h2>
+<table>
+	<tr>
+	<td>Enter id : </td>
+	<td><input type='text' name='orderid' onchange="ajax('showorderid_1',['orderid'],'showing')"/>
+	</td>
+</table>
+<div id='showing'>

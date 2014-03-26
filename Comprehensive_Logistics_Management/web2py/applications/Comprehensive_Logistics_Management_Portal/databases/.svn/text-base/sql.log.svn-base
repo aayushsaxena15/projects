@@ -1,0 +1,76 @@
+timestamp: 2013-10-06T14:22:05.840805
+CREATE TABLE auth_user(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name CHAR(128),
+    last_name CHAR(128),
+    email CHAR(512),
+    password CHAR(512),
+    registration_key CHAR(512),
+    reset_password_key CHAR(512),
+    registration_id CHAR(512)
+);
+success!
+timestamp: 2013-10-06T14:22:05.963815
+CREATE TABLE auth_group(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    role CHAR(512),
+    description TEXT
+);
+success!
+timestamp: 2013-10-06T14:22:06.074570
+CREATE TABLE auth_membership(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2013-10-06T14:22:06.164320
+CREATE TABLE auth_permission(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE,
+    name CHAR(512),
+    table_name CHAR(512),
+    record_id INTEGER
+);
+success!
+timestamp: 2013-10-06T14:22:06.254654
+CREATE TABLE auth_event(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    time_stamp TIMESTAMP,
+    client_ip CHAR(512),
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    origin CHAR(512),
+    description TEXT
+);
+success!
+timestamp: 2013-10-06T14:22:06.343982
+CREATE TABLE auth_cas(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    created_on TIMESTAMP,
+    service CHAR(512),
+    ticket CHAR(512),
+    renew CHAR(1)
+);
+success!
+timestamp: 2013-10-06T14:28:35.006133
+CREATE TABLE Logistics(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Service CHAR(512)
+);
+success!
+timestamp: 2013-10-06T14:36:53.408004
+ALTER TABLE Logistics ADD logistic_type CHAR(512);
+timestamp: 2013-10-06T14:36:53.618688
+ALTER TABLE Logistics ADD mode_of_payment CHAR(512);
+timestamp: 2013-10-06T14:41:21.765923
+ALTER TABLE Logistics ADD expected_delivery_date DATE;
+timestamp: 2013-10-15T20:42:04.176893
+CREATE TABLE Location1(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Source_City CHAR(512),
+    Destination_City CHAR(512),
+    Source_Postal_Code INTEGER,
+    Destination_Postal_Code INTEGER
+);
+success!

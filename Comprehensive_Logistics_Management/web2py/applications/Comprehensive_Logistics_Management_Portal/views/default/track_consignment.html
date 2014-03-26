@@ -1,0 +1,216 @@
+{{include 'web2py_ajax.html'}}
+<head>
+<link rel="stylesheet" href="../static/css/bootstrap.css" type="text/css" media="all" />
+
+  <!-- All JavaScript at the bottom, except for Modernizr which enables
+       HTML5 elements & feature detects -->
+ 
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>Logistics</title>
+<link rel="stylesheet" href="../static/css/style.css" type="text/css" media="all" />
+    <script src="../static/js/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <script src="../static/js/jquery.jcarousel.pack.js" type="text/javascript"></script>
+    <script src="../static/js/jquery-func.js" type="text/javascript"></script>
+
+
+  
+
+{{import json}}
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+
+<!-- this is autocomplete-->
+<!--link rel="stylesheet" href="{{=URL('static/chosen','docsupport/style.css')}}">
+<link rel="stylesheet" href="{{=URL('static/chosen','docsupport/prism.css')}}"-->
+<link rel="stylesheet" href="{{=URL('static/chosen','chosen.css')}}">
+<style type="text/css" media="all">
+/* fix rtl for demo */
+.chosen-rtl .chosen-drop { left: -9000px; }
+</style>
+<!-- this is autocomplete-->
+    
+    
+</head>
+<body>
+<div id="page" class="shell">
+    <!-- Logo + Search + Navigation -->
+    <div id="top">
+        <div class="cl">&nbsp;</div>
+        <h1 id="logo"><a href="#"></a></h1>
+        <!--form action="" method="post" id="search">
+            <div class="field-holder">
+                <input type="text" class="field" value="Search" title="Search" />
+            </div>
+            <input type="submit" class="button" value="Search" />
+            <div class="cl">&nbsp;</div>
+        </form-->
+        <div class="cl">&nbsp;</div>
+        <div id="navigation">
+            <ul>
+                <li>
+                    <a href="{{=URL('default','index')}}"><span>home</span></a>
+                </li>
+                <li>
+                    <a href="{{=URL('default','about_us')}}"><span>About us</span></a>
+                </li>
+                <li>
+                        <li><a href="{{=URL('default','place_order')}}"><span>Place Order</span></a></li>
+                        
+                        
+                </li>
+                <li>
+                    <a href="{{=URL('default','estimate_cost')}}"><span>Estimate Cost</span></a>
+                </li>
+                <li><a href="{{=URL('default','view_consignment')}}" class="active"><span>View/Track Consignments</span></a></li>
+                <li>
+                    <a href="{{=URL('default','contact')}}"><span>contact</span></a>
+                </li>
+            </ul>
+        </div>  
+    </div>
+    <!-- END Logo + Search + Navigation -->
+    <!-- Header -->
+    <div id="header">
+    </div>
+    <!-- END Header -->
+    <div id="main">
+
+
+{{source=loc[0]['Source_City']}}
+{{destination=loc[0]['Destination_City']}}
+{{current_location=x[0]['Current_location']}}
+<html>
+     <head>
+	  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	  <meta charset="utf-8">
+	  <title>Directions service</title>
+	  <style>
+	       html, body, #map-canvas {
+            height: 85%;
+		    width: 90%;
+            margin-left: auto ;
+            margin-right: auto ;
+		 }
+	       #panel {
+		    position: absolute;
+		    top: 5px;
+		    left: 50%;
+		    margin-left: -180px;
+		    z-index: 5;
+		    background-color: #fff;
+		    padding: 5px;
+		    border: 1px solid #999;
+	       }
+	  </style>
+	  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+	  <script>
+	       var directionsDisplay;
+	       var directionsService = new google.maps.DirectionsService();
+	       var map;
+
+	       function initialize() {
+		    geocoder = new google.maps.Geocoder();
+		    directionsDisplay = new google.maps.DirectionsRenderer();
+		    var chicago = new google.maps.LatLng(41.850033, -87.6500523);
+		    var mapOptions = {
+			 zoom:7,
+			 mapTypeId: google.maps.MapTypeId.ROADMAP,
+			 center: chicago
+		    }
+		    map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+		    directionsDisplay.setMap(map);
+	       }
+
+	       function calcRoute() {
+		    //	    var start = document.getElementById('start').value;
+		    //	    var end = document.getElementById('end').value;
+               var start = {{=XML(response.json(source))}};
+               var end = {{=XML(response.json(destination))}};
+		    var request = {
+			 origin:start,
+			 destination:end,
+			 travelMode: google.maps.DirectionsTravelMode.DRIVING
+		    };
+		    directionsService.route(request, function(response, status) {
+			 if (status == google.maps.DirectionsStatus.OK) {
+			      directionsDisplay.setDirections(response);
+			 }
+		    });
+		    codeAddress();
+	       }
+	       function codeAddress() {
+		    //  var address = document.getElementById('address').value;
+		    var address={{=XML(response.json(current_location))}}
+		    geocoder.geocode( { 'address': address}, function(results, status) {
+			 if (status == google.maps.GeocoderStatus.OK) {
+			      map.setCenter(results[0].geometry.location);
+			      var marker = new google.maps.Marker({
+				   map: map,
+				   position: results[0].geometry.location
+			      });
+			      } else {
+			      alert('Geocode was not successful for the following reason: ' + status);
+			 }
+		    });
+	       }
+
+	       google.maps.event.addDomListener(window, 'load', initialize);
+
+	  </script>
+     </head>
+    <body onload="calcRoute();" align="center">
+<!--	  <div id="panel">
+	       <b>Start: </b>
+	       <select id="start" onchange="calcRoute();">
+		    <option value="chicago, il">Chicago</option>
+		    <option value="st louis, mo">St Louis</option>
+		    <option value="joplin, mo">Joplin, MO</option>
+		    <option value="oklahoma city, ok">Oklahoma City</option>
+		    <option value="amarillo, tx">Amarillo</option>
+		    <option value="gallup, nm">Gallup, NM</option>
+		    <option value="flagstaff, az">Flagstaff, AZ</option>
+		    <option value="winona, az">Winona</option>
+		    <option value="kingman, az">Kingman</option>
+		    <option value="barstow, ca">Barstow</option>
+		    <option value="san bernardino, ca">San Bernardino</option>
+		    <option value="los angeles, ca">Los Angeles</option>
+	       </select>
+	       -->
+	      <!-- <b>End: </b>
+	       <select id="end" onchange="calcRoute();">
+		    <option value="chicago, il">Chicago</option>
+		    <option value="st louis, mo">St Louis</option>
+		    <option value="joplin, mo">Joplin, MO</option>
+		    <option value="oklahoma city, ok">Oklahoma City</option>
+		    <option value="amarillo, tx">Amarillo</option>
+		    <option value="gallup, nm">Gallup, NM</option>
+		    <option value="flagstaff, az">Flagstaff, AZ</option>
+		    <option value="winona, az">Winona</option>
+		    <option value="kingman, az">Kingman</option>
+		    <option value="barstow, ca">Barstow</option>
+		    <option value="san bernardino, ca">San Bernardino</option>
+		    <option value="los angeles, ca">Los Angeles</option>
+	       </select>
+	      
+	  </div>
+	  -->
+        <p>
+            Source is marked by A which is {{=source}}<br/>
+            Destination is marked by B which is {{=destination}}<br/>
+            The position marked between them is current location which is {{=current_location}}
+	  </p>
+	  <div id="map-canvas" >
+	  </div>
+        <br><br><br><br><br>
+        <!-- Footer -->
+    <div id="footer">
+        <p class="right">&copy; 2013 - &nbsp; Design by <a href="http://web.iiit.ac.in/~saurabh.kathpalia" target="_blank" title="IIIT Hyderabad">Saurabh Kathpalia</a></p>
+            
+        <p><left><a href="#">Contact</a></left></p>
+        <div class="cl">&nbsp;</div>
+    </div>
+    <!-- END Footer -->
+    <br />
+    
+     </body>
+        </div>
+</html>
