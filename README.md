@@ -3,7 +3,7 @@ projects
 
 Hello everyone.
 
-I am a second year student at International Institute of Information Technology, Hyderabad pursuing B.Tech. in Computer
+I am a third year student at International Institute of Information Technology, Hyderabad pursuing B.Tech. in Computer
 Science and Engineering.
 
 
@@ -13,5 +13,6 @@ that I could improve upon my skills or work.
 
 Currently, I am working upon some android application and joomla.I will commit them too in near future when they would 
 become capable enough.
+
 
 Thank you.
