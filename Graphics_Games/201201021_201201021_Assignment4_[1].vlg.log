@@ -1,0 +1,1264 @@
+vlg.log: 29/01/2014 14:10:52 IST
+SESSION BEGIN: Aayush Saxena (201201021) at 29/01/2014 14:10:52 IST
+vlg.log: 29/01/2014 14:12:27 IST
+ADDSHAPE: cube.ply
+vlg.log: 29/01/2014 14:12:29 IST
+ADDINSTANCE: Instance 1
+vlg.log: 29/01/2014 14:15:06 IST
+SESSION BEGIN: Aayush Saxena (201201021) at 29/01/2014 14:15:06 IST
+vlg.log: 29/01/2014 18:35:35 IST
+SESSION BEGIN: Aayush Saxena (201201021) at 29/01/2014 18:35:35 IST
+vlg.log: 29/01/2014 18:41:12 IST
+UPDATECOORDSYS: Co-ordinate System 1 is Hidden
+vlg.log: 29/01/2014 18:41:13 IST
+UPDATECOORDSYS: Co-ordinate System 1 is Shown
+vlg.log: 29/01/2014 18:41:40 IST
+UPDATECOORDSYS: Co-ordinate System 1 X-axis changed to [ 2.0 , 0.0 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:41:42 IST
+UPDATECOORDSYS: Co-ordinate System 1 X-axis changed to [ 2.0 , 0.0 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:41:43 IST
+UPDATECOORDSYS: Co-ordinate System 1 X-axis changed to [ 2.0 , 0.0 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:41:46 IST
+UPDATECOORDSYS: Co-ordinate System 1 X-axis changed to [ 2.0 , 0.0 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:41:50 IST
+UPDATECOORDSYS: Co-ordinate System 1 Y-axis changed to [ 0.0 , 1.0 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:41:50 IST
+UPDATECOORDSYS: Co-ordinate System 1 Y-axis changed to [ 0.0 , -3.0 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:41:52 IST
+UPDATECOORDSYS: Co-ordinate System 1 Y-axis changed to [ 0.0 , 1.0 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:41:52 IST
+UPDATECOORDSYS: Co-ordinate System 1 Y-axis changed to [ 0.0 , 1.0 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:41:53 IST
+UPDATECOORDSYS: Co-ordinate System 1 Y-axis changed to [ 0.0 , 1.0 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:41:53 IST
+UPDATECOORDSYS: Co-ordinate System 1 Y-axis changed to [ 0.0 , -2.0 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:41:54 IST
+UPDATECOORDSYS: Co-ordinate System 1 Y-axis changed to [ 0.0 , -2.0 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:41:54 IST
+UPDATECOORDSYS: Co-ordinate System 1 Y-axis changed to [ 0.0 , -2.5 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:42:03 IST
+UPDATECOORDSYS: Co-ordinate System 1 Y-axis changed to [ 0.0 , -2.5 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:42:07 IST
+UPDATECOORDSYS: Co-ordinate System 1 Z-axis changed to [ 0.0 , 0.0 , 9.0 , 0.0 ]
+vlg.log: 29/01/2014 18:42:08 IST
+UPDATECOORDSYS: Co-ordinate System 1 Z-axis changed to [ 0.0 , 0.0 , 1.0 , 0.0 ]
+vlg.log: 29/01/2014 18:42:08 IST
+UPDATECOORDSYS: Co-ordinate System 1 Z-axis changed to [ 0.0 , 0.0 , 1.0 , 0.0 ]
+vlg.log: 29/01/2014 18:42:08 IST
+UPDATECOORDSYS: Co-ordinate System 1 Z-axis changed to [ 0.0 , 0.0 , 2.0 , 0.0 ]
+vlg.log: 29/01/2014 18:42:09 IST
+UPDATECOORDSYS: Co-ordinate System 1 Z-axis changed to [ 0.0 , 0.0 , 1.0 , 0.0 ]
+vlg.log: 29/01/2014 18:42:10 IST
+UPDATECOORDSYS: Co-ordinate System 1 Z-axis changed to [ 0.0 , 0.0 , 1.0 , 0.0 ]
+vlg.log: 29/01/2014 18:42:10 IST
+UPDATECOORDSYS: Co-ordinate System 1 Z-axis changed to [ 0.0 , 0.0 , 1.0 , 0.0 ]
+vlg.log: 29/01/2014 18:42:10 IST
+UPDATECOORDSYS: Co-ordinate System 1 Z-axis changed to [ 0.0 , 0.0 , 1.0 , 0.0 ]
+vlg.log: 29/01/2014 18:42:13 IST
+UPDATECOORDSYS: Co-ordinate System 1 Z-axis changed to [ 0.0 , 0.0 , 1.0 , 0.0 ]
+vlg.log: 29/01/2014 18:42:16 IST
+UPDATECOORDSYS: Co-ordinate System 1 Y-axis changed to [ 1.0 , -2.5 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:42:16 IST
+UPDATECOORDSYS: Co-ordinate System 1 Y-axis changed to [ 1.0 , -2.5 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:42:17 IST
+UPDATECOORDSYS: Co-ordinate System 1 Y-axis changed to [ 1.0 , -2.5 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:42:45 IST
+UPDATECOORDSYS: Co-ordinate System 1 Y-axis changed to [ 1.0 , -2.5 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:42:45 IST
+UPDATECOORDSYS: Co-ordinate System 1 units are Hidden
+vlg.log: 29/01/2014 18:42:46 IST
+UPDATECOORDSYS: Co-ordinate System 1 units are Shown
+vlg.log: 29/01/2014 18:42:46 IST
+UPDATECOORDSYS: Co-ordinate System 1 units are Hidden
+vlg.log: 29/01/2014 18:42:47 IST
+UPDATECOORDSYS: Co-ordinate System 1 units are Shown
+vlg.log: 29/01/2014 18:42:54 IST
+UPDATECOORDSYS: Co-ordinate System 1 X-axis changed to [ 1.0 , 0.0 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:42:54 IST
+UPDATECOORDSYS: Co-ordinate System 1 X-axis changed to [ 1.0 , 0.0 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:42:54 IST
+UPDATECOORDSYS: Co-ordinate System 1 X-axis changed to [ 1.0 , 0.0 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:42:56 IST
+UPDATECOORDSYS: Co-ordinate System 1 X-axis changed to [ 1.0 , 0.0 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:42:57 IST
+UPDATECOORDSYS: Co-ordinate System 1 Y-axis changed to [ 0.0 , -2.5 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:42:57 IST
+UPDATECOORDSYS: Co-ordinate System 1 Y-axis changed to [ 0.0 , -2.5 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:42:58 IST
+UPDATECOORDSYS: Co-ordinate System 1 Y-axis changed to [ 0.0 , -2.5 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:43:00 IST
+UPDATECOORDSYS: Co-ordinate System 1 Y-axis changed to [ 0.0 , -2.5 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:43:01 IST
+UPDATECOORDSYS: Co-ordinate System 1 Y-axis changed to [ 0.0 , -1.0 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:43:01 IST
+UPDATECOORDSYS: Co-ordinate System 1 Y-axis changed to [ 0.0 , -1.0 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:43:02 IST
+UPDATECOORDSYS: Co-ordinate System 1 Y-axis changed to [ 0.0 , -1.0 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:43:04 IST
+UPDATECOORDSYS: Co-ordinate System 1 Y-axis changed to [ 0.0 , 1.0 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:43:10 IST
+UPDATECOORDSYS: Co-ordinate System 1 Y-axis changed to [ 0.0 , 1.0 , 0.0 , 0.0 ]
+vlg.log: 29/01/2014 18:50:10 IST
+CONFIG: Enabled 3D
+vlg.log: 29/01/2014 18:50:11 IST
+CONFIG: Disabled 3D
+vlg.log: 29/01/2014 18:50:12 IST
+CONFIG: Enabled 3D
+vlg.log: 29/01/2014 18:50:13 IST
+CONFIG: Disabled 3D
+vlg.log: 29/01/2014 18:50:13 IST
+CONFIG: Enabled 3D
+vlg.log: 29/01/2014 18:50:14 IST
+CONFIG: Disabled 3D
+vlg.log: 29/01/2014 18:50:50 IST
+ADDSHAPE: cube.ply
+vlg.log: 29/01/2014 18:50:52 IST
+ADDINSTANCE: Instance 1
+vlg.log: 29/01/2014 18:51:19 IST
+CONFIG: Enable YZ grid
+vlg.log: 29/01/2014 18:51:20 IST
+CONFIG: Disable YZ grid
+vlg.log: 29/01/2014 18:51:20 IST
+CONFIG: Enable YZ grid
+vlg.log: 29/01/2014 18:51:21 IST
+CONFIG: Disable YZ grid
+vlg.log: 29/01/2014 18:51:22 IST
+CONFIG: Disable XY grid
+vlg.log: 29/01/2014 18:51:24 IST
+CONFIG: Enable XY grid
+vlg.log: 29/01/2014 18:51:25 IST
+CONFIG: Disable XY grid
+vlg.log: 29/01/2014 18:51:25 IST
+CONFIG: Enable XY grid
+vlg.log: 29/01/2014 18:51:26 IST
+CONFIG: Enable YZ grid
+vlg.log: 29/01/2014 18:51:26 IST
+CONFIG: Disable YZ grid
+vlg.log: 29/01/2014 18:51:28 IST
+CONFIG: Enable ZX grid
+vlg.log: 29/01/2014 18:51:28 IST
+CONFIG: Disable ZX grid
+vlg.log: 29/01/2014 18:51:29 IST
+CONFIG: Disable XY grid
+vlg.log: 29/01/2014 18:51:30 IST
+CONFIG: Enable ZX grid
+vlg.log: 29/01/2014 18:51:38 IST
+CONFIG: Enable YZ grid
+vlg.log: 29/01/2014 18:51:40 IST
+CONFIG: Enable XY grid
+vlg.log: 29/01/2014 18:51:42 IST
+CONFIG: Disable YZ grid
+vlg.log: 29/01/2014 18:51:42 IST
+CONFIG: Disable ZX grid
+vlg.log: 29/01/2014 18:51:45 IST
+CONFIG: Transform Coordinate Systems
+vlg.log: 29/01/2014 18:51:45 IST
+CONFIG: Transform Geometry
+vlg.log: 29/01/2014 19:06:44 IST
+SESSION BEGIN: Aayush Saxena (201201021) at 29/01/2014 19:06:44 IST
+vlg.log: 29/01/2014 19:07:58 IST
+SESSION BEGIN: Aayush Saxena (201201021) at 29/01/2014 19:07:58 IST
+vlg.log: 29/01/2014 19:14:20 IST
+CONFIG: Transform Coordinate Systems
+vlg.log: 29/01/2014 19:14:21 IST
+CONFIG: Transform Geometry
+vlg.log: 29/01/2014 19:14:24 IST
+CONFIG: Transform Coordinate Systems
+vlg.log: 29/01/2014 19:14:25 IST
+CONFIG: Transform Geometry
+vlg.log: 29/01/2014 19:14:26 IST
+CONFIG: View Reset
+vlg.log: 29/01/2014 19:14:28 IST
+CONFIG: Transform Coordinate Systems
+vlg.log: 29/01/2014 19:14:42 IST
+CONFIG: Transform Geometry
+vlg.log: 29/01/2014 19:15:07 IST
+CONFIG: Transform Coordinate Systems
+vlg.log: 29/01/2014 19:15:09 IST
+CONFIG: Transform Geometry
+vlg.log: 29/01/2014 19:15:10 IST
+CONFIG: Transform Coordinate Systems
+vlg.log: 29/01/2014 19:15:11 IST
+CONFIG: Transform Geometry
+vlg.log: 29/01/2014 19:15:11 IST
+CONFIG: Transform Coordinate Systems
+vlg.log: 29/01/2014 19:15:13 IST
+CONFIG: Transform Geometry
+vlg.log: 29/01/2014 19:15:17 IST
+CONFIG: Transform Coordinate Systems
+vlg.log: 29/01/2014 19:15:17 IST
+CONFIG: Transform Geometry
+vlg.log: 29/01/2014 19:15:18 IST
+CONFIG: Transform Coordinate Systems
+vlg.log: 29/01/2014 19:15:25 IST
+CONFIG: Transform Geometry
+vlg.log: 29/01/2014 19:15:26 IST
+CONFIG: Transform Coordinate Systems
+vlg.log: 29/01/2014 19:15:28 IST
+CONFIG: Transform Geometry
+vlg.log: 29/01/2014 19:15:33 IST
+CONFIG: Transform Coordinate Systems
+vlg.log: 29/01/2014 19:15:35 IST
+CONFIG: Transform Geometry
+vlg.log: 29/01/2014 19:15:36 IST
+CONFIG: Transform Coordinate Systems
+vlg.log: 29/01/2014 19:15:36 IST
+CONFIG: Transform Geometry
+vlg.log: 29/01/2014 19:15:37 IST
+CONFIG: Transform Coordinate Systems
+vlg.log: 29/01/2014 19:15:37 IST
+CONFIG: Transform Geometry
+vlg.log: 29/01/2014 19:15:38 IST
+CONFIG: Transform Coordinate Systems
+vlg.log: 29/01/2014 19:15:38 IST
+CONFIG: Transform Geometry
+vlg.log: 29/01/2014 19:15:39 IST
+CONFIG: Transform Coordinate Systems
+vlg.log: 29/01/2014 19:15:41 IST
+CONFIG: Transform Geometry
+vlg.log: 29/01/2014 19:15:43 IST
+CONFIG: Transform Coordinate Systems
+vlg.log: 29/01/2014 19:15:45 IST
+CONFIG: Transform Geometry
+vlg.log: 29/01/2014 19:16:03 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 2 frames
+vlg.log: 29/01/2014 19:16:03 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 20 frames
+vlg.log: 29/01/2014 19:16:03 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 200 frames
+vlg.log: 29/01/2014 19:16:06 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:16:06 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 200 frames
+vlg.log: 29/01/2014 19:16:07 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 20 frames
+vlg.log: 29/01/2014 19:16:07 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 2 frames
+vlg.log: 29/01/2014 19:16:07 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 1000 frames
+vlg.log: 29/01/2014 19:16:07 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 1000 frames
+vlg.log: 29/01/2014 19:16:08 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 1 frames
+vlg.log: 29/01/2014 19:16:08 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 10 frames
+vlg.log: 29/01/2014 19:16:08 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 100 frames
+vlg.log: 29/01/2014 19:16:08 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 1000 frames
+vlg.log: 29/01/2014 19:16:08 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 10000 frames
+vlg.log: 29/01/2014 19:16:10 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 1000 frames
+vlg.log: 29/01/2014 19:16:11 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 10000 frames
+vlg.log: 29/01/2014 19:16:13 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 100000 frames
+vlg.log: 29/01/2014 19:16:13 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 1000000 frames
+vlg.log: 29/01/2014 19:16:13 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 10000000 frames
+vlg.log: 29/01/2014 19:16:13 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 100000000 frames
+vlg.log: 29/01/2014 19:16:13 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 1000000000 frames
+vlg.log: 29/01/2014 19:16:13 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 1000 frames
+vlg.log: 29/01/2014 19:16:14 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 1000000000 frames
+vlg.log: 29/01/2014 19:16:14 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 100000000 frames
+vlg.log: 29/01/2014 19:16:15 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 10000000 frames
+vlg.log: 29/01/2014 19:16:15 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 1000000 frames
+vlg.log: 29/01/2014 19:16:15 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 100000 frames
+vlg.log: 29/01/2014 19:16:15 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 10000 frames
+vlg.log: 29/01/2014 19:16:15 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 1000 frames
+vlg.log: 29/01/2014 19:16:19 IST
+UPDATETRANSFORM: Translation by < 3.0 , 2.0 , 0.0 >
+Duration: 1000 frames
+vlg.log: 29/01/2014 19:16:21 IST
+CONFIG: Enabled 3D
+vlg.log: 29/01/2014 19:16:22 IST
+CONFIG: Disabled 3D
+vlg.log: 29/01/2014 19:16:22 IST
+CONFIG: Enabled 3D
+vlg.log: 29/01/2014 19:16:25 IST
+CONFIG: Disabled 3D
+vlg.log: 29/01/2014 19:16:56 IST
+SESSION BEGIN: Aayush Saxena (201201021) at 29/01/2014 19:16:56 IST
+vlg.log: 29/01/2014 19:17:33 IST
+SESSION BEGIN: Aayush Saxena (201201021) at 29/01/2014 19:17:33 IST
+vlg.log: 29/01/2014 19:18:20 IST
+SESSION BEGIN: Aayush Saxena (201201021) at 29/01/2014 19:18:20 IST
+vlg.log: 29/01/2014 19:19:21 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about Y
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:25 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about X
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:25 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about X
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:27 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about Z
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:27 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about Z
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:29 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 2.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:29 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 2.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:29 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 2.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:30 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:30 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:30 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:31 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:31 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:31 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:31 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:31 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:31 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:31 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:31 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:31 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:33 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:33 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:33 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:34 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:34 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:34 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:34 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:34 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:34 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:35 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:35 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:35 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:36 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:36 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:36 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:37 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:37 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:37 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:38 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:38 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:38 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:45 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:45 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:45 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:46 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:46 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:46 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:46 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:46 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:46 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:47 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:47 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:47 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:49 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about Z
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:19:49 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about Z
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:21:40 IST
+SESSION BEGIN: Aayush Saxena (201201021) at 29/01/2014 19:21:40 IST
+vlg.log: 29/01/2014 19:22:03 IST
+CONFIG: Enabled 3D
+vlg.log: 29/01/2014 19:23:04 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about Y
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:24:10 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about Y
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:24:12 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:24:12 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:24:12 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:24:13 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about X
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:24:13 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about X
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:25:36 IST
+SESSION BEGIN: Aayush Saxena (201201021) at 29/01/2014 19:25:36 IST
+vlg.log: 29/01/2014 19:29:49 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about Z
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:30:03 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about Y
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:30:46 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about Z
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:31:16 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about Y
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:31:24 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about Z
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:31:40 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about Z
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:32:07 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:32:13 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:32:48 IST
+SESSION BEGIN: Aayush Saxena (201201021) at 29/01/2014 19:32:48 IST
+vlg.log: 29/01/2014 19:33:27 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:33:29 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:33:40 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:33:40 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:33:40 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:33:41 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:33:41 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:33:41 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:33:41 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:33:41 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:33:41 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:33:42 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:33:42 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:33:42 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:33:43 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:33:43 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:33:43 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:33:46 IST
+UPDATETRANSFORM: Rotation by 9.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:33:46 IST
+UPDATETRANSFORM: Rotation by 90.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:33:47 IST
+UPDATETRANSFORM: Rotation by 90.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:33:47 IST
+UPDATETRANSFORM: Rotation by 90.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:33:48 IST
+UPDATETRANSFORM: Rotation by 90.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 19:34:09 IST
+CONFIG: Enabled 3D
+vlg.log: 29/01/2014 19:34:16 IST
+CONFIG: View Reset
+vlg.log: 29/01/2014 19:34:17 IST
+CONFIG: Disabled 3D
+vlg.log: 29/01/2014 22:02:41 IST
+SESSION BEGIN: Aayush Saxena (201201021) at 29/01/2014 22:02:41 IST
+vlg.log: 29/01/2014 22:13:49 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:13:55 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:13:56 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:13:56 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:13:56 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:13:59 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:13:59 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:13:59 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:13:59 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:13:59 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:13:59 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:13:59 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:13:59 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:13:59 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:14:03 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:14:03 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:14:03 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:14:07 IST
+UPDATETRANSFORM: Rotation by 4.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:14:07 IST
+UPDATETRANSFORM: Rotation by 45.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:14:08 IST
+UPDATETRANSFORM: Rotation by 45.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:14:08 IST
+UPDATETRANSFORM: Rotation by 45.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:14:23 IST
+UPDATETRANSFORM: Rotation by 45.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:14:24 IST
+CONFIG: Enabled 3D
+vlg.log: 29/01/2014 22:17:19 IST
+ADDSHAPE: Instance 1
+vlg.log: 29/01/2014 22:17:20 IST
+ADDINSTANCE: Instance 1
+vlg.log: 29/01/2014 22:17:35 IST
+UPDATETRANSFORM: Rotation by 45.0 degrees about X
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:18:04 IST
+UPDATETRANSFORM: Rotation by 45.0 degrees about X
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:18:04 IST
+UPDATETRANSFORM: Rotation by 45.0 degrees about X
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:18:04 IST
+UPDATETRANSFORM: Rotation by 45.0 degrees about X
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:18:06 IST
+UPDATETRANSFORM: Rotation by 45.0 degrees about X
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:18:06 IST
+UPDATETRANSFORM: Rotation by 45.0 degrees about X
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:18:06 IST
+UPDATETRANSFORM: Rotation by 4.0 degrees about X
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:18:07 IST
+UPDATETRANSFORM: Rotation by 0.0 degrees about X
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:18:07 IST
+UPDATETRANSFORM: Rotation by 1.0 degrees about X
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:18:08 IST
+UPDATETRANSFORM: Rotation by 12.0 degrees about X
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:18:08 IST
+UPDATETRANSFORM: Rotation by 120.0 degrees about X
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:18:08 IST
+UPDATETRANSFORM: Rotation by 120.0 degrees about X
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:18:08 IST
+UPDATETRANSFORM: Rotation by 120.0 degrees about X
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:18:11 IST
+UPDATETRANSFORM: Rotation by 120.0 degrees about X
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:19:03 IST
+SESSION BEGIN: Aayush Saxena (201201021) at 29/01/2014 22:19:03 IST
+vlg.log: 29/01/2014 22:20:53 IST
+UPDATETRANSFORM: Scale by < 3.0 , 2.0 , 1.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:20:54 IST
+UPDATETRANSFORM: Scale by < 3.0 , 2.0 , 2.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:20:54 IST
+UPDATETRANSFORM: Scale by < 3.0 , 2.0 , 2.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:20:54 IST
+UPDATETRANSFORM: Scale by < 3.0 , 2.0 , 2.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:20:56 IST
+UPDATETRANSFORM: Scale by < 3.0 , 2.0 , 2.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:20:57 IST
+CONFIG: Enabled 3D
+vlg.log: 29/01/2014 22:21:25 IST
+UPDATETRANSFORM: Scale by < 3.0 , 3.0 , 2.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:21:26 IST
+UPDATETRANSFORM: Scale by < 3.0 , 3.0 , 2.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:21:26 IST
+UPDATETRANSFORM: Scale by < 3.0 , 3.0 , 2.0 >
+Duration: 2000 frames
+vlg.log: 29/01/2014 22:22:11 IST
+SESSION BEGIN: Aayush Saxena (201201021) at 29/01/2014 22:22:11 IST
+vlg.log: 29/01/2014 22:24:12 IST
+SESSION BEGIN: Aayush Saxena (201201021) at 29/01/2014 22:24:12 IST
+vlg.log: 29/01/2014 22:26:37 IST
+SESSION BEGIN: Aayush Saxena (201201021) at 29/01/2014 22:26:37 IST
+vlg.log: 29/01/2014 22:26:51 IST
+CONFIG: Enabled 3D
+vlg.log: 29/01/2014 22:29:20 IST
+SESSION BEGIN: Aayush Saxena (201201021) at 29/01/2014 22:29:20 IST
+vlg.log: 29/01/2014 22:29:40 IST
+UPDATETRANSFORM: Translation by < 2.0 , 1.0 , 0.0 > in 1000 frames Moved up
+vlg.log: 29/01/2014 22:29:40 IST
+UPDATETRANSFORM: Translation by < 2.0 , 1.0 , 0.0 > in 1000 frames Moved up
+vlg.log: 29/01/2014 22:29:41 IST
+UPDATETRANSFORM: Translation by < 2.0 , 1.0 , 0.0 > in 1000 frames Moved up
+vlg.log: 29/01/2014 22:29:42 IST
+UPDATETRANSFORM: Tranformation 1
+vlg.log: 29/01/2014 22:30:14 IST
+UPDATETRANSFORM: Tranformation 1
+vlg.log: 29/01/2014 22:30:32 IST
+UPDATETRANSFORM: Rotation by 90.0 degrees about < 1.0 , 1.0 , 0.0 > in 0 frames Deleted
+vlg.log: 29/01/2014 22:30:36 IST
+UPDATETRANSFORM: Translation by < -2.0 , -1.0 , -0.0 > in 1000 frames Moved up
+vlg.log: 29/01/2014 22:30:39 IST
+UPDATETRANSFORM: Tranformation 1
+vlg.log: 29/01/2014 22:31:35 IST
+UPDATETRANSFORM: Translation by < -2.0 , -1.0 , -0.0 > in 1000 frames Deleted
+vlg.log: 29/01/2014 22:31:38 IST
+UPDATETRANSFORM: Scale by < 3.0 , 2.0 , 1.0 > in 1000 frames Moved up
+vlg.log: 29/01/2014 22:31:43 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about Z in 1000 frames Moved up
+vlg.log: 29/01/2014 22:31:51 IST
+UPDATETRANSFORM: Tranformation 1
+vlg.log: 29/01/2014 22:32:08 IST
+UPDATETRANSFORM: Tranformation 1
+vlg.log: 29/01/2014 22:32:15 IST
+UPDATETRANSFORM: Scale by < 3.0 , 2.0 , 1.0 >
+Duration: 1000 frames
+vlg.log: 29/01/2014 22:32:16 IST
+UPDATETRANSFORM: Scale by < 3.0 , 2.0 , 0.0 >
+Duration: 1000 frames
+vlg.log: 29/01/2014 22:32:16 IST
+UPDATETRANSFORM: Scale by < 3.0 , 2.0 , 3.0 >
+Duration: 1000 frames
+vlg.log: 29/01/2014 22:32:20 IST
+UPDATETRANSFORM: Scale by < 3.0 , 2.0 , 3.0 >
+Duration: 1000 frames
+vlg.log: 29/01/2014 22:32:25 IST
+UPDATETRANSFORM: Rotation by 10.0 degrees about Z
+Duration: 1000 frames
+vlg.log: 29/01/2014 22:32:25 IST
+UPDATETRANSFORM: Rotation by 0.0 degrees about Z
+Duration: 1000 frames
+vlg.log: 29/01/2014 22:32:26 IST
+UPDATETRANSFORM: Rotation by 90.0 degrees about Z
+Duration: 1000 frames
+vlg.log: 29/01/2014 22:32:28 IST
+UPDATETRANSFORM: Rotation by 90.0 degrees about Z
+Duration: 1000 frames
+vlg.log: 29/01/2014 22:32:32 IST
+UPDATETRANSFORM: Translation by < -2.0 , 1.0 , 0.0 >
+Duration: 1000 frames
+vlg.log: 29/01/2014 22:32:33 IST
+UPDATETRANSFORM: Translation by < -2.0 , 1.0 , 0.0 >
+Duration: 1000 frames
+vlg.log: 29/01/2014 22:32:35 IST
+UPDATETRANSFORM: Translation by < -2.0 , 1.0 , 0.0 >
+Duration: 1000 frames
+vlg.log: 29/01/2014 22:32:35 IST
+UPDATETRANSFORM: Translation by < -2.0 , 1.0 , -3.0 >
+Duration: 1000 frames
+vlg.log: 29/01/2014 22:32:36 IST
+UPDATETRANSFORM: Translation by < -2.0 , 1.0 , -3.0 >
+Duration: 1000 frames
+vlg.log: 29/01/2014 22:32:36 IST
+UPDATETRANSFORM: Translation by < -2.0 , 1.0 , -3.0 >
+Duration: 1000 frames
+vlg.log: 29/01/2014 22:32:39 IST
+UPDATETRANSFORM: Translation by < -2.0 , 1.0 , -3.0 >
+Duration: 1000 frames
+vlg.log: 29/01/2014 22:32:40 IST
+CONFIG: Enabled 3D
+vlg.log: 29/01/2014 22:33:43 IST
+SESSION BEGIN: Aayush Saxena (201201021) at 29/01/2014 22:33:43 IST
+vlg.log: 29/01/2014 22:36:12 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:36:14 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 2.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:36:14 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 2.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:36:15 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 2.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:36:17 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 2.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:36:17 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 2.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:36:18 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:36:20 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:36:20 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:36:21 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:36:22 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:36:23 IST
+UPDATETRANSFORM: Translation by < 1.0 , 2.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:36:24 IST
+UPDATETRANSFORM: Translation by < 1.0 , 2.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:36:25 IST
+UPDATETRANSFORM: Translation by < 1.0 , 2.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:36:28 IST
+UPDATETRANSFORM: Translation by < 1.0 , 2.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:36:56 IST
+SESSION BEGIN: Aayush Saxena (201201021) at 29/01/2014 22:36:56 IST
+vlg.log: 29/01/2014 22:37:16 IST
+UPDATETRANSFORM: Scale by < 2.0 , 0.5 , 2.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:37:18 IST
+UPDATETRANSFORM: Scale by < 2.0 , 0.5 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:37:18 IST
+UPDATETRANSFORM: Scale by < 2.0 , 0.5 , 3.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:37:27 IST
+UPDATETRANSFORM: Scale by < 2.0 , 0.5 , 3.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:37:36 IST
+UPDATETRANSFORM: Rotation by 45.0 degrees about Y
+Duration: 400 frames
+vlg.log: 29/01/2014 22:37:43 IST
+UPDATETRANSFORM: Rotation by 45.0 degrees about Y
+Duration: 400 frames
+vlg.log: 29/01/2014 22:37:43 IST
+UPDATETRANSFORM: Rotation by 45.0 degrees about Y
+Duration: 400 frames
+vlg.log: 29/01/2014 22:37:43 IST
+UPDATETRANSFORM: Rotation by 45.0 degrees about Y
+Duration: 400 frames
+vlg.log: 29/01/2014 22:37:45 IST
+UPDATETRANSFORM: Rotation by 4.0 degrees about Y
+Duration: 400 frames
+vlg.log: 29/01/2014 22:37:45 IST
+UPDATETRANSFORM: Rotation by 0.0 degrees about Y
+Duration: 400 frames
+vlg.log: 29/01/2014 22:37:47 IST
+UPDATETRANSFORM: Rotation by 1.0 degrees about Y
+Duration: 400 frames
+vlg.log: 29/01/2014 22:37:47 IST
+UPDATETRANSFORM: Rotation by 18.0 degrees about Y
+Duration: 400 frames
+vlg.log: 29/01/2014 22:37:47 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about Y
+Duration: 400 frames
+vlg.log: 29/01/2014 22:37:54 IST
+UPDATETRANSFORM: Rotation by 180.0 degrees about Y
+Duration: 400 frames
+vlg.log: 29/01/2014 22:38:00 IST
+UPDATETRANSFORM: Translation by < -1.0 , 1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:02 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:03 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:03 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:04 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:09 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:09 IST
+UPDATETRANSFORM: Translation by < 1.0 , -1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:10 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:11 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:12 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:13 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:13 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:13 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:13 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:14 IST
+UPDATETRANSFORM: Translation by < 1.0 , -1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:15 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:17 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:21 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:21 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:21 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 1.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:23 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:24 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:27 IST
+UPDATETRANSFORM: Translation by < 1.0 , 1.0 , 0.0 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:31 IST
+UPDATETRANSFORM: Scale by < 3.0 , -0.5 , 0.5 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:31 IST
+UPDATETRANSFORM: Scale by < 3.0 , 0.5 , 0.5 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:32 IST
+UPDATETRANSFORM: Scale by < 3.0 , 0.5 , 0.5 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:32 IST
+UPDATETRANSFORM: Scale by < 3.0 , 0.5 , 0.5 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:32 IST
+UPDATETRANSFORM: Scale by < 3.0 , 0.5 , 0.5 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:33 IST
+UPDATETRANSFORM: Scale by < 3.0 , 0.0 , 0.5 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:33 IST
+UPDATETRANSFORM: Scale by < 3.0 , 0.0 , 0.5 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:33 IST
+UPDATETRANSFORM: Scale by < 3.0 , 0.5 , 0.5 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:34 IST
+UPDATETRANSFORM: Scale by < 3.0 , 2.0 , 0.5 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:34 IST
+UPDATETRANSFORM: Scale by < 3.0 , 2.0 , 0.5 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:34 IST
+UPDATETRANSFORM: Scale by < 3.0 , 2.5 , 0.5 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:36 IST
+UPDATETRANSFORM: Scale by < 3.0 , 2.0 , 0.5 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:36 IST
+UPDATETRANSFORM: Scale by < 3.0 , 2.0 , 0.5 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:37 IST
+UPDATETRANSFORM: Scale by < 3.0 , 0.5 , 0.5 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:39 IST
+UPDATETRANSFORM: Scale by < 3.0 , 0.5 , 0.5 >
+Duration: 0 frames
+vlg.log: 29/01/2014 22:38:52 IST
+UPDATETRANSFORM: Rotation by 45.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 400 frames
+vlg.log: 29/01/2014 22:38:54 IST
+UPDATETRANSFORM: Rotation by 45.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 400 frames
+vlg.log: 29/01/2014 22:38:54 IST
+UPDATETRANSFORM: Rotation by 45.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 400 frames
+vlg.log: 29/01/2014 22:38:56 IST
+UPDATETRANSFORM: Rotation by 45.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 400 frames
+vlg.log: 29/01/2014 22:38:56 IST
+UPDATETRANSFORM: Rotation by 45.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 400 frames
+vlg.log: 29/01/2014 22:38:56 IST
+UPDATETRANSFORM: Rotation by 45.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 400 frames
+vlg.log: 29/01/2014 22:38:56 IST
+UPDATETRANSFORM: Rotation by 45.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 400 frames
+vlg.log: 29/01/2014 22:38:57 IST
+UPDATETRANSFORM: Rotation by 45.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 400 frames
+vlg.log: 29/01/2014 22:38:57 IST
+UPDATETRANSFORM: Rotation by 45.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 400 frames
+vlg.log: 29/01/2014 22:38:57 IST
+UPDATETRANSFORM: Rotation by 45.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 400 frames
+vlg.log: 29/01/2014 22:38:57 IST
+UPDATETRANSFORM: Rotation by 45.0 degrees about < 1.0 , 1.0 , 0.0 >
+Duration: 400 frames
+vlg.log: 29/01/2014 22:39:30 IST
+SESSION BEGIN: Aayush Saxena (201201021) at 29/01/2014 22:39:30 IST
+vlg.log: 29/01/2014 22:42:24 IST
+SESSION BEGIN: Aayush Saxena (201201021) at 29/01/2014 22:42:24 IST
+vlg.log: 29/01/2014 22:44:23 IST
+SESSION BEGIN: Aayush Saxena (201201021) at 29/01/2014 22:44:23 IST
+vlg.log: 29/01/2014 22:45:04 IST
+UPDATECAMERA: Camera View of Camera 1 is Disabled
+vlg.log: 29/01/2014 22:45:06 IST
+UPDATECAMERA: Camera View of Camera 1 is Enabled
+vlg.log: 29/01/2014 22:45:20 IST
+UPDATECAMERA: Camera Type of Camera 1 changed to ORTHOGRAPHIC
+vlg.log: 29/01/2014 22:45:30 IST
+UPDATECAMERA: Camera Type of Camera 1 changed to PERSPECTIVE
+vlg.log: 29/01/2014 22:45:31 IST
+UPDATECAMERA: Camera Type of Camera 1 changed to PERSPECTIVE
+vlg.log: 29/01/2014 22:46:32 IST
+UPDATECAMERA: Reference frame changed to Camera Camera 1
+vlg.log: 29/01/2014 22:46:34 IST
+UPDATECAMERA: Reference frame changed to Camera Camera 1
+vlg.log: 29/01/2014 22:46:35 IST
+UPDATECAMERA: Reference frame changed to Camera Camera 1
+vlg.log: 29/01/2014 22:46:37 IST
+UPDATECAMERA: Reference frame changed to Camera Camera 1
+vlg.log: 29/01/2014 22:46:52 IST
+CONFIG: Disabled 3D
+vlg.log: 29/01/2014 22:46:53 IST
+CONFIG: Enabled 3D
+vlg.log: 29/01/2014 22:47:02 IST
+UPDATECAMERA: Reference frame changed to Camera Camera 1
+vlg.log: 29/01/2014 22:48:03 IST
+ADDCAMERA: Camera 2 with parameters
+Left = -1.0
+Right = -2.0
+Bottom = 2.0
+Top = 5.0
+Near = 3.0
+Far = 4.0
+Eye = (1.0 , 1.0 , 1.0)
+LookAt = (2.0 , 2.0 , 2.0)
+Up = (-1.0 , -1.0 , -1.0)
+
+vlg.log: 29/01/2014 22:48:27 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:48:27 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to -2.0
+vlg.log: 29/01/2014 22:48:29 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:48:30 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:48:30 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:48:30 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:48:31 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:48:33 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:48:34 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 2.0
+vlg.log: 29/01/2014 22:48:35 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:48:36 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 3.0
+vlg.log: 29/01/2014 22:48:38 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:48:38 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 4.0
+vlg.log: 29/01/2014 22:48:39 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:48:39 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:48:41 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:48:42 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to -1.0
+vlg.log: 29/01/2014 22:48:42 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:48:43 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:48:44 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:48:44 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to -5.0
+vlg.log: 29/01/2014 22:48:45 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:48:45 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:48:45 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:48:47 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:48:47 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:48:47 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 1.4
+vlg.log: 29/01/2014 22:48:48 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:48:48 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:48:48 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:48:49 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:48:50 IST
+UPDATECAMERA: Camera Near of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:48:52 IST
+UPDATECAMERA: Camera Far of Camera 1 changed to -20.0
+vlg.log: 29/01/2014 22:48:54 IST
+UPDATECAMERA: Camera Far of Camera 1 changed to -20.0
+vlg.log: 29/01/2014 22:48:54 IST
+UPDATECAMERA: Camera Far of Camera 1 changed to -20.0
+vlg.log: 29/01/2014 22:48:54 IST
+UPDATECAMERA: Camera Far of Camera 1 changed to 20.0
+vlg.log: 29/01/2014 22:48:55 IST
+UPDATECAMERA: Camera Far of Camera 1 changed to 20.0
+vlg.log: 29/01/2014 22:48:56 IST
+UPDATECAMERA: Camera Far of Camera 1 changed to 0.0
+vlg.log: 29/01/2014 22:48:56 IST
+UPDATECAMERA: Camera Far of Camera 1 changed to 10.0
+vlg.log: 29/01/2014 22:48:57 IST
+UPDATECAMERA: Camera Far of Camera 1 changed to 0.0
+vlg.log: 29/01/2014 22:48:58 IST
+UPDATECAMERA: Camera Far of Camera 1 changed to 20.0
+vlg.log: 29/01/2014 22:48:59 IST
+UPDATECAMERA: Camera Far of Camera 1 changed to 20.0
+vlg.log: 29/01/2014 22:49:01 IST
+UPDATECAMERA: Camera Bottom of Camera 1 changed to -1.0
+vlg.log: 29/01/2014 22:49:01 IST
+UPDATECAMERA: Camera Bottom of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:49:03 IST
+UPDATECAMERA: Camera Bottom of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:49:03 IST
+UPDATECAMERA: Camera Bottom of Camera 1 changed to 11.0
+vlg.log: 29/01/2014 22:49:05 IST
+UPDATECAMERA: Camera Bottom of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:49:05 IST
+UPDATECAMERA: Camera Bottom of Camera 1 changed to -11.0
+vlg.log: 29/01/2014 22:49:05 IST
+UPDATECAMERA: Camera Bottom of Camera 1 changed to -11.0
+vlg.log: 29/01/2014 22:49:09 IST
+UPDATECAMERA: Camera Bottom of Camera 1 changed to -110.0
+vlg.log: 29/01/2014 22:49:09 IST
+UPDATECAMERA: Camera Bottom of Camera 1 changed to -10.0
+vlg.log: 29/01/2014 22:49:11 IST
+UPDATECAMERA: Camera Bottom of Camera 1 changed to -1.0
+vlg.log: 29/01/2014 22:49:13 IST
+UPDATECAMERA: Camera Bottom of Camera 1 changed to -1.0
+vlg.log: 29/01/2014 22:49:13 IST
+UPDATECAMERA: Camera Left of Camera 1 changed to -1.0
+vlg.log: 29/01/2014 22:49:16 IST
+UPDATECAMERA: Camera Top of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:49:16 IST
+UPDATECAMERA: Camera Top of Camera 1 changed to 0.0
+vlg.log: 29/01/2014 22:49:17 IST
+UPDATECAMERA: Camera Top of Camera 1 changed to 5.0
+vlg.log: 29/01/2014 22:49:19 IST
+UPDATECAMERA: Camera Top of Camera 1 changed to 0.0
+vlg.log: 29/01/2014 22:49:20 IST
+UPDATECAMERA: Camera Top of Camera 1 changed to -0.0
+vlg.log: 29/01/2014 22:49:20 IST
+UPDATECAMERA: Camera Top of Camera 1 changed to -1.0
+vlg.log: 29/01/2014 22:49:21 IST
+UPDATECAMERA: Camera Top of Camera 1 changed to -0.0
+vlg.log: 29/01/2014 22:49:21 IST
+UPDATECAMERA: Camera Top of Camera 1 changed to 0.0
+vlg.log: 29/01/2014 22:49:21 IST
+UPDATECAMERA: Camera Top of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:49:24 IST
+UPDATECAMERA: Camera Top of Camera 1 changed to 1.0
+vlg.log: 29/01/2014 22:49:25 IST
+UPDATECAMERA: Camera Left of Camera 1 changed to -1.0
+vlg.log: 29/01/2014 22:49:26 IST
+UPDATECAMERA: Camera Left of Camera 1 changed to -2.0
+vlg.log: 29/01/2014 22:49:29 IST
+UPDATECAMERA: Camera Left of Camera 1 changed to -2.0
+vlg.log: 29/01/2014 22:49:31 IST
+UPDATECAMERA: Camera Right of Camera 1 changed to -1.0
+vlg.log: 29/01/2014 22:49:35 IST
+UPDATECAMERA: Camera Right of Camera 1 changed to -1.0
+vlg.log: 29/01/2014 22:49:37 IST
+UPDATETRANSFORM: Rotation by 90.0 degrees about < 1.0 , 0.0 , 0.0 >
+Duration: 5000 frames

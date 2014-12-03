@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Assignment-4</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				background-color: #009;
+				margin: 0px;
+				overflow: hidden;
+			}
+
+			#info {
+				position: absolute;
+				top: 0px; width: 100%;
+				color: #ffffff;
+				padding: 5px;
+				font-family: Monospace;
+				font-size: 13px;
+				text-align: center;
+			}
+
+			a {
+				color: #ff0080;
+				text-decoration: none;
+			}
+
+			a:hover {
+				color: #0080ff;
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<div id="container"></div>
+		
+		
+		<script src="three.min.js"></script>
+		<script src="OBJLoader.js"></script>
+		<script src="TrackballControls.js"></script>
+		<script src="FirstPersonControls.js"></script>
+		
+		<script src="Detector.js"></script>
+
+		<script>
+
+			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+
+			var camera, scene, renderer, controls,horse;
+			var animation;
+			var loader4;
+      			var geometry,mesh,zmesh;
+			var FAR = 400;
+
+			var clock = new THREE.Clock();
+
+			init();
+			animate();
+
+			function init() {
+
+				var container = document.getElementById( 'container' );
+
+				// CAMERA
+
+				camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, FAR );
+				camera.position.set( 90, 140, 350 );
+				//camera.lookAt( new THREE.Vector3() );
+				camera.lookAt( 0,0,0 );
+				// SCENE
+
+				scene = new THREE.Scene();
+				scene.fog = new THREE.Fog( 0xB0E0F6, 1,500 );
+				var ambient = new THREE.AmbientLight( 0x2F1561 );
+				scene.add( ambient );
+
+				
+				// CONTROLS
+				controls = new THREE.FirstPersonControls( camera );
+				controls.movementSpeed = 90;
+				controls.lookSpeed = 0.1;
+				controls.lookVertical = true;
+				controls.lon = -90;
+
+				// TEXTURES
+
+				var texture = THREE.ImageUtils.loadTexture( "textures/grasslight-big.jpg" );
+				
+				texture.repeat.set( 20, 10 );
+				texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+				texture.format = THREE.RGBFormat;
+
+				var texture2 = THREE.ImageUtils.loadTexture( "textures/moon_1024.jpg" );
+				texture2.repeat.set( 2, 1 );
+				texture2.wrapS = texture2.wrapT = THREE.RepeatWrapping;
+				texture2.format = THREE.RGBFormat;
+
+				var texture1 = THREE.ImageUtils.loadTexture( 'house/tex/tex1.jpg' );
+				texture1.wrapS = texture1.wrapT = THREE.RepeatWrapping;
+				texture1.format = THREE.RGBFormat;
+				
+				// MATERIALS
+
+				var groundMaterial = new THREE.MeshPhongMaterial( { color: 0xfffff1, ambient: 0x444443, map: texture } );
+
+				// GROUND
+
+				var mesh = new THREE.Mesh( new THREE.PlaneGeometry( 8000, 4000, 2, 2 ), groundMaterial );
+				mesh.position.y = 0;
+				mesh.rotation.x = - Math.PI / 2;
+				scene.add( mesh );
+
+				// OBJECTS
+        			
+
+
+				// LOADER
+				var loader = new THREE.OBJLoader( THREE.DefaultLoadingManager );
+				loader.load( 'house/house.obj', function ( object ) {
+
+					object.traverse( function ( child ) {
+
+						if ( child instanceof THREE.Mesh ) {
+
+							child.material.map = texture1;
+
+						}
+
+					} );
+
+					object.position.y = 0;
+					object.scale.set(0.3,0.3,0.3);
+					scene.add( object );
+
+				} );
+
+				var loader6 = new THREE.JSONLoader( true );
+				loader6.load( "./horse.js", function( geometry ) {
+	
+				var horsetexture = THREE.ImageUtils.loadTexture('textures/horse.jpg');
+				horse = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( {map: horsetexture, morphTargets: true } ) );
+				horse.scale.set( 0.5, 0.5, 0.5 );
+				horse.position.set(200,-5,100);
+				horse.rotation.y = 90;
+				scene.add(horse);
+				animation = new THREE.MorphAnimation(horse);
+				animation.play();
+					
+
+				});
+
+				
+				// LIGHTS
+
+				var intensity = 2.0;
+				var distance = 1000;
+						
+				
+				scene.add(new THREE.AmbientLight(0xffffff));
+				var dlight = new THREE.DirectionalLight( 0xffffff, 0.8 );
+				dlight.position.set( 0.5, -1, 0 ).normalize();
+				scene.add( dlight );
+
+				var sphere = new THREE.SphereGeometry( 0.25, 16, 8 );
+
+				
+				// RENDERER
+
+				renderer = new THREE.WebGLRenderer( { antialias: false } );
+				renderer.setClearColor( scene.fog.color, 1 );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+				container.appendChild( renderer.domElement );
+
+				renderer.gammaInput = true;
+				renderer.gammaOutput = true;
+				
+				//
+				window.addEventListener( 'resize', onWindowResize, false );
+
+			}
+		        function createScene( geometry, x, y, z, b ) {
+				material = new THREE.MeshLambertMaterial( { color: 0x0FBC0F, shading: THREE.SmoothShading, overdraw: true } );
+				zmesh = new THREE.Mesh( geometry, material);
+				zmesh.position.set( x, y, z );
+				zmesh.scale.set( 2, 2, 2 );
+				scene.add( zmesh );
+
+
+			}
+
+			
+			function onWindowResize() {
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+				controls.handleResize();
+
+			}
+
+
+			function animate() {
+
+				requestAnimationFrame( animate);
+				
+				render();
+
+			}
+
+			function render() {
+
+				var time = Date.now() * 0.00025;
+				var z = 20, d = 150;
+
+				controls.update( clock.getDelta() );
+				var delta = clock.getDelta();
+
+				THREE.AnimationHandler.update( delta );
+
+
+				renderer.render( scene, camera );
+
+			}
+
+		</script>
+	</body>
+</html>

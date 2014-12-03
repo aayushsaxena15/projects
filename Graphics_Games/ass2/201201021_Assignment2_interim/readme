@@ -1,0 +1,34 @@
+Aayush Saxena
+201201021
+
+
+
+To compile enter on terminal:
+	
+		g++ -lglut -lGL -lGLU 201201021_Assignment2_interim.cpp vec3f.cpp imageloader.cpp
+
+
+
+Assignment 2
+
+Basic features implemented:
+
+
+
+hilly terrain
+
+cube(vehicle)
+
+cube moves up  and down the hills
+
+fossils on the terrain
+
+4 camera views
+
+	1    Driver view
+	2    Wheel view
+	3    Overhead view
+	5    Follow Cam
+
+
+Reference--  http://www.videotutorialsrock.com/opengl_tutorial

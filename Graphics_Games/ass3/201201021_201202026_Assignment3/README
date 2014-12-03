@@ -1,0 +1,56 @@
+201202026 Mihir Wadwekar
+201201021 Aayush Saxena
+Graphics Assignment 3 final
+
+
+
+Main program is in game.cpp
+Execute by typing make (ignore the warning messages) and then ./game
+
+---------- Instructions To Play ----------------
+
+1)Accelerate bike by pressing up key and apply brakes by down key
+2)Right and Left key tilt the bike and turn it left and right when it is in speed.
+3)Views can be switched by pressing buttons:
+	1 Driver View
+	2 Wheel View
+	3 Overhead View
+	4 Helicopter View
+	5 Follow Cam
+4)Press 'ESC' key to exit game.
+5)Execute by typing make and then ./game.
+
+
+
+
+Features implemented in Assignment3:-
+
+1) Use of texture ("grass.bmp") along with slight shading.
+2) Use of headlight in the bike(dynamic spotlight).
+3) Use of static spotlights at the corners of the terrain.
+4) Use of skymap ("cloud.bmp"). 
+
+
+
+
+
+
+
+
+
+---------- Features that were Implemented in Assignment2----------------
+1) Terrain.
+2) Bike has constant acceleration on pressing up key and deaccelarates when key is left.(Physics)
+2) Bike can tilt and will be balanced by centrifugal force.(Physics)
+3) Rotating tyres.
+4) Bike Structure.
+5) Bike can climb up the mounts.
+6) There are fossils distributed accross the terrain.
+7) Five camera views.
+8) Player can collect the fossils by passing over them.
+9) There is a timer. If player does not collect all the 50 fossils in the give time, then he loses the game.Otherwise, he wins.
+10) Score and Timer Displays
+
+
+References:
+http://www.videotutorialsrock.com/ for terrain implementation.

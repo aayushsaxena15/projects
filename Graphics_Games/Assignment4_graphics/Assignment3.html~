@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Assignment-3</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				background-color: #000;
+				margin: 0px;
+				overflow: hidden;
+			}
+
+			#info {
+				position: absolute;
+				top: 0px; width: 100%;
+				color: #ffffff;
+				padding: 5px;
+				font-family: Monospace;
+				font-size: 13px;
+				text-align: center;
+			}
+
+			a {
+				color: #ff0080;
+				text-decoration: none;
+			}
+
+			a:hover {
+				color: #0080ff;
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<div id="container"></div>
+		
+
+		<script src="three.min.js"></script>
+
+		<script src="TrackballControls.js"></script>
+		<script src="FirstPersonControls.js"></script>
+		<script src="ColladaLoader.js"></script>
+		<script src="Detector.js"></script>
+		<script src="BinaryLoader.js"></script>
+
+		<script>
+
+			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+
+			var camera, scene, renderer, controls,
+			particle1, particle2, particle4, particle4, particle5, particle6,
+			light1, light2, light3, light4, light5, light6;
+      			var geometry,mesh,zmesh;
+			var FAR = 300;
+
+			var clock = new THREE.Clock();
+
+			init();
+			animate();
+
+			function init() {
+
+				var container = document.getElementById( 'container' );
+
+				// CAMERA
+
+				camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, FAR );
+				camera.position.set( 0, 15, 150 );
+				camera.lookAt( new THREE.Vector3() );
+
+				// SCENE
+
+				scene = new THREE.Scene();
+				scene.fog = new THREE.Fog( 0x303336, 1, FAR );
+
+				// CONTROLS
+
+				var fly = true;
+
+				if ( !fly ) {
+
+					controls = new THREE.TrackballControls( camera );
+					controls.target.set( 0, 0, 0 );
+
+					controls.rotateSpeed = 1.0;
+					controls.zoomSpeed = 1.2;
+					controls.panSpeed = 0.8;
+
+					controls.noZoom = false;
+					controls.noPan = false;
+
+					controls.staticMoving = false;
+					controls.dynamicDampingFactor = 0.15;
+
+					controls.keys = [ 65, 83, 68 ];
+
+				} else {
+
+					controls = new THREE.FirstPersonControls( camera );
+
+					controls.movementSpeed = 100;
+					controls.lookSpeed = 0.005;
+					controls.lookVertical = true;
+
+					controls.lon = -90;
+
+				}
+
+
+				// TEXTURES
+
+				var texture = THREE.ImageUtils.loadTexture( "textures/grasslight-big.jpg" );
+				texture.repeat.set( 20, 10 );
+				texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+				texture.format = THREE.RGBFormat;
+
+				var texture2 = THREE.ImageUtils.loadTexture( "textures/moon_1024.jpg" );
+				texture2.repeat.set( 2, 1 );
+				texture2.wrapS = texture2.wrapT = THREE.RepeatWrapping;
+				texture2.format = THREE.RGBFormat;
+var camaroMaterials = {
+
+					body: {
+
+						Orange: new THREE.MeshLambertMaterial( {
+							color: 0xff6600,
+							envMap: texture,
+							combine: THREE.MixOperation,
+							reflectivity: 0.3
+						} ),
+
+						Blue: new THREE.MeshLambertMaterial( {
+							color: 0x226699,
+							envMap: texture,
+							combine: THREE.MixOperation,
+							reflectivity: 0.3
+						} ),
+
+						Red: new THREE.MeshLambertMaterial( {
+							color: 0x660000,
+							envMap: texture,
+							combine: THREE.MixOperation,
+							reflectivity: 0.5
+						} ),
+
+						Black: new THREE.MeshLambertMaterial( {
+							color: 0x000000,
+							envMap: texture,
+							combine: THREE.MixOperation,
+							reflectivity: 0.5
+						} ),
+
+						White: new THREE.MeshLambertMaterial( {
+							color: 0xffffff,
+							envMap: texture,
+							combine: THREE.MixOperation,
+							reflectivity: 0.5
+						} ),
+
+						Carmine: new THREE.MeshPhongMaterial( {
+							color: 0x770000,
+							specular: 0xffaaaa,
+							envMap: texture,
+							combine: THREE.MultiplyOperation
+						} ),
+
+						Gold: new THREE.MeshPhongMaterial( {
+							color: 0xaa9944,
+							specular: 0xbbaa99,
+							shininess: 50,
+							envMap: texture,
+							combine: THREE.MultiplyOperation
+						} ),
+
+						Bronze: new THREE.MeshPhongMaterial( {
+							color: 0x150505,
+							specular: 0xee6600,
+							shininess: 10,
+							envMap: texture,
+							combine: THREE.MixOperation,
+							reflectivity: 0.5
+						} ),
+
+						Chrome: new THREE.MeshPhongMaterial( {
+							color: 0xffffff,
+							specular:0xffffff,
+							envMap: texture,
+							combine: THREE.MultiplyOperation
+						} )
+
+					},
+
+					chrome: new THREE.MeshLambertMaterial( {
+						color: 0xffffff,
+						envMap: texture
+					} ),
+
+					darkchrome: new THREE.MeshLambertMaterial( {
+						color: 0x444444,
+						envMap: texture
+					} ),
+
+					glass: new THREE.MeshBasicMaterial( {
+						color: 0x223344,
+						envMap: texture,
+						opacity: 0.25,
+						combine: THREE.MixOperation,
+						reflectivity: 0.25,
+						transparent: true
+					} ),
+
+					tire: new THREE.MeshLambertMaterial( {
+						color: 0x050505
+					} ),
+
+					interior: new THREE.MeshPhongMaterial( {
+						color: 0x050505,
+						shininess: 20
+					} ),
+
+					black: new THREE.MeshLambertMaterial( {
+						color: 0x000000
+					} )
+
+				};
+
+				var loader1 = new THREE.BinaryLoader();
+				loader1.load( "obj/camaro/CamaroNoUv_bin.js", function( geometry ) { createScene( geometry, camaroMaterials ) } );
+
+				// MATERIALS
+
+				var groundMaterial = new THREE.MeshPhongMaterial( { color: 0xffffff, ambient: 0x444444, map: texture } );
+
+				// GROUND
+
+				var mesh = new THREE.Mesh( new THREE.PlaneGeometry( 8000, 4000, 2, 2 ), groundMaterial );
+				mesh.position.y = -37;
+				mesh.rotation.x = - Math.PI / 2;
+				scene.add( mesh );
+
+				// OBJECTS
+        			var loader = new THREE.JSONLoader(),
+					callbackMale   = function( geometry ) { createScene( geometry,  0, 0, 100, 205 ) };
+
+				//loader.load( "maison.js", callbackMale );
+
+				
+				// LIGHTS
+
+				var intensity = 2.5;
+				var distance = 1000;
+				var c1 = 0xff0040, c2 = 0x0040ff, c3 = 0x80ff80, c4 = 0xffaa00, c5 = 0x00ffaa, c6 = 0xff1100;
+				//var c1 = 0xffffff, c2 = 0xffffff, c3 = 0xffffff, c4 = 0xffffff, c5 = 0xffffff, c6 = 0xffffff;
+
+				light1 = new THREE.PointLight( c1, intensity, distance );
+				scene.add( light1 );
+
+				light2 = new THREE.PointLight( c2, intensity, distance );
+				scene.add( light2 );
+
+				light3 = new THREE.PointLight( c3, intensity, distance );
+				scene.add( light3 );
+
+				light4 = new THREE.PointLight( c4, intensity, distance );
+				scene.add( light4 );
+
+				light5 = new THREE.PointLight( c5, intensity, distance );
+				scene.add( light5 );
+
+				light6 = new THREE.PointLight( c6, intensity, distance );
+				scene.add( light6 );
+				
+				scene.add(new THREE.AmbientLight(0xffffff));
+				var dlight = new THREE.DirectionalLight( 0xffffff, 0.8 );
+				dlight.position.set( 0.5, -1, 0 ).normalize();
+				scene.add( dlight );
+
+				var sphere = new THREE.SphereGeometry( 0.25, 16, 8 );
+
+				var l1 = new THREE.Mesh( sphere, new THREE.MeshBasicMaterial( { color: c1 } ) );
+				l1.position = light1.position;
+				scene.add( l1 );
+
+				var l2 = new THREE.Mesh( sphere, new THREE.MeshBasicMaterial( { color: c2 } ) );
+				l2.position = light2.position;
+				scene.add( l2 );
+
+				var l3 = new THREE.Mesh( sphere, new THREE.MeshBasicMaterial( { color: c3 } ) );
+				l3.position = light3.position;
+				scene.add( l3 );
+
+				var l4 = new THREE.Mesh( sphere, new THREE.MeshBasicMaterial( { color: c4 } ) );
+				l4.position = light4.position;
+				scene.add( l4 );
+
+				var l5 = new THREE.Mesh( sphere, new THREE.MeshBasicMaterial( { color: c5 } ) );
+				l5.position = light5.position;
+				scene.add( l5 );
+
+				var l6 = new THREE.Mesh( sphere, new THREE.MeshBasicMaterial( { color: c6 } ) );
+				l6.position = light6.position;
+				scene.add( l6 );
+
+				// RENDERER
+
+				renderer = new THREE.WebGLRenderer( { antialias: false } );
+				renderer.setClearColor( scene.fog.color, 1 );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+				container.appendChild( renderer.domElement );
+
+				renderer.gammaInput = true;
+				renderer.gammaOutput = true;
+
+				
+
+
+				//
+
+				window.addEventListener( 'resize', onWindowResize, false );
+
+			}
+		        function createScene( geometry, x, y, z, b ) {
+				material = new THREE.MeshLambertMaterial( { color: 0x158799, shading: THREE.SmoothShading, overdraw: true } );
+				zmesh = new THREE.Mesh( geometry, material);
+				zmesh.position.set( x, y, z );
+				zmesh.scale.set( 2, 2, 2 );
+				scene.add( zmesh );
+
+
+			}
+
+			
+			function onWindowResize() {
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+				controls.handleResize();
+
+			}
+
+			//
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+				render();
+
+			}
+
+			function render() {
+
+				var time = Date.now() * 0.00025;
+				var z = 20, d = 150;
+
+				light1.position.x = Math.sin( time * 0.7 ) * d;
+				light1.position.z = Math.cos( time * 0.3 ) * d;
+
+				light2.position.x = Math.cos( time * 0.3 ) * d;
+				light2.position.z = Math.sin( time * 0.7 ) * d;
+
+				light3.position.x = Math.sin( time * 0.7 ) * d;
+				light3.position.z = Math.sin( time * 0.5 ) * d;
+
+				light4.position.x = Math.sin( time * 0.3 ) * d;
+				light4.position.z = Math.sin( time * 0.5 ) * d;
+
+				light5.position.x = Math.cos( time * 0.3 ) * d;
+				light5.position.z = Math.sin( time * 0.5 ) * d;
+
+				light6.position.x = Math.cos( time * 0.7 ) * d;
+				light6.position.z = Math.cos( time * 0.5 ) * d;
+
+				controls.update( clock.getDelta() );
+
+				renderer.render( scene, camera );
+
+			}
+
+		</script>
+	</body>
+</html>

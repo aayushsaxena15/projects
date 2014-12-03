@@ -1,0 +1,42 @@
+﻿Graphics
+Assignment 1
+
+Aayush Saxena- 201201021
+
+
+
+Overview:
+
+The game is about killing the spiders using a canon and collecting green and red spiders in the respective baskets.
+
+
+Basic Controls:
+
+Press b to select the canon(blue coloured) and press arrow keys to move the canon.
+
+Press right mouse button on the middle of canon and click the mouse to rotate the canon.
+
+Press left mouse button around middle of canon or baskets, that will be selected and drag the mouse to move the objects.
+
+Press r to select the red basket  and press arrow keys to move the basket.
+
+Press g to select the green basket  and press arrow keys to move the basket.
+
+Press space bar to release the laser. You can only shoot after 1 second interval.
+
+When the spiders fall into the basket, they disappear.
+
+The fallen spiders block the way of the canon.  The canon cannot move beyond a fallen spider.
+
+Sound will be played after shooting laser.
+
+Press Escape to quit.
+
+
+Points:
+
+
++1 killing a black spider.
++1 collecting correct spider in correct basket
+-1 collecting wrong spider in basket
+-5 if a spider hits the ground
