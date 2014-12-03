@@ -1,0 +1,635 @@
+create table test1 (id int,fname string,lname string,percent float,class string,year int)
+Querytype: create
+Tablename: test1
+Attributes: id int,fname string,lname string,percent float,class string,year int 
+id int
+fname string
+lname string
+percent float
+class string
+year int 
+create table test2 (id int,fname string,percent float)
+Querytype: create
+Tablename: test2
+Attributes: id int,fname string,percent float 
+id int
+fname string
+percent float 
+create table test3 (id int,lname string,percent float)
+Querytype: create
+Tablename: test3
+Attributes: id int,lname string,percent float 
+id int
+lname string
+percent float 
+create table dbs (id int,roll_no int,name string)
+Querytype: create
+Tablename: dbs
+Attributes: id int,roll_no int,name string 
+id int
+roll_no int
+name string 
+create table t1 (temp int,temp int)
+Querytype: create
+Tablename: t1
+Attributes: temp int,temp int 
+temp int
+temp int 
+create table t1 (temp int,temp float)
+Querytype: create
+Tablename: t1
+Attributes: temp int,temp float 
+temp int
+temp float 
+create table t1 (temp int,temp int)
+Querytype: create
+Tablename: t1
+Attributes: temp int,temp int 
+temp int
+temp int 
+create table dbs (temp int,temp int)
+Querytype: create
+Tablename: dbs
+Attributes: temp int,temp int 
+temp int
+temp int 
+create table t1 (varchar int,temp int)
+Querytype: create
+Tablename: t1
+Attributes: varchar int,temp int 
+varchar int
+temp int 
+create table t1 (float int,temp int)
+Querytype: create
+Tablename: t1
+Attributes: float int,temp int 
+float int
+temp int 
+create table t1 (temp int,temp1 float)
+Querytype: create
+Tablename: t1
+Attributes: temp int,temp1 float 
+temp int
+temp1 float 
+select roll_no from dbs where id=1
+Querytype: select
+Tablename: dbs
+Columns: roll_no
+Distinct: NA
+Condition: id=1
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from dbs
+Querytype: select
+Tablename: dbs
+Columns: *
+Distinct: NA
+Condition: NA
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from dbs where id>=1
+Querytype: select
+Tablename: dbs
+Columns: *
+Distinct: NA
+Condition: id>=1
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from abc
+Invalid Query
+select * from test1,test1
+Querytype: select
+Tablename: test1,test1
+Columns: *
+Distinct: NA
+Condition: NA
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1,test2,test3
+Querytype: select
+Tablename: test1,test2,test3
+Columns: *
+Distinct: NA
+Condition: NA
+Orderby: NA 
+Groupby: NA
+Having: NA
+select abc from test1
+Querytype: select
+Tablename: test1
+Columns: abc
+Distinct: NA
+Condition: NA
+Orderby: NA 
+Groupby: NA
+Having: NA
+select abc from test1,test2,test3
+Querytype: select
+Tablename: test1,test2,test3
+Columns: abc
+Distinct: NA
+Condition: NA
+Orderby: NA 
+Groupby: NA
+Having: NA
+select id,fname from test1
+Querytype: select
+Tablename: test1
+Columns: id,fname
+Distinct: NA
+Condition: NA
+Orderby: NA 
+Groupby: NA
+Having: NA
+select test1.id from test1
+Querytype: select
+Tablename: test1
+Columns: test1.id
+Distinct: NA
+Condition: NA
+Orderby: NA 
+Groupby: NA
+Having: NA
+select test2.id from test1
+Querytype: select
+Tablename: test1
+Columns: test2.id
+Distinct: NA
+Condition: NA
+Orderby: NA 
+Groupby: NA
+Having: NA
+select test2.fname from test1,test2,test3
+Querytype: select
+Tablename: test1,test2,test3
+Columns: test2.fname
+Distinct: NA
+Condition: NA
+Orderby: NA 
+Groupby: NA
+Having: NA
+select id,fname from test1,test2,test3
+Querytype: select
+Tablename: test1,test2,test3
+Columns: id,fname
+Distinct: NA
+Condition: NA
+Orderby: NA 
+Groupby: NA
+Having: NA
+select id,test2.fname,lname from test1,test2,test3
+Querytype: select
+Tablename: test1,test2,test3
+Columns: id,test2.fname,lname
+Distinct: NA
+Condition: NA
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1
+Querytype: select
+Tablename: test1
+Columns: *
+Distinct: NA
+Condition: NA
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1,test2,test3
+Querytype: select
+Tablename: test1,test2,test3
+Columns: *
+Distinct: NA
+Condition: NA
+Orderby: NA 
+Groupby: NA
+Having: NA
+select *,id from test1
+Querytype: select
+Tablename: test1
+Columns: *,id
+Distinct: NA
+Condition: NA
+Orderby: NA 
+Groupby: NA
+Having: NA
+select *,id,fname from test1,test2,test3
+Querytype: select
+Tablename: test1,test2,test3
+Columns: *,id,fname
+Distinct: NA
+Condition: NA
+Orderby: NA 
+Groupby: NA
+Having: NA
+select null from test1
+Querytype: select
+Tablename: test1
+Columns: null
+Distinct: NA
+Condition: NA
+Orderby: NA 
+Groupby: NA
+Having: NA
+select null
+Querytype: select
+Tablename: 
+Columns: null
+Distinct: NA
+Condition: NA
+Orderby: NA 
+Groupby: NA
+Having: NA
+select distinct(id),fname,lname from test1
+Querytype: select
+Tablename: test1
+Columns: distinct(id),fname,lname
+Distinct: id
+Condition: NA
+Orderby: NA 
+Groupby: NA
+Having: NA
+select distinct(id),fname,lname from test1
+Querytype: select
+Tablename: test1
+Columns: distinct(id),fname,lname
+Distinct: id
+Condition: NA
+Orderby: NA 
+Groupby: NA
+Having: NA
+select distinct(fname),abc from test1
+Querytype: select
+Tablename: test1
+Columns: distinct(fname),abc
+Distinct: fname
+Condition: NA
+Orderby: NA 
+Groupby: NA
+Having: NA
+select distinct(test2.lname) ,fname from test1,test2
+Querytype: select
+Tablename: test1,test2
+Columns: distinct(test2.lname),fname
+Distinct: test2.lname
+Condition: NA
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1 where id>5.5
+Querytype: select
+Tablename: test1
+Columns: *
+Distinct: NA
+Condition: id>5.5
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1 where percent>10
+Querytype: select
+Tablename: test1
+Columns: *
+Distinct: NA
+Condition: percent>10
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1 where id like 5.5
+Querytype: select
+Tablename: test1
+Columns: *
+Distinct: NA
+Condition: idlike5.5
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1 where percent like 10
+Querytype: select
+Tablename: test1
+Columns: *
+Distinct: NA
+Condition: percentlike10
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1 where fname = 'abcd'
+Querytype: select
+Tablename: test1
+Columns: *
+Distinct: NA
+Condition: fname='abcd'
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1 where fname like 23
+Querytype: select
+Tablename: test1
+Columns: *
+Distinct: NA
+Condition: fnamelike23
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1 where fname like 34.5
+Querytype: select
+Tablename: test1
+Columns: *
+Distinct: NA
+Condition: fnamelike34.5
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1 where id like 'sdffs'
+Querytype: select
+Tablename: test1
+Columns: *
+Distinct: NA
+Condition: idlike'sdffs'
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1 where percent like 'sdffs'
+Querytype: select
+Tablename: test1
+Columns: *
+Distinct: NA
+Condition: percentlike'sdffs'
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1 where id<32492752938523958237529
+Querytype: select
+Tablename: test1
+Columns: *
+Distinct: NA
+Condition: id<32492752938523958237529
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1 where percent<32492752938523958237529
+Querytype: select
+Tablename: test1
+Columns: *
+Distinct: NA
+Condition: percent<32492752938523958237529
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1,test2 where lname='abcd')
+Querytype: select
+Tablename: test1,test2
+Columns: *
+Distinct: NA
+Condition: lname='abcd')
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1,test2 where id=1
+Querytype: select
+Tablename: test1,test2
+Columns: *
+Distinct: NA
+Condition: id=1
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1 where roll=45
+Querytype: select
+Tablename: test1
+Columns: *
+Distinct: NA
+Condition: roll=45
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1,test2 where roll=34
+Querytype: select
+Tablename: test1,test2
+Columns: *
+Distinct: NA
+Condition: roll=34
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1,test2 where test1.id=1
+Querytype: select
+Tablename: test1,test2
+Columns: *
+Distinct: NA
+Condition: test1.id=1
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1,test2 where (id)=2
+Querytype: select
+Tablename: test1,test2
+Columns: *
+Distinct: NA
+Condition: (id)=2
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1 where id<3 and percent<30
+Querytype: select
+Tablename: test1
+Columns: *
+Distinct: NA
+Condition: id<3andpercent<30
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1 where id<3 AND percent<30
+Querytype: select
+Tablename: test1
+Columns: *
+Distinct: NA
+Condition: id<3ANDpercent<30
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1 where id>3 OR percent<30
+Querytype: select
+Tablename: test1
+Columns: *
+Distinct: NA
+Condition: id>3ORpercent<30
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1 where id>3 or percent<30
+Querytype: select
+Tablename: test1
+Columns: *
+Distinct: NA
+Condition: id>3orpercent<30
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1 where lname like 'cdef'
+Querytype: select
+Tablename: test1
+Columns: *
+Distinct: NA
+Condition: lnamelike'cdef'
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1 where id<=3 and percent>30 or fname like 'abce'
+Querytype: select
+Tablename: test1
+Columns: *
+Distinct: NA
+Condition: id<=3andpercent>30orfnamelike'abce'
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1 where id>5 and id<5 and id>=5 and id<=5 and id=5 and id<>5
+Querytype: select
+Tablename: test1
+Columns: *
+Distinct: NA
+Condition: id>5andid<5andid>=5andid<=5andid=5andid<>5
+Orderby: NA 
+Groupby: NA
+Having: NA
+select * from test1 where percent>13.5 and percent<13.5 and percent>=13.5 and percent<=13.5 and percent<>13.5 and percent=13.5
+Querytype: select
+Tablename: test1
+Columns: *
+Distinct: NA
+Condition: percent>13.5andpercent<13.5andpercent>=13.5andpercent<=13.5andpercent<>13.5andpercent=13.5
+Orderby: NA 
+Groupby: NA
+Having: NA
+select roll from test1 groupby roll
+Querytype: select
+Tablename: test1
+Columns: roll
+Distinct: NA
+Condition: NA
+Orderby: NA 
+Groupby: roll
+Having: NA
+select id,fname from test1 groupby class
+Querytype: select
+Tablename: test1
+Columns: id,fname
+Distinct: NA
+Condition: NA
+Orderby: NA 
+Groupby: class
+Having: NA
+select class from test1 groupby (class)
+Querytype: select
+Tablename: test1
+Columns: class
+Distinct: NA
+Condition: NA
+Orderby: NA 
+Groupby: (class)
+Having: NA
+select class,year from test1 groupby class,year
+Querytype: select
+Tablename: test1
+Columns: class,year
+Distinct: NA
+Condition: NA
+Orderby: NA 
+Groupby: class,year
+Having: NA
+select test1.class from test1 groupby test1.class, test1.year
+Querytype: select
+Tablename: test1
+Columns: test1.class
+Distinct: NA
+Condition: NA
+Orderby: NA 
+Groupby: test1.class,test1.year
+Having: NA
+select year from test1 groupby class having class like 'B'
+Querytype: select
+Tablename: test1
+Columns: year
+Distinct: NA
+Condition: NA
+Orderby: NA 
+Groupby: class
+Having: classlike'B'
+select class from test1 groupby class having year=2012
+Querytype: select
+Tablename: test1
+Columns: class
+Distinct: NA
+Condition: NA
+Orderby: NA 
+Groupby: class
+Having: year=2012
+select fname from test1 having id<=3
+Querytype: select
+Tablename: test1
+Columns: fname
+Distinct: NA
+Condition: NA
+Orderby: NA 
+Groupby: NA
+Having: id<=3
+select id from test1 having id<=3
+Querytype: select
+Tablename: test1
+Columns: id
+Distinct: NA
+Condition: NA
+Orderby: NA 
+Groupby: NA
+Having: id<=3
+select * from test1 orderby roll
+Querytype: select
+Tablename: test1
+Columns: *
+Distinct: NA
+Condition: NA
+Orderby: roll
+Groupby: NA
+Having: NA
+select id from test1 orderby percent
+Querytype: select
+Tablename: test1
+Columns: id
+Distinct: NA
+Condition: NA
+Orderby: percent
+Groupby: NA
+Having: NA
+select id,percent from test1 orderby (percent)
+Querytype: select
+Tablename: test1
+Columns: id,percent
+Distinct: NA
+Condition: NA
+Orderby: (percent)
+Groupby: NA
+Having: NA
+select * from test1 ordeby year
+Invalid Query
+select test1.id,test1.percent,test1.year from test1 orderby percent,year
+Querytype: select
+Tablename: test1
+Columns: test1.id,test1.percent,test1.year
+Distinct: NA
+Condition: NA
+Orderby: percent,year
+Groupby: NA
+Having: NA
+select test1.id,test1.percent,test1.year from test1 orderby year,percent
+Querytype: select
+Tablename: test1
+Columns: test1.id,test1.percent,test1.year
+Distinct: NA
+Condition: NA
+Orderby: year,percent
+Groupby: NA
+Having: NA

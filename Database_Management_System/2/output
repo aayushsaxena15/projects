@@ -1,0 +1,413 @@
+Querytype:create
+Tablename:test1
+Attributes:id int,fname varchar(30),lname varchar(50),percent float,class varchar(50),year int
+Querytype:create
+Tablename:test2
+Attributes:id int,fname varchar(40),percent float
+Querytype:create
+Tablename:test3
+Attributes:id int,lname varchar(50),percent float
+Querytype:create
+Tablename:dbs
+Attributes:id int,roll_no int,name varchar(50)
+Query Invalid
+Query Invalid
+Query Invalid
+Query Invalid
+Query Invalid
+Query Invalid
+Querytype:create
+Tablename:t1
+Attributes:temp intEGer,temp1 FloAt
+Querytype:select
+Tablename:dbs
+Columns:roll_no
+Distinct:NA
+Condition:id=1
+Orderby:NA
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:dbs
+Columns:id,roll_no,name
+Distinct:NA
+Condition:NA
+Orderby:NA
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:dbs
+Columns:id,roll_no,name
+Distinct:NA
+Condition:id>=1
+Orderby:NA
+Groupby:NA
+Having:NA
+Query Invalid
+Query Invalid
+Querytype:select
+Tablename:test1,test2,test3
+Columns:id,fname,lname,percent,class,year
+Distinct:NA
+Condition:NA
+Orderby:NA
+Groupby:NA
+Having:NA
+Query Invalid
+Query Invalid
+Querytype:select
+Tablename:test1
+Columns:id,fname
+Distinct:NA
+Condition:NA
+Orderby:NA
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:test1
+Columns:test1.id
+Distinct:NA
+Condition:NA
+Orderby:NA
+Groupby:NA
+Having:NA
+Query Invalid
+Querytype:select
+Tablename:test1,test2,test3
+Columns:test2.fname
+Distinct:NA
+Condition:NA
+Orderby:NA
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:test1,test2,test3
+Columns:id,fname
+Distinct:NA
+Condition:NA
+Orderby:NA
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:test1,test2,test3
+Columns:id,test2.fname,lname
+Distinct:NA
+Condition:NA
+Orderby:NA
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:test1
+Columns:id,fname,lname,percent,class,year
+Distinct:NA
+Condition:NA
+Orderby:NA
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:test1,test2,test3
+Columns:id,fname,lname,percent,class,year
+Distinct:NA
+Condition:NA
+Orderby:NA
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:test1
+Columns:id,fname,lname,percent,class,year
+Distinct:NA
+Condition:NA
+Orderby:NA
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:test1,test2,test3
+Columns:id,fname,lname,percent,class,year
+Distinct:NA
+Condition:NA
+Orderby:NA
+Groupby:NA
+Having:NA
+Query Invalid
+Query Invalid
+Querytype:select
+Tablename:test1
+Columns:id,fname,lname
+Distinct:id,fname,lname
+Condition:NA
+Orderby:NA
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:test1
+Columns:id,fname,lname
+Distinct:id,fname,lname
+Condition:NA
+Orderby:NA
+Groupby:NA
+Having:NA
+syntax error(10102) near: ,(1,20)
+no_root_node(-1000) near: no root node(0,0)
+Query Invalidselect distinct (id,fname,lname) from test1
+Query Invalid
+Query Invalid
+Querytype:select
+Tablename:test1
+Columns:id,fname,lname,percent,class,year
+Distinct:NA
+Condition:id>5.5
+Orderby:NA
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:test1
+Columns:id,fname,lname,percent,class,year
+Distinct:NA
+Condition:percent>10
+Orderby:NA
+Groupby:NA
+Having:NA
+Query Invalid
+Query Invalid
+Querytype:select
+Tablename:test1
+Columns:id,fname,lname,percent,class,year
+Distinct:NA
+Condition:fname = 'abcd'
+Orderby:NA
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:test1
+Columns:id,fname,lname,percent,class,year
+Distinct:NA
+Condition:fname like 23
+Orderby:NA
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:test1
+Columns:id,fname,lname,percent,class,year
+Distinct:NA
+Condition:fname like 34.5
+Orderby:NA
+Groupby:NA
+Having:NA
+Query Invalid
+Query Invalid
+Querytype:select
+Tablename:test1
+Columns:id,fname,lname,percent,class,year
+Distinct:NA
+Condition:id<32492752938523958237529
+Orderby:NA
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:test1
+Columns:id,fname,lname,percent,class,year
+Distinct:NA
+Condition:percent<32492752938523958237529
+Orderby:NA
+Groupby:NA
+Having:NA
+syntax error(10102) near: )(1,45)
+no_root_node(-1000) near: no root node(0,0)
+Query Invalidselect * from test1,test2 where lname='abcd')
+Querytype:select
+Tablename:test1,test2
+Columns:id,fname,lname,percent,class,year
+Distinct:NA
+Condition:id=1
+Orderby:NA
+Groupby:NA
+Having:NA
+Query Invalid
+Query Invalid
+Querytype:select
+Tablename:test1,test2
+Columns:id,fname,lname,percent,class,year
+Distinct:NA
+Condition:test1.id=1
+Orderby:NA
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:test1,test2
+Columns:id,fname,lname,percent,class,year
+Distinct:NA
+Condition:(id)=2
+Orderby:NA
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:test1
+Columns:id,fname,lname,percent,class,year
+Distinct:NA
+Condition:id<3 and percent<30
+Orderby:NA
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:test1
+Columns:id,fname,lname,percent,class,year
+Distinct:NA
+Condition:id<3 AND percent<30
+Orderby:NA
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:test1
+Columns:id,fname,lname,percent,class,year
+Distinct:NA
+Condition:id>3 OR percent<30
+Orderby:NA
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:test1
+Columns:id,fname,lname,percent,class,year
+Distinct:NA
+Condition:id>3 or percent<30
+Orderby:NA
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:test1
+Columns:id,fname,lname,percent,class,year
+Distinct:NA
+Condition:lname like 'cdef'
+Orderby:NA
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:test1
+Columns:id,fname,lname,percent,class,year
+Distinct:NA
+Condition:id<=3 and percent>30 or fname like 'abce'
+Orderby:NA
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:test1
+Columns:id,fname,lname,percent,class,year
+Distinct:NA
+Condition:id>5 and id<5 and id>=5 and id<=5 and id=5 and id<>5
+Orderby:NA
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:test1
+Columns:id,fname,lname,percent,class,year
+Distinct:NA
+Condition:percent>13.5 and percent<13.5 and percent>=13.5 and percent<=13.5 and percent<>13.5 and percent=13.5
+Orderby:NA
+Groupby:NA
+Having:NA
+Query Invalid
+Querytype:select
+Tablename:test1
+Columns:id,fname
+Distinct:NA
+Condition:NA
+Orderby:NA
+Groupby:class
+Having:NA
+Querytype:select
+Tablename:test1
+Columns:class
+Distinct:NA
+Condition:NA
+Orderby:NA
+Groupby:(class)
+Having:NA
+Querytype:select
+Tablename:test1
+Columns:class,year
+Distinct:NA
+Condition:NA
+Orderby:NA
+Groupby:class,year
+Having:NA
+Querytype:select
+Tablename:test1
+Columns:test1.class
+Distinct:NA
+Condition:NA
+Orderby:NA
+Groupby:test1.class, test1.year
+Having:NA
+Querytype:select
+Tablename:test1
+Columns:year
+Distinct:NA
+Condition:NA
+Orderby:NA
+Groupby:class
+Having:class like 'B'
+Querytype:select
+Tablename:test1
+Columns:class
+Distinct:NA
+Condition:NA
+Orderby:NA
+Groupby:class
+Having:year=2012
+Querytype:select
+Tablename:test1
+Columns:fname
+Distinct:NA
+Condition:NA
+Orderby:NA
+Groupby:NA
+Having:id<=3
+Querytype:select
+Tablename:test1
+Columns:id
+Distinct:NA
+Condition:NA
+Orderby:NA
+Groupby:NA
+Having:id<=3
+Query Invalid
+Querytype:select
+Tablename:test1
+Columns:id
+Distinct:NA
+Condition:NA
+Orderby:percent
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:test1
+Columns:id,percent
+Distinct:NA
+Condition:NA
+Orderby:percent
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:test1
+Columns:id,fname,lname,percent,class,year
+Distinct:NA
+Condition:NA
+Orderby:year
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:test1
+Columns:test1.id,test1.percent,test1.year
+Distinct:NA
+Condition:NA
+Orderby:percent,year
+Groupby:NA
+Having:NA
+Querytype:select
+Tablename:test1
+Columns:test1.id,test1.percent,test1.year
+Distinct:NA
+Condition:NA
+Orderby:year,percent
+Groupby:NA
+Having:NA
+

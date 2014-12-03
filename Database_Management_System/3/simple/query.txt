@@ -1,0 +1,16 @@
+15
+select * from Employee
+select id,spousesal from Employee
+select * from Employee
+select id,spousename from Employee where Employee.id>20
+select name,id from Employee orderby id 
+select spousename from Employee where Employee.id>20 and Employee.spouseid>10 and Employee.sal>1900 and Employee.spousesal>1400
+select * from Employee where Employee.id>20 and Employee.spouseid>10 and Employee.sal>1020 and Employee.spousesal>1010
+select * from Employee where Employee.id>20 and Employee.spouseid>10 and Employee.sal>1020 and Employee.spousesal<1010
+select spousename from Employee where Employee.id>20 and Employee.spouseid>10 and Employee.sal>1900 and Employee.spousesal>1400
+select spousename from Employee where Employee.id>20 or Employee.spouseid>10 or Employee.sal>1900 or Employee.spousesal> 1400
+select spousename from Employee where Employee.id>20 orderby id 
+select spousename from Employee where Employee.id>20 and Employee.spouseid>10 and Employee.sal>1900 and Employee.spousesal>1400 orderby id
+select spousename from Employee where id>20 or spouseid>10 or sal>1900 or spousesal>1400 orderby id
+select * from Employee where Employee.id>20 orderby id,name 
+select spousename from Employee where Employee.id>20 orderby spousename 

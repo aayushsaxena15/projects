@@ -1,0 +1,15 @@
+PAGE_SIZE 1024
+NUM_PAGES 1024
+PATH_FOR_DATA ./
+BEGIN
+table1
+e_id,int
+e_num,float
+e_order,int
+END
+BEGIN
+table2
+s_id,int
+s_order,string
+s_num,float
+END

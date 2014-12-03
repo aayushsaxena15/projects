@@ -1,0 +1,35 @@
+PAGE_SIZE 500
+NUM_PAGES 5
+PATH_FOR_DATA /tmp/
+BEGIN
+test1
+id, int
+fname, varchar(30)
+lname, varchar(50)
+percent, float
+class, varchar(50)
+year, int
+END
+BEGIN
+test2
+id, int
+fname, varchar(40)
+percent, float
+END
+BEGIN
+test3
+id, int
+lname, varchar(50)
+percent, float
+END
+BEGIN
+dbs
+id, int
+roll_no, int
+name, varchar(50)
+END
+BEGIN
+t1
+temp, intEGer
+temp1, FloAt
+END

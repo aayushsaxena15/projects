@@ -1,0 +1,21 @@
+Number of unique values= 146
+table2.abc=table2.def fsdafas
+Order of the given join conditions starting from the first condition:
+order 0
+order 1
+order 2
+./table1.csvjointable1ontable1.abc=table1.defjoint2ontable2.asd=table1.werjoint3ontable2.abc=table2.def.csv
+Invalid Query
+table1.e_num=table2.s_num fsdafas
+./table1.csv
+./table2.csv
+Querytype: select
+Tablename: table1,table2
+Columns: s_num,e_id
+Distinct: 
+Condition: 
+Orderby: 
+Groupby: 
+Having: 
+
+147 284 

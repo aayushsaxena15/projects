@@ -1,0 +1,19 @@
+PAGE_SIZE 50
+NUM_PAGES 4
+PATH_FOR_DATA ./
+BEGIN
+test55
+no,int
+name,string
+sal,string
+no2,int
+END
+BEGIN
+Employee
+id,int
+name,string
+sal,float
+spouseid,int
+spousename,string
+spousesal,float
+END

@@ -1,0 +1,1564 @@
+select * from Employee
+Query Start: 1
+Employee fsdafas
+./Employee.csv
+Querytype: select
+Tablename: Employee
+Columns: id,name,sal,spouseid,spousename,spousesal
+Distinct: NA
+Condition: NA
+Orderby: 
+Groupby: NA
+Having: NA
+
+
+82 test81 1081.11 48 test47 1047.11 
+39 test38 1038.11 66 test65 1065.11 
+
+44 test43 1043.11 82 test81 1081.11 
+76 test75 1075.11 87 test86 1086.11 
+
+43 test42 1042.11 66 test65 1065.11 
+55 test54 1054.11 91 test90 1090.11 
+
+75 test74 1074.11 64 test63 1063.11 
+5 test4 1004.11 47 test46 1046.11 
+
+21 test20 1020.11 40 test39 1039.11 
+50 test49 1049.11 70 test69 1069.11 
+
+83 test82 1082.11 22 test21 1021.11 
+4 test3 1003.11 20 test19 1019.11 
+
+35 test34 1034.11 4 test3 1003.11 
+78 test77 1077.11 33 test32 1032.11 
+
+7 test6 1006.11 12 test11 1011.11 
+91 test90 1090.11 20 test19 1019.11 
+
+43 test42 1042.11 17 test16 1016.11 
+43 test42 1042.11 90 test89 1089.11 
+
+4 test3 1003.11 69 test68 1068.11 
+45 test44 1044.11 78 test77 1077.11 
+
+62 test61 1061.11 70 test69 1069.11 
+80 test79 1079.11 91 test90 1090.11 
+
+96 test95 1095.11 31 test30 1030.11 
+54 test53 1053.11 8 test7 1007.11 
+
+34 test33 1033.11 77 test76 1076.11 
+49 test48 1048.11 69 test68 1068.11 
+
+44 test43 1043.11 44 test43 1043.11 
+64 test63 1063.11 45 test44 1044.11 
+
+42 test41 1041.11 40 test39 1039.11 
+62 test61 1061.11 40 test39 1039.11 
+
+72 test71 1071.11 21 test20 1020.11 
+3 test2 1002.11 22 test21 1021.11 
+
+34 test33 1033.11 31 test30 1030.11 
+14 test13 1013.11 52 test51 1051.11 
+
+53 test52 1052.11 8 test7 1007.11 
+15 test14 1014.11 39 test38 1038.11 
+
+99 test98 1098.11 81 test80 1080.11 
+47 test46 1046.11 99 test98 1098.11 
+
+44 test43 1043.11 28 test27 1027.11 
+71 test70 1070.11 14 test13 1013.11 
+
+22 test21 1021.11 25 test24 1024.11 
+59 test58 1058.11 14 test13 1013.11 
+
+23 test22 1022.11 42 test41 1041.11 
+97 test96 1096.11 59 test58 1058.11 
+
+5 test4 1004.11 42 test41 1041.11 
+51 test50 1050.11 54 test53 1053.11 
+
+68 test67 1067.11 56 test55 1055.11 
+93 test92 1092.11 72 test71 1071.11 
+
+83 test82 1082.11 39 test38 1038.11 
+41 test40 1040.11 87 test86 1086.11 
+
+22 test21 1021.11 74 test73 1073.11 
+49 test48 1048.11 36 test35 1035.11 
+
+96 test95 1095.11 18 test17 1017.11 
+54 test53 1053.11 68 test67 1067.11 
+
+7 test6 1006.11 31 test30 1030.11 
+96 test95 1095.11 38 test37 1037.11 
+
+81 test80 1080.11 71 test70 1070.11 
+71 test70 1070.11 29 test28 1028.11 
+
+50 test49 1049.11 16 test15 1015.11 
+45 test44 1044.11 58 test57 1057.11 
+
+18 test17 1017.11 86 test85 1085.11 
+46 test45 1045.11 39 test38 1038.11 
+
+75 test74 1074.11 11 test10 1010.11 
+93 test92 1092.11 99 test98 1098.11 
+
+65 test64 1064.11 35 test34 1034.11 
+89 test88 1088.11 20 test19 1019.11 
+
+44 test43 1043.11 61 test60 1060.11 
+7 test6 1006.11 77 test76 1076.11 
+
+32 test31 1031.11 81 test80 1080.11 
+58 test57 1057.11 51 test50 1050.11 
+
+96 test95 1095.11 28 test27 1027.11 
+25 test24 1024.11 44 test43 1043.11 
+
+6 test5 1005.11 26 test25 1025.11 
+38 test37 1037.11 68 test67 1067.11 
+
+49 test48 1048.11 2 test1 1001.11 
+13 test12 1012.11 60 test59 1059.11 
+
+25 test24 1024.11 33 test32 1032.11 
+75 test74 1074.11 70 test69 1069.11 
+
+22 test21 1021.11 2 test1 1001.11 
+19 test18 1018.11 90 test89 1089.11 
+
+98 test97 1097.11 9 test8 1008.11 
+29 test28 1028.11 60 test59 1059.11 
+
+18 test17 1017.11 97 test96 1096.11 
+49 test48 1048.11 71 test70 1070.11 
+
+69 test68 1068.11 80 test79 1079.11 
+34 test33 1033.11 91 test90 1090.11 
+
+2 test1 1001.11 50 test49 1049.11 
+18 test17 1017.11 84 test83 1083.11 
+
+34 test33 1033.11 1 test0 1000.11 
+70 test69 1069.11 51 test50 1050.11 
+
+13 test12 1012.11 83 test82 1082.11 
+75 test74 1074.11 81 test80 1080.11 
+
+76 test75 1075.11 90 test89 1089.11 
+84 test83 1083.11 47 test46 1046.11 
+
+9 test8 1008.11 14 test13 1013.11 
+47 test46 1046.11 8 test7 1007.11 
+
+56 test55 1055.11 94 test93 1093.11 
+20 test19 1019.11 62 test61 1061.11 
+
+19 test18 1018.11 2 test1 1001.11 
+72 test71 1071.11 47 test46 1046.11 
+
+Query End.
+select id,spousesal from Employee
+Query Start: 1
+Employee fsdafas
+./Employee.csv
+Querytype: select
+Tablename: Employee
+Columns: id,spousesal
+Distinct: NA
+Condition: NA
+Orderby: 
+Groupby: NA
+Having: NA
+
+
+82 1081.11 1047.11 
+39 1038.11 1065.11 
+
+44 1043.11 1081.11 
+76 1075.11 1086.11 
+
+43 1042.11 1065.11 
+55 1054.11 1090.11 
+
+75 1074.11 1063.11 
+5 1004.11 1046.11 
+
+21 1020.11 1039.11 
+50 1049.11 1069.11 
+
+83 1082.11 1021.11 
+4 1003.11 1019.11 
+
+35 1034.11 1003.11 
+78 1077.11 1032.11 
+
+7 1006.11 1011.11 
+91 1090.11 1019.11 
+
+43 1042.11 1016.11 
+43 1042.11 1089.11 
+
+4 1003.11 1068.11 
+45 1044.11 1077.11 
+
+62 1061.11 1069.11 
+80 1079.11 1090.11 
+
+96 1095.11 1030.11 
+54 1053.11 1007.11 
+
+34 1033.11 1076.11 
+49 1048.11 1068.11 
+
+44 1043.11 1043.11 
+64 1063.11 1044.11 
+
+42 1041.11 1039.11 
+62 1061.11 1039.11 
+
+72 1071.11 1020.11 
+3 1002.11 1021.11 
+
+34 1033.11 1030.11 
+14 1013.11 1051.11 
+
+53 1052.11 1007.11 
+15 1014.11 1038.11 
+
+99 1098.11 1080.11 
+47 1046.11 1098.11 
+
+44 1043.11 1027.11 
+71 1070.11 1013.11 
+
+22 1021.11 1024.11 
+59 1058.11 1013.11 
+
+23 1022.11 1041.11 
+97 1096.11 1058.11 
+
+5 1004.11 1041.11 
+51 1050.11 1053.11 
+
+68 1067.11 1055.11 
+93 1092.11 1071.11 
+
+83 1082.11 1038.11 
+41 1040.11 1086.11 
+
+22 1021.11 1073.11 
+49 1048.11 1035.11 
+
+96 1095.11 1017.11 
+54 1053.11 1067.11 
+
+7 1006.11 1030.11 
+96 1095.11 1037.11 
+
+81 1080.11 1070.11 
+71 1070.11 1028.11 
+
+50 1049.11 1015.11 
+45 1044.11 1057.11 
+
+18 1017.11 1085.11 
+46 1045.11 1038.11 
+
+75 1074.11 1010.11 
+93 1092.11 1098.11 
+
+65 1064.11 1034.11 
+89 1088.11 1019.11 
+
+44 1043.11 1060.11 
+7 1006.11 1076.11 
+
+32 1031.11 1080.11 
+58 1057.11 1050.11 
+
+96 1095.11 1027.11 
+25 1024.11 1043.11 
+
+6 1005.11 1025.11 
+38 1037.11 1067.11 
+
+49 1048.11 1001.11 
+13 1012.11 1059.11 
+
+25 1024.11 1032.11 
+75 1074.11 1069.11 
+
+22 1021.11 1001.11 
+19 1018.11 1089.11 
+
+98 1097.11 1008.11 
+29 1028.11 1059.11 
+
+18 1017.11 1096.11 
+49 1048.11 1070.11 
+
+69 1068.11 1079.11 
+34 1033.11 1090.11 
+
+2 1001.11 1049.11 
+18 1017.11 1083.11 
+
+34 1033.11 1000.11 
+70 1069.11 1050.11 
+
+13 1012.11 1082.11 
+75 1074.11 1080.11 
+
+76 1075.11 1089.11 
+84 1083.11 1046.11 
+
+9 1008.11 1013.11 
+47 1046.11 1007.11 
+
+56 1055.11 1093.11 
+20 1019.11 1061.11 
+
+19 1018.11 1001.11 
+72 1071.11 1046.11 
+
+Query End.
+select * from Employee
+Query Start: 1
+Employee fsdafas
+./Employee.csv
+Querytype: select
+Tablename: Employee
+Columns: id,name,sal,spouseid,spousename,spousesal
+Distinct: NA
+Condition: NA
+Orderby: 
+Groupby: NA
+Having: NA
+
+
+82 test81 1081.11 48 test47 1047.11 
+39 test38 1038.11 66 test65 1065.11 
+
+44 test43 1043.11 82 test81 1081.11 
+76 test75 1075.11 87 test86 1086.11 
+
+43 test42 1042.11 66 test65 1065.11 
+55 test54 1054.11 91 test90 1090.11 
+
+75 test74 1074.11 64 test63 1063.11 
+5 test4 1004.11 47 test46 1046.11 
+
+21 test20 1020.11 40 test39 1039.11 
+50 test49 1049.11 70 test69 1069.11 
+
+83 test82 1082.11 22 test21 1021.11 
+4 test3 1003.11 20 test19 1019.11 
+
+35 test34 1034.11 4 test3 1003.11 
+78 test77 1077.11 33 test32 1032.11 
+
+7 test6 1006.11 12 test11 1011.11 
+91 test90 1090.11 20 test19 1019.11 
+
+43 test42 1042.11 17 test16 1016.11 
+43 test42 1042.11 90 test89 1089.11 
+
+4 test3 1003.11 69 test68 1068.11 
+45 test44 1044.11 78 test77 1077.11 
+
+62 test61 1061.11 70 test69 1069.11 
+80 test79 1079.11 91 test90 1090.11 
+
+96 test95 1095.11 31 test30 1030.11 
+54 test53 1053.11 8 test7 1007.11 
+
+34 test33 1033.11 77 test76 1076.11 
+49 test48 1048.11 69 test68 1068.11 
+
+44 test43 1043.11 44 test43 1043.11 
+64 test63 1063.11 45 test44 1044.11 
+
+42 test41 1041.11 40 test39 1039.11 
+62 test61 1061.11 40 test39 1039.11 
+
+72 test71 1071.11 21 test20 1020.11 
+3 test2 1002.11 22 test21 1021.11 
+
+34 test33 1033.11 31 test30 1030.11 
+14 test13 1013.11 52 test51 1051.11 
+
+53 test52 1052.11 8 test7 1007.11 
+15 test14 1014.11 39 test38 1038.11 
+
+99 test98 1098.11 81 test80 1080.11 
+47 test46 1046.11 99 test98 1098.11 
+
+44 test43 1043.11 28 test27 1027.11 
+71 test70 1070.11 14 test13 1013.11 
+
+22 test21 1021.11 25 test24 1024.11 
+59 test58 1058.11 14 test13 1013.11 
+
+23 test22 1022.11 42 test41 1041.11 
+97 test96 1096.11 59 test58 1058.11 
+
+5 test4 1004.11 42 test41 1041.11 
+51 test50 1050.11 54 test53 1053.11 
+
+68 test67 1067.11 56 test55 1055.11 
+93 test92 1092.11 72 test71 1071.11 
+
+83 test82 1082.11 39 test38 1038.11 
+41 test40 1040.11 87 test86 1086.11 
+
+22 test21 1021.11 74 test73 1073.11 
+49 test48 1048.11 36 test35 1035.11 
+
+96 test95 1095.11 18 test17 1017.11 
+54 test53 1053.11 68 test67 1067.11 
+
+7 test6 1006.11 31 test30 1030.11 
+96 test95 1095.11 38 test37 1037.11 
+
+81 test80 1080.11 71 test70 1070.11 
+71 test70 1070.11 29 test28 1028.11 
+
+50 test49 1049.11 16 test15 1015.11 
+45 test44 1044.11 58 test57 1057.11 
+
+18 test17 1017.11 86 test85 1085.11 
+46 test45 1045.11 39 test38 1038.11 
+
+75 test74 1074.11 11 test10 1010.11 
+93 test92 1092.11 99 test98 1098.11 
+
+65 test64 1064.11 35 test34 1034.11 
+89 test88 1088.11 20 test19 1019.11 
+
+44 test43 1043.11 61 test60 1060.11 
+7 test6 1006.11 77 test76 1076.11 
+
+32 test31 1031.11 81 test80 1080.11 
+58 test57 1057.11 51 test50 1050.11 
+
+96 test95 1095.11 28 test27 1027.11 
+25 test24 1024.11 44 test43 1043.11 
+
+6 test5 1005.11 26 test25 1025.11 
+38 test37 1037.11 68 test67 1067.11 
+
+49 test48 1048.11 2 test1 1001.11 
+13 test12 1012.11 60 test59 1059.11 
+
+25 test24 1024.11 33 test32 1032.11 
+75 test74 1074.11 70 test69 1069.11 
+
+22 test21 1021.11 2 test1 1001.11 
+19 test18 1018.11 90 test89 1089.11 
+
+98 test97 1097.11 9 test8 1008.11 
+29 test28 1028.11 60 test59 1059.11 
+
+18 test17 1017.11 97 test96 1096.11 
+49 test48 1048.11 71 test70 1070.11 
+
+69 test68 1068.11 80 test79 1079.11 
+34 test33 1033.11 91 test90 1090.11 
+
+2 test1 1001.11 50 test49 1049.11 
+18 test17 1017.11 84 test83 1083.11 
+
+34 test33 1033.11 1 test0 1000.11 
+70 test69 1069.11 51 test50 1050.11 
+
+13 test12 1012.11 83 test82 1082.11 
+75 test74 1074.11 81 test80 1080.11 
+
+76 test75 1075.11 90 test89 1089.11 
+84 test83 1083.11 47 test46 1046.11 
+
+9 test8 1008.11 14 test13 1013.11 
+47 test46 1046.11 8 test7 1007.11 
+
+56 test55 1055.11 94 test93 1093.11 
+20 test19 1019.11 62 test61 1061.11 
+
+19 test18 1018.11 2 test1 1001.11 
+72 test71 1071.11 47 test46 1046.11 
+
+Query End.
+select id,spousename from Employee where Employee.id>20
+Query Start: 1
+Employee fsdafas
+NAEmployee.id>20NANA./Employee.csv
+Querytype: select
+Tablename: Employee
+Columns: id,spousename
+Distinct: NA
+Condition: 
+Orderby: 
+Groupby: NA
+Having: NA
+
+
+82 test81 test47 
+39 test38 test65 
+
+44 test43 test81 
+76 test75 test86 
+
+43 test42 test65 
+55 test54 test90 
+
+75 test74 test63 
+21 test20 test39 
+
+50 test49 test69 
+83 test82 test21 
+
+35 test34 test3 
+78 test77 test32 
+
+91 test90 test19 
+43 test42 test16 
+
+43 test42 test89 
+45 test44 test77 
+
+62 test61 test69 
+80 test79 test90 
+
+96 test95 test30 
+54 test53 test7 
+
+34 test33 test76 
+49 test48 test68 
+
+44 test43 test43 
+64 test63 test44 
+
+42 test41 test39 
+62 test61 test39 
+
+72 test71 test20 
+34 test33 test30 
+
+53 test52 test7 
+99 test98 test80 
+
+47 test46 test98 
+44 test43 test27 
+
+71 test70 test13 
+22 test21 test24 
+
+59 test58 test13 
+23 test22 test41 
+
+97 test96 test58 
+51 test50 test53 
+
+68 test67 test55 
+93 test92 test71 
+
+83 test82 test38 
+41 test40 test86 
+
+22 test21 test73 
+49 test48 test35 
+
+96 test95 test17 
+54 test53 test67 
+
+96 test95 test37 
+81 test80 test70 
+
+71 test70 test28 
+50 test49 test15 
+
+45 test44 test57 
+46 test45 test38 
+
+75 test74 test10 
+93 test92 test98 
+
+65 test64 test34 
+89 test88 test19 
+
+44 test43 test60 
+32 test31 test80 
+
+58 test57 test50 
+96 test95 test27 
+
+25 test24 test43 
+38 test37 test67 
+
+49 test48 test1 
+25 test24 test32 
+
+75 test74 test69 
+22 test21 test1 
+
+98 test97 test8 
+29 test28 test59 
+
+49 test48 test70 
+69 test68 test79 
+
+34 test33 test90 
+34 test33 test0 
+
+70 test69 test50 
+75 test74 test80 
+
+76 test75 test89 
+84 test83 test46 
+
+47 test46 test7 
+56 test55 test93 
+
+72 test71 test46 
+Query End.
+select name,id from Employee orderby id 
+Query Start: 1
+Employee fsdafas
+id
+./Employee.csv
+Querytype: select
+Tablename: Employee
+Columns: name,id
+Distinct: NA
+Condition: NA
+Orderby: 
+id
+Groupby: NA
+Having: NA
+
+
+2 test1 
+3 test2 
+
+4 test3 
+4 test3 
+
+5 test4 
+5 test4 
+
+6 test5 
+7 test6 
+
+7 test6 
+7 test6 
+
+9 test8 
+13 test12 
+
+13 test12 
+14 test13 
+
+15 test14 
+18 test17 
+
+18 test17 
+18 test17 
+
+19 test18 
+19 test18 
+
+20 test19 
+21 test20 
+
+22 test21 
+22 test21 
+
+22 test21 
+23 test22 
+
+25 test24 
+25 test24 
+
+29 test28 
+32 test31 
+
+34 test33 
+34 test33 
+
+34 test33 
+34 test33 
+
+35 test34 
+38 test37 
+
+39 test38 
+41 test40 
+
+42 test41 
+43 test42 
+
+43 test42 
+43 test42 
+
+44 test43 
+44 test43 
+
+44 test43 
+44 test43 
+
+45 test44 
+45 test44 
+
+46 test45 
+47 test46 
+
+47 test46 
+49 test48 
+
+49 test48 
+49 test48 
+
+49 test48 
+50 test49 
+
+50 test49 
+51 test50 
+
+53 test52 
+54 test53 
+
+54 test53 
+55 test54 
+
+56 test55 
+58 test57 
+
+59 test58 
+62 test61 
+
+62 test61 
+64 test63 
+
+65 test64 
+68 test67 
+
+69 test68 
+70 test69 
+
+71 test70 
+71 test70 
+
+72 test71 
+72 test71 
+
+75 test74 
+75 test74 
+
+75 test74 
+75 test74 
+
+76 test75 
+76 test75 
+
+78 test77 
+80 test79 
+
+81 test80 
+82 test81 
+
+83 test82 
+83 test82 
+
+84 test83 
+89 test88 
+
+91 test90 
+93 test92 
+
+93 test92 
+96 test95 
+
+96 test95 
+96 test95 
+
+96 test95 
+97 test96 
+
+98 test97 
+99 test98 
+
+Query End.
+select spousename from Employee where Employee.id>20 and Employee.spouseid>10 and Employee.sal>1900 and Employee.spousesal>1400
+Query Start: 1
+Employee fsdafas
+NAEmployee.id>20NAEmployee.spouseid>10NAEmployee.sal>1900Employee.spousesal>1400./Employee.csv
+Querytype: select
+Tablename: Employee
+Columns: spousename
+Distinct: NA
+Condition: 
+Orderby: 
+Groupby: NA
+Having: NA
+
+
+Query End.
+select * from Employee where Employee.id>20 and Employee.spouseid>10 and Employee.sal>1020 and Employee.spousesal>1010
+Query Start: 1
+Employee fsdafas
+NAEmployee.id>20NAEmployee.spouseid>10NAEmployee.sal>1020Employee.spousesal>1010./Employee.csv
+Querytype: select
+Tablename: Employee
+Columns: id,name,sal,spouseid,spousename,spousesal
+Distinct: NA
+Condition: 
+Orderby: 
+Groupby: NA
+Having: NA
+
+
+82 test81 1081.11 48 test47 1047.11 
+39 test38 1038.11 66 test65 1065.11 
+
+44 test43 1043.11 82 test81 1081.11 
+76 test75 1075.11 87 test86 1086.11 
+
+43 test42 1042.11 66 test65 1065.11 
+55 test54 1054.11 91 test90 1090.11 
+
+75 test74 1074.11 64 test63 1063.11 
+21 test20 1020.11 40 test39 1039.11 
+
+50 test49 1049.11 70 test69 1069.11 
+83 test82 1082.11 22 test21 1021.11 
+
+78 test77 1077.11 33 test32 1032.11 
+91 test90 1090.11 20 test19 1019.11 
+
+43 test42 1042.11 17 test16 1016.11 
+43 test42 1042.11 90 test89 1089.11 
+
+45 test44 1044.11 78 test77 1077.11 
+62 test61 1061.11 70 test69 1069.11 
+
+80 test79 1079.11 91 test90 1090.11 
+96 test95 1095.11 31 test30 1030.11 
+
+34 test33 1033.11 77 test76 1076.11 
+49 test48 1048.11 69 test68 1068.11 
+
+44 test43 1043.11 44 test43 1043.11 
+64 test63 1063.11 45 test44 1044.11 
+
+42 test41 1041.11 40 test39 1039.11 
+62 test61 1061.11 40 test39 1039.11 
+
+72 test71 1071.11 21 test20 1020.11 
+34 test33 1033.11 31 test30 1030.11 
+
+99 test98 1098.11 81 test80 1080.11 
+47 test46 1046.11 99 test98 1098.11 
+
+44 test43 1043.11 28 test27 1027.11 
+71 test70 1070.11 14 test13 1013.11 
+
+22 test21 1021.11 25 test24 1024.11 
+59 test58 1058.11 14 test13 1013.11 
+
+23 test22 1022.11 42 test41 1041.11 
+97 test96 1096.11 59 test58 1058.11 
+
+51 test50 1050.11 54 test53 1053.11 
+68 test67 1067.11 56 test55 1055.11 
+
+93 test92 1092.11 72 test71 1071.11 
+83 test82 1082.11 39 test38 1038.11 
+
+41 test40 1040.11 87 test86 1086.11 
+22 test21 1021.11 74 test73 1073.11 
+
+49 test48 1048.11 36 test35 1035.11 
+96 test95 1095.11 18 test17 1017.11 
+
+54 test53 1053.11 68 test67 1067.11 
+96 test95 1095.11 38 test37 1037.11 
+
+81 test80 1080.11 71 test70 1070.11 
+71 test70 1070.11 29 test28 1028.11 
+
+50 test49 1049.11 16 test15 1015.11 
+45 test44 1044.11 58 test57 1057.11 
+
+46 test45 1045.11 39 test38 1038.11 
+75 test74 1074.11 11 test10 1010.11 
+
+93 test92 1092.11 99 test98 1098.11 
+65 test64 1064.11 35 test34 1034.11 
+
+89 test88 1088.11 20 test19 1019.11 
+44 test43 1043.11 61 test60 1060.11 
+
+32 test31 1031.11 81 test80 1080.11 
+58 test57 1057.11 51 test50 1050.11 
+
+96 test95 1095.11 28 test27 1027.11 
+25 test24 1024.11 44 test43 1043.11 
+
+38 test37 1037.11 68 test67 1067.11 
+25 test24 1024.11 33 test32 1032.11 
+
+75 test74 1074.11 70 test69 1069.11 
+29 test28 1028.11 60 test59 1059.11 
+
+49 test48 1048.11 71 test70 1070.11 
+69 test68 1068.11 80 test79 1079.11 
+
+34 test33 1033.11 91 test90 1090.11 
+70 test69 1069.11 51 test50 1050.11 
+
+75 test74 1074.11 81 test80 1080.11 
+76 test75 1075.11 90 test89 1089.11 
+
+84 test83 1083.11 47 test46 1046.11 
+56 test55 1055.11 94 test93 1093.11 
+
+72 test71 1071.11 47 test46 1046.11 
+Query End.
+select * from Employee where Employee.id>20 and Employee.spouseid>10 and Employee.sal>1020 and Employee.spousesal<1010
+Query Start: 1
+Employee fsdafas
+NAEmployee.id>20NAEmployee.spouseid>10NAEmployee.sal>1020Employee.spousesal<1010./Employee.csv
+Querytype: select
+Tablename: Employee
+Columns: id,name,sal,spouseid,spousename,spousesal
+Distinct: NA
+Condition: 
+Orderby: 
+Groupby: NA
+Having: NA
+
+
+Query End.
+select spousename from Employee where Employee.id>20 and Employee.spouseid>10 and Employee.sal>1900 and Employee.spousesal>1400
+Query Start: 1
+Employee fsdafas
+NAEmployee.id>20NAEmployee.spouseid>10NAEmployee.sal>1900Employee.spousesal>1400./Employee.csv
+Querytype: select
+Tablename: Employee
+Columns: spousename
+Distinct: NA
+Condition: 
+Orderby: 
+Groupby: NA
+Having: NA
+
+
+Query End.
+select spousename from Employee where Employee.id>20 or Employee.spouseid>10 or Employee.sal>1900 or Employee.spousesal> 1400
+Query Start: 1
+Employee fsdafas
+NAEmployee.id>20NAEmployee.spouseid>10NAEmployee.sal>1900Employee.spousesal>1400./Employee.csv
+Querytype: select
+Tablename: Employee
+Columns: spousename
+Distinct: NA
+Condition: 
+Orderby: 
+Groupby: NA
+Having: NA
+
+
+test81 test47 
+test38 test65 
+
+test43 test81 
+test75 test86 
+
+test42 test65 
+test54 test90 
+
+test74 test63 
+test4 test46 
+
+test20 test39 
+test49 test69 
+
+test82 test21 
+test3 test19 
+
+test34 test3 
+test77 test32 
+
+test6 test11 
+test90 test19 
+
+test42 test16 
+test42 test89 
+
+test3 test68 
+test44 test77 
+
+test61 test69 
+test79 test90 
+
+test95 test30 
+test53 test7 
+
+test33 test76 
+test48 test68 
+
+test43 test43 
+test63 test44 
+
+test41 test39 
+test61 test39 
+
+test71 test20 
+test2 test21 
+
+test33 test30 
+test13 test51 
+
+test52 test7 
+test14 test38 
+
+test98 test80 
+test46 test98 
+
+test43 test27 
+test70 test13 
+
+test21 test24 
+test58 test13 
+
+test22 test41 
+test96 test58 
+
+test4 test41 
+test50 test53 
+
+test67 test55 
+test92 test71 
+
+test82 test38 
+test40 test86 
+
+test21 test73 
+test48 test35 
+
+test95 test17 
+test53 test67 
+
+test6 test30 
+test95 test37 
+
+test80 test70 
+test70 test28 
+
+test49 test15 
+test44 test57 
+
+test17 test85 
+test45 test38 
+
+test74 test10 
+test92 test98 
+
+test64 test34 
+test88 test19 
+
+test43 test60 
+test6 test76 
+
+test31 test80 
+test57 test50 
+
+test95 test27 
+test24 test43 
+
+test5 test25 
+test37 test67 
+
+test48 test1 
+test12 test59 
+
+test24 test32 
+test74 test69 
+
+test21 test1 
+test18 test89 
+
+test97 test8 
+test28 test59 
+
+test17 test96 
+test48 test70 
+
+test68 test79 
+test33 test90 
+
+test1 test49 
+test17 test83 
+
+test33 test0 
+test69 test50 
+
+test12 test82 
+test74 test80 
+
+test75 test89 
+test83 test46 
+
+test8 test13 
+test46 test7 
+
+test55 test93 
+test19 test61 
+
+test71 test46 
+Query End.
+select spousename from Employee where Employee.id>20 orderby id 
+Query Start: 1
+Employee fsdafas
+NAEmployee.id>20NANAid
+./Employee.csv
+Querytype: select
+Tablename: Employee
+Columns: spousename
+Distinct: NA
+Condition: 
+Orderby: 
+id
+Groupby: NA
+Having: NA
+
+
+test20 test39 
+test21 test24 
+
+test21 test73 
+test21 test1 
+
+test22 test41 
+test24 test43 
+
+test24 test32 
+test28 test59 
+
+test31 test80 
+test33 test76 
+
+test33 test30 
+test33 test90 
+
+test33 test0 
+test34 test3 
+
+test37 test67 
+test38 test65 
+
+test40 test86 
+test41 test39 
+
+test42 test65 
+test42 test16 
+
+test42 test89 
+test43 test81 
+
+test43 test43 
+test43 test27 
+
+test43 test60 
+test44 test77 
+
+test44 test57 
+test45 test38 
+
+test46 test98 
+test46 test7 
+
+test48 test68 
+test48 test35 
+
+test48 test1 
+test48 test70 
+
+test49 test69 
+test49 test15 
+
+test50 test53 
+test52 test7 
+
+test53 test7 
+test53 test67 
+
+test54 test90 
+test55 test93 
+
+test57 test50 
+test58 test13 
+
+test61 test69 
+test61 test39 
+
+test63 test44 
+test64 test34 
+
+test67 test55 
+test68 test79 
+
+test69 test50 
+test70 test13 
+
+test70 test28 
+test71 test20 
+
+test71 test46 
+test74 test63 
+
+test74 test10 
+test74 test69 
+
+test74 test80 
+test75 test86 
+
+test75 test89 
+test77 test32 
+
+test79 test90 
+test80 test70 
+
+test81 test47 
+test82 test21 
+
+test82 test38 
+test83 test46 
+
+test88 test19 
+test90 test19 
+
+test92 test71 
+test92 test98 
+
+test95 test30 
+test95 test17 
+
+test95 test37 
+test95 test27 
+
+test96 test58 
+test97 test8 
+
+test98 test80 
+Query End.
+select spousename from Employee where Employee.id>20 and Employee.spouseid>10 and Employee.sal>1900 and Employee.spousesal>1400 orderby id
+Query Start: 1
+Employee fsdafas
+NAEmployee.id>20NAEmployee.spouseid>10NAEmployee.sal>1900Employee.spousesal>1400idid
+./Employee.csv
+Querytype: select
+Tablename: Employee
+Columns: spousename
+Distinct: NA
+Condition: 
+Orderby: 
+idid
+Groupby: NA
+Having: NA
+
+
+Query End.
+select spousename from Employee where id>20 or spouseid>10 or sal>1900 or spousesal>1400 orderby id
+Query Start: 1
+Employee fsdafas
+NAid>20NAspouseid>10NAsal>1900spousesal>1400idid
+./Employee.csv
+Querytype: select
+Tablename: Employee
+Columns: spousename
+Distinct: NA
+Condition: 
+Orderby: 
+idid
+Groupby: NA
+Having: NA
+
+
+Query End.
+select * from Employee where Employee.id>20 orderby id,name 
+Query Start: 1
+Employee fsdafas
+NAEmployee.id>20NANAid,name
+./Employee.csv
+Querytype: select
+Tablename: Employee
+Columns: id,name,sal,spouseid,spousename,spousesal
+Distinct: NA
+Condition: 
+Orderby: 
+id
+name
+Groupby: NA
+Having: NA
+
+
+21 test20 1020.11 40 test39 1039.11 
+22 test21 1021.11 25 test24 1024.11 
+
+22 test21 1021.11 74 test73 1073.11 
+22 test21 1021.11 2 test1 1001.11 
+
+23 test22 1022.11 42 test41 1041.11 
+25 test24 1024.11 44 test43 1043.11 
+
+25 test24 1024.11 33 test32 1032.11 
+29 test28 1028.11 60 test59 1059.11 
+
+32 test31 1031.11 81 test80 1080.11 
+34 test33 1033.11 77 test76 1076.11 
+
+34 test33 1033.11 31 test30 1030.11 
+34 test33 1033.11 91 test90 1090.11 
+
+34 test33 1033.11 1 test0 1000.11 
+35 test34 1034.11 4 test3 1003.11 
+
+38 test37 1037.11 68 test67 1067.11 
+39 test38 1038.11 66 test65 1065.11 
+
+41 test40 1040.11 87 test86 1086.11 
+42 test41 1041.11 40 test39 1039.11 
+
+43 test42 1042.11 66 test65 1065.11 
+43 test42 1042.11 17 test16 1016.11 
+
+43 test42 1042.11 90 test89 1089.11 
+44 test43 1043.11 82 test81 1081.11 
+
+44 test43 1043.11 44 test43 1043.11 
+44 test43 1043.11 28 test27 1027.11 
+
+44 test43 1043.11 61 test60 1060.11 
+45 test44 1044.11 78 test77 1077.11 
+
+45 test44 1044.11 58 test57 1057.11 
+46 test45 1045.11 39 test38 1038.11 
+
+47 test46 1046.11 99 test98 1098.11 
+47 test46 1046.11 8 test7 1007.11 
+
+49 test48 1048.11 69 test68 1068.11 
+49 test48 1048.11 36 test35 1035.11 
+
+49 test48 1048.11 2 test1 1001.11 
+49 test48 1048.11 71 test70 1070.11 
+
+50 test49 1049.11 70 test69 1069.11 
+50 test49 1049.11 16 test15 1015.11 
+
+51 test50 1050.11 54 test53 1053.11 
+53 test52 1052.11 8 test7 1007.11 
+
+54 test53 1053.11 8 test7 1007.11 
+54 test53 1053.11 68 test67 1067.11 
+
+55 test54 1054.11 91 test90 1090.11 
+56 test55 1055.11 94 test93 1093.11 
+
+58 test57 1057.11 51 test50 1050.11 
+59 test58 1058.11 14 test13 1013.11 
+
+62 test61 1061.11 70 test69 1069.11 
+62 test61 1061.11 40 test39 1039.11 
+
+64 test63 1063.11 45 test44 1044.11 
+65 test64 1064.11 35 test34 1034.11 
+
+68 test67 1067.11 56 test55 1055.11 
+69 test68 1068.11 80 test79 1079.11 
+
+70 test69 1069.11 51 test50 1050.11 
+71 test70 1070.11 14 test13 1013.11 
+
+71 test70 1070.11 29 test28 1028.11 
+72 test71 1071.11 21 test20 1020.11 
+
+72 test71 1071.11 47 test46 1046.11 
+75 test74 1074.11 64 test63 1063.11 
+
+75 test74 1074.11 11 test10 1010.11 
+75 test74 1074.11 70 test69 1069.11 
+
+75 test74 1074.11 81 test80 1080.11 
+76 test75 1075.11 87 test86 1086.11 
+
+76 test75 1075.11 90 test89 1089.11 
+78 test77 1077.11 33 test32 1032.11 
+
+80 test79 1079.11 91 test90 1090.11 
+81 test80 1080.11 71 test70 1070.11 
+
+82 test81 1081.11 48 test47 1047.11 
+83 test82 1082.11 22 test21 1021.11 
+
+83 test82 1082.11 39 test38 1038.11 
+84 test83 1083.11 47 test46 1046.11 
+
+89 test88 1088.11 20 test19 1019.11 
+91 test90 1090.11 20 test19 1019.11 
+
+93 test92 1092.11 72 test71 1071.11 
+93 test92 1092.11 99 test98 1098.11 
+
+96 test95 1095.11 31 test30 1030.11 
+96 test95 1095.11 18 test17 1017.11 
+
+96 test95 1095.11 38 test37 1037.11 
+96 test95 1095.11 28 test27 1027.11 
+
+97 test96 1096.11 59 test58 1058.11 
+98 test97 1097.11 9 test8 1008.11 
+
+99 test98 1098.11 81 test80 1080.11 
+Query End.
+select spousename from Employee where Employee.id>20 orderby spousename 
+Query Start: 1
+Employee fsdafas
+NAEmployee.id>20NANAspousename
+./Employee.csv
+Querytype: select
+Tablename: Employee
+Columns: spousename
+Distinct: NA
+Condition: 
+Orderby: 
+spousename
+Groupby: NA
+Having: NA
+
+
+test33 test0 
+test48 test1 
+
+test21 test1 
+test74 test10 
+
+test70 test13 
+test58 test13 
+
+test49 test15 
+test42 test16 
+
+test95 test17 
+test90 test19 
+
+test88 test19 
+test71 test20 
+
+test82 test21 
+test21 test24 
+
+test43 test27 
+test95 test27 
+
+test70 test28 
+test34 test3 
+
+test95 test30 
+test33 test30 
+
+test77 test32 
+test24 test32 
+
+test64 test34 
+test48 test35 
+
+test95 test37 
+test82 test38 
+
+test45 test38 
+test20 test39 
+
+test41 test39 
+test61 test39 
+
+test22 test41 
+test43 test43 
+
+test24 test43 
+test63 test44 
+
+test83 test46 
+test71 test46 
+
+test81 test47 
+test57 test50 
+
+test69 test50 
+test50 test53 
+
+test67 test55 
+test44 test57 
+
+test96 test58 
+test28 test59 
+
+test43 test60 
+test74 test63 
+
+test38 test65 
+test42 test65 
+
+test53 test67 
+test37 test67 
+
+test48 test68 
+test49 test69 
+
+test61 test69 
+test74 test69 
+
+test53 test7 
+test52 test7 
+
+test46 test7 
+test80 test70 
+
+test48 test70 
+test92 test71 
+
+test21 test73 
+test33 test76 
+
+test44 test77 
+test68 test79 
+
+test97 test8 
+test98 test80 
+
+test31 test80 
+test74 test80 
+
+test43 test81 
+test75 test86 
+
+test40 test86 
+test42 test89 
+
+test75 test89 
+test54 test90 
+
+test79 test90 
+test33 test90 
+
+test55 test93 
+test46 test98 
+
+test92 test98 
+Query End.

@@ -1,0 +1,84 @@
+//initial
+file1.queryType("create table test1(id int,fname string,lname string,percent float,class string,year int)");
+file1.queryType("create table test2(id int,fname string,percent float)");
+file1.queryType("create table test3(id int,lname string,percent float)");
+//create
+file1.queryType("create table dbs(id int,roll_no int,name string)");
+file1.queryType("create table t1(temp int,temp int)");
+file1.queryType("create table t1(temp int,temp float)");
+file1.queryType("create table t1(temp int,temp int)");
+file1.queryType("create table dbs(temp int,temp int)");
+file1.queryType("create table t1(varchar int,temp int)");
+file1.queryType("create table t1(float int,temp int)");
+file1.queryType("create table t1(temp int,temp1 float)");
+//from
+file1.queryType("select roll_no from dbs where id=1");
+file1.queryType("select * from dbs");
+file1.queryType("select * from dbs where id>=1");
+file1.queryType("select * from abc");
+file1.queryType("select * from test1,test1");
+file1.queryType("select * from test1,test2,test3");
+//select
+file1.queryType("select abc from test1");
+file1.queryType("select abc from test1,test2,test3");
+file1.queryType("select id,fname from test1");
+file1.queryType("select test1.id from test1");
+file1.queryType("select test2.id from test1");
+file1.queryType("select test2.fname from test1,test2,test3");
+file1.queryType("select id,fname from test1,test2,test3");
+file1.queryType("select id,test2.fname,lname from test1,test2,test3");
+file1.queryType("select * from test1");
+file1.queryType("select * from test1,test2,test3");
+file1.queryType("select *,id from test1");
+file1.queryType("select *,id,fname from test1,test2,test3");
+file1.queryType("select null from test1");
+file1.queryType("select null");
+file1.queryType("select distinct(id),fname,lname from test1");
+file1.queryType("select distinct(id),fname,lname from test1");
+//file1.queryType("select distinct(id,fname,lname) from test1");
+file1.queryType("select distinct(fname),abc from test1");
+file1.queryType("select distinct(test2.lname) ,fname from test1,test2");
+//where
+file1.queryType("select * from test1 where id>5.5");
+file1.queryType("select * from test1 where percent>10");
+file1.queryType("select * from test1 where id like 5.5");
+file1.queryType("select * from test1 where percent like 10");
+file1.queryType("select * from test1 where fname = 'abcd'");
+file1.queryType("select * from test1 where fname like 23");
+file1.queryType("select * from test1 where fname like 34.5");
+file1.queryType("select * from test1 where id like 'sdffs'");
+file1.queryType("select * from test1 where percent like 'sdffs'");
+file1.queryType("select * from test1 where id<32492752938523958237529");
+file1.queryType("select * from test1 where percent<32492752938523958237529");
+file1.queryType("select * from test1,test2 where lname='abcd')");
+file1.queryType("select * from test1,test2 where id=1");
+file1.queryType("select * from test1 where roll=45");
+file1.queryType("select * from test1,test2 where roll=34");
+file1.queryType("select * from test1,test2 where test1.id=1");
+file1.queryType("select * from test1,test2 where (id)=2");
+file1.queryType("select * from test1 where id<3 and percent<30");
+file1.queryType("select * from test1 where id<3 AND percent<30");
+file1.queryType("select * from test1 where id>3 OR percent<30");
+file1.queryType("select * from test1 where id>3 or percent<30");
+file1.queryType("select * from test1 where lname like 'cdef'");
+file1.queryType("select * from test1 where id<=3 and percent>30 or fname like 'abce'");
+file1.queryType("select * from test1 where id>5 and id<5 and id>=5 and id<=5 and id=5 and id<>5");
+file1.queryType("select * from test1 where percent>13.5 and percent<13.5 and percent>=13.5 and percent<=13.5 and percent<>13.5 and percent=13.5");
+//group by
+file1.queryType("select roll from test1 group by roll");
+file1.queryType("select id,fname from test1 group by class");
+file1.queryType("select class from test1 group by (class)");
+file1.queryType("select class,year from test1 group by class,year");
+file1.queryType("select test1.class from test1 group by test1.class, test1.year");
+//having
+file1.queryType("select year from test1 group by class having class like 'B'");
+file1.queryType("select class from test1 group by class having year=2012");
+file1.queryType("select fname from test1 having id<=3");
+file1.queryType("select id from test1 having id<=3");
+//order by
+file1.queryType("select * from test1 order by roll");
+file1.queryType("select id from test1 order by percent");
+file1.queryType("select id,percent from test1 order by (percent)");
+file1.queryType("select * from test1 order by year");
+file1.queryType("select test1.id,test1.percent,test1.year from test1 order by percent,year");
+file1.queryType("select test1.id,test1.percent,test1.year from test1 order by year,percent");

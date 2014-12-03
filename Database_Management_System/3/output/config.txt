@@ -1,0 +1,20 @@
+PAGE_SIZE 50123
+NUM_PAGES 25
+PATH_FOR_DATA ./
+BEGIN
+countries
+ID,integer
+CODE,string
+NAME,string
+CONTINENT,string
+END
+BEGIN
+airports
+ID,int
+TYPE,string
+NAME,string
+LATITUDE,integer
+LONGITUDE,integer
+COUNTRY,string
+REGION,string
+END

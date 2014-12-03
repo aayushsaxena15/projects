@@ -1,0 +1,1 @@
+id int,lname string,percent float 
