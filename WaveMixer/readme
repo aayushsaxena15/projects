@@ -1,0 +1,17 @@
+201201021
+Aayush Saxena
+
+DSAA- Assignment 1
+
+The Wave Mixer works well for 16-bit wae files.
+Some of the files for which it works well are given along.
+
+The output of the operations will be stored in the following files:
+
+1. wave1--- output1.wav
+2. wave2--- output2.wav
+3. wave3--- output3.wav
+
+4. modulation--- modulated.wav
+5. mixing---     mixed.wav
+6. recording---  recorded.wav

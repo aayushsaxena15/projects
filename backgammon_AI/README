@@ -1,0 +1,36 @@
+Mini Project 1- Phase 2
+
+Team Members:
+
+1. Rupinder Singh Khokhar- 201201181
+2. Aayush Saxena-          201201021
+
+
+Strategy used:
+
+We are calculating the best possible move from two moves based on Blitz, Attacking and Building Board.Heuristic is the summation of health of attacking, pairing, pile creation and single move (going from single to pair).Prefernece- attacking in opponent's home board,
+pile creation in our home board.
+
+First move is made on the basis of the dice numbers(not actually). Then in the second move, we are calculating the final heuristic value of each function based on the comparison among all the possible states of the game.
+Then the final move is made based on the resultant heuristic value at the two levels. 
+
+Blitz- We attack the opponent with high probability in opponent's home board.
+
+Building board- We maintain a pile in our home board so that the opponent's bar checkers find it difficult to be cleared off the bar.
+We will have high priority of attacking in opponent's home board and the least priority in our home board.
+The probability of moving the checker will be more in the remaining 2 quadrants( apart from our home and opponent's home) 
+
+
+We are also checking for the bar.If there is any checker on the bar, then we are removing it based on the following priority: if 2 checkers are present on the point, if more than two checkers are present on the point.
+
+
+Then we are checking for the bearing off condition, if all the checkers are in the home, then we are bearing them off by checking:
+
+--if the point corresponding to the dice roll has a checker, then we are bearing it off straight away.		
+--if there are any checkers behind the corresponding point, then we are moving them forward according to the dice roll.We are giving priority according to pairing,hitting and empty.
+--if there are no checkers on the corresponding point or behind that point, then we are bearing off by giving priorities in the decreasing order to point having 1 checker, point having 2 checkers.
+
+Modification from the previous one---
+ Manipulating bar string.
+ We didnt know how to handle the bar string.
+ Now if the string contains 'e', then there are no checkers on the bar.
