@@ -1,0 +1,57 @@
+{{extend 'layout.html'}}
+<style type="text/css">
+	#ToggleTarget {
+		display: none;
+	}
+</style>
+
+<script type="text/javascript">
+	function Toggle() {
+		var el = document.getElementById("ToggleTarget");
+		if (el.style.display == "block") {
+			el.style.display = "none";
+		}
+		else {
+			el.style.display = "block";
+		}
+	}
+</script>
+{{if y:}}
+<a href="{{=URL('default','imageupdate.html')}}"><img src="{{=URL('download',args=y.Image)}}" width=500px style="float:right"/></a>
+{{else:}}
+<a href="{{=URL('default','imageupdate.html')}}">
+	<img src="{{=URL('static','images/aabhas.png')}}" width=300px style="float:right" alt="update profile pic"/>
+</a>
+{{pass}}
+{{pass}}
+<p style="font-size:20px">
+<u>Name </u>: -{{=s.first_name}} {{=s.last_name}}<br/><br/>
+<u>email</u> : -  {{=s.email}}<br/><br/>
+<u>	username</u> : - {{=s.username}}<br/><br/>
+<u> Type of user</u> : - {{=s.Typeofuser}}<br/><br/>
+<u>	Organisation</u> : - {{=s.Organisation}}<br/>
+<br/>
+<p style="font-size:20px ">
+{{pro=db(db.Project.Username==auth.user.id).select(db.Project.Project_Name,db.Project.id,db.Project.Revision_no,orderby=~db.Project.Revision_no)}}
+{{ if pro:}}
+Project Made by {{=auth.user.username}} are :- <br/>
+{{l1=1}}
+{{d=[]}}
+{{for a in pro:}}
+{{if a.Project_Name not in d:}}
+<br/>
+{{p=db(db.Project.Project_Name==a.Project_Name).select(db.Project.Project_Name,db.Project.id,db.Project.Revision_no)}}
+{{=l1}}){{=a.Project.Project_Name}}
+{{l=1}}
+{{for k in p:}}
+{{=l}})<a href="{{=URL(r=request,f='showproject?Projectid=%s'%k.id)}}"> {{=k.Project_Name}}({{=k.Revision_no}})</a>
+{{l+=1}}
+{{pass}}
+{{l1+=1}}
+{{d.append(a.Project_Name)}}
+<br/>
+{{pass}}
+{{pass}}
+{{else:}}
+No Project Made by {{=auth.user.username}}
+{{pass}}

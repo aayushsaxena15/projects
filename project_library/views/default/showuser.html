@@ -1,0 +1,31 @@
+{{extend 'layout.html'}}
+{{if y:}}
+<img src="{{=URL('download',args=y.Image)}}" width=500px style="float:right"/>
+{{else:}}
+<img src="{{=URL('static','images/aabhas.png')}}" width=300px style="float:right" alt="update profile pic"/>
+{{pass}}
+{{pass}}
+<p style="font-size:20px">
+<u>Name </u>: -{{=s.first_name}} {{=s.last_name}}<br/><br/>
+<u>email</u> : -  {{=s.email}}<br/><br/>
+<u>	username</u> : - {{=s.username}}<br/><br/>
+<u> Type of user</u> : - {{=s.Typeofuser}}<br/><br/>
+<u>	Organisation</u> : - {{=s.Organisation}}<br/>
+<br/>
+<p style="font-size:20px ">
+{{ if pro:}}
+Project Made by {{=s.username}} are :- <br/>
+{{l=1}}
+{{d=[]}}
+{{for k in pro:}}
+{{if k.Project_Name not in d:}}
+<br/>
+{{=l}})<a href="{{=URL(r=request,f='showproject?Projectid=%s'%k.id)}}"> {{=k.Project_Name}}({{=k.Revision_no}})</a>
+{{l+=1}}
+{{d.append(k.Project_Name)}}
+<br/>
+{{pass}}
+{{pass}}
+{{else:}}
+No Project Made by {{=s.username}}
+{{pass}}

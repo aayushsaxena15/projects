@@ -1,0 +1,23 @@
+{{extend 'layout.html'}}
+<p style="font-size:20px">
+{{if y or x:}}
+Project(s) Found With Pattern '{{=b}}' in the database are :-
+{{l=1}}
+{{for i in y:}}
+<br/>
+<br/>
+{{=l}})<a href="{{=URL('showproject?Projectid=%d'%i.id)}}">{{=i.Project_Name}} </a>- {{=i.Desription}}
+{{l+=1}}
+{{pass}}
+{{for i in x:}}
+{{if i not in y:}}
+<br/>
+<br/>
+{{=l}})<a href="{{=URL('showproject?Projectid=%d'%i.id)}}">{{=i.Project_Name}} </a>- {{=i.Desription}}
+{{l+=1}}
+{{pass}}
+{{pass}}
+{{else:}}
+No Project Found With Key '{{=b}}'
+{{pass}}
+</p>

@@ -1,0 +1,11 @@
+Loading data...
+Train Complete
+Creating train and test sets for blending.
+0 RandomForestClassifier(bootstrap=True, compute_importances=False,
+            criterion=gini, max_depth=None, max_features=auto,
+            min_density=0.1, min_split=1, n_estimators=10, n_jobs=-1,
+            random_state=<mtrand.RandomState object at 0xb731b130>)
+Fold 0
+Fold 1
+Fold 2
+Blending.
