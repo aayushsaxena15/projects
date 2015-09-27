@@ -1,7 +1,0 @@
-For compiling the source code, type
-
-g++ Assignment1_interim.cpp -lglut -lGL -lGLU  on the terminal where Assignment1_interim.cpp is the name of the program.
-
-Then type
-
- ./a.out to execute the program.
