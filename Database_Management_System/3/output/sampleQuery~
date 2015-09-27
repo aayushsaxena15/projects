@@ -1,8 +1,0 @@
-7
-select * from countries
-select TYPE,NAME from airports
-select ID from airports where airports.TYPE=small_airport
-select ID from airports where airports.TYPELIKESMALL_Airport
-select ID,NAME,CODE,CONTINENT from countries where countries.CONTINENT=OC or countries.NAME=India 
-select ID,NAME from airports orderby NAME
-select NAME,COUNTRY from airports where airports.LATITUDE>=40 and airports.LATITUDE<=42 orderby NAME
