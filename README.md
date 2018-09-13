@@ -1,8 +1,7 @@
 projects
 ========
 
-I am a third year student at International Institute of Information Technology, Hyderabad pursuing B.Tech. in Computer
-Science and Engineering.
+I am a Computer Science graduate from International Institute of Information Technology, Hyderabad. Currently working on machine learning and artificial intelligence projects.
 
 
 This is my first official repository meant for reference purposes so that various organizations can go through my work.
